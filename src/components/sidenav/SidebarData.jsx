@@ -16,14 +16,8 @@ export const SidebarData = [
     cName: 'nav-text'
   },
   {
-    title: 'Team',
-    path: '/team',
-    icon: <IoIcons.IoMdPeople />,
-    cName: 'nav-text'
-  },
-  {
-    title: 'Messages',
-    path: '/messages',
+    title: 'Attendance',
+    path: '/attendance',
     icon: <FaIcons.FaEnvelopeOpenText />,
     cName: 'nav-text'
   },

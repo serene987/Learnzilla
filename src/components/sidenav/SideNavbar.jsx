@@ -2,7 +2,7 @@ import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 
 import  { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, } from 'react-router-dom';
 import { SidebarData } from './SidebarData.jsx';
 import { IconContext } from 'react-icons';
 import './Sidenavbar.css';
