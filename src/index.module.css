@@ -10,8 +10,8 @@
     
     --primary-color: #073d72; 
     --secondary-color: #02509d; 
-    --grey-color: #454c52; 
-    --green-color: #008e3d; 
+    --grey-color: #232324; 
+    --green-color: #008d3de8; 
     --red-color: #c10000; 
     --white-color: #d4d6d8; 
     
@@ -42,6 +42,7 @@
   .navbar {
     background-color: var(--primary-color);
     height: 80px;
+    width: 100%; 
     display: flex;
     align-items: center;
   }
@@ -75,21 +76,32 @@
     font-size: 3.2em;
     line-height: 1.1;
   }
-  .signIn{
 
+  .signIn{
+    top: 0;
+    right: 100%;
+    cursor: pointer;
+    transition: border-color 0.25s;
   }
-  /* button {
+  /* .signIn:hover{
+
+
+  } */
+
+
+/* 
+  button {
     border-radius: 8px;
     border: 1px solid transparent;
-    padding: 0.6em 1.2em;
+    padding: 5 1.2em;
     font-size: 1em;
     font-weight: 500;
     font-family: inherit;
-    background-color: #1a1a1a;
+    background-color: var(--green-color);
     cursor: pointer;
     transition: border-color 0.25s;
-  } */
-/*    
+  } 
+
   button:hover {
     border-color: #646cff;
   }
