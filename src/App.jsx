@@ -1,4 +1,5 @@
 import './App.css';
+import Index from './Index';
 
 // import Topnav from './components/topnav/Topnav.jsx'
 
@@ -7,7 +8,7 @@ import './App.css';
 function App() {
   return (
     <>
-    
+      <Index/>
     </>
   );
 }

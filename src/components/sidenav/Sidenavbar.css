@@ -1,11 +1,4 @@
-#root{
-  --primary-color: #073d72; 
-  --secondary-color: #0055aa; 
-  --grey-color: #454c52; 
-  --green-color: #008e3d; 
-  --red-color: #c10000; 
-  --white-color: #d4d6d8; 
-}
+
 
 .navbar {
     background-color: var(--primary-color);
