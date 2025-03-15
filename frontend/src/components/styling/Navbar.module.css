@@ -1,0 +1,99 @@
+/* Navbar */
+.navbar {
+  background-color: var(--color-primary); /* Dark Blue */
+  color: var(--color-text-primary);
+  padding: 12px 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensure navbar stays on top */
+}
+
+/* Navbar Container */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Logo */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--color-text-primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Auth Links */
+.authLinks {
+  position: relative; /* Needed for absolute positioning of dropdown */
+}
+
+/* Sign In Button */
+.navButton {
+  background-color: var(--color-secondary);
+  color: var(--color-text-primary);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.1s ease;
+}
+
+.navButton:hover {
+  background-color: var(--color-accent);
+}
+
+/* Dropdown */
+.dropdown {
+  position: absolute;
+  top: 100%; /* Align right below the button */
+  background-color: var(--color-primary);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  padding: 8px 0;
+  z-index: 10;
+  width: 150px;
+
+  /* Hidden by default */
+  opacity: 0;
+  transform: translateY(-10px);
+  visibility: hidden;
+  transition: opacity 0.3s ease, transform 0.4s ease;
+}
+
+/* Show dropdown when state is true */
+.dropdown.show {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+/* Dropdown Button */
+.dropdown button {
+  width: 100%;
+  padding: 12px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+  color: var(--color-text-primary);
+}
+
+/* Hover Effect for Dropdown Buttons */
+.dropdown button:hover {
+  background-color: rgba(69, 59, 110, 0.27);
+}
+
+/* Divider */
+hr {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: 4px 0;
+}
