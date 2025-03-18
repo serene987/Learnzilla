@@ -2,34 +2,23 @@
    
     /* Primary Colors */
     --color-primary: #1f2937; /* Dark Blue */
+    --transparent: #314562bc; 
     
     /* Secondary and Accent Colors */
-    --color-secondary: #2563eb; /* Steel Blue */
     --color-accent: #1e40af; /* Deep Blue */
+    --color-secondary: #2563eb; /* Steel Blue */
     
     /* Background and Text Colors */
     --color-background: #e5e7eb; /* Slightly darker gray */
+    --color-background-dark: #161e2a;
     --color-text-primary: #ffffff; /* White */
     --color-text-secondary: #94a3b8; /* Darker Slate Gray */
+    --color-text-secondary-dark: #66778e; /* Darker Slate Gray */
     
     /* State Colors */
     --color-success: #059669; /* Emerald Green */
     --color-warning: #f4a928; /* Amber */
     --color-error: #dc2626; /* Crimson Red */
 
-    /* Dark Mode */
-    [data-theme="dark"] {
-      --color-primary: #111827;
-      --color-secondary: #2563eb;
-      --color-accent: #1e40af;
-
-      --color-background: #1f2937;
-      --color-text-primary: #ffffff;
-      --color-text-secondary: #9ca3af;
-
-      --color-success: #10b981;
-      --color-warning: #f59e0b;
-      --color-error: #ef4444;
-    }
   }
   
