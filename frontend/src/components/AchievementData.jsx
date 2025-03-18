@@ -1,3 +1,4 @@
+import { FaAward, FaUniversity, FaStar } from 'react-icons/fa';
 
 export const achievementsData = [
   {

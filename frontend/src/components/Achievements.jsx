@@ -1,4 +1,3 @@
-import { FaAward, FaUniversity, FaStar } from 'react-icons/fa';
 import achievementsStyles from './styling/Achievements.module.css';
 import { achievementsData } from './AchievementData';
 
