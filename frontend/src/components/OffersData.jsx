@@ -1,21 +1,22 @@
+import { FaChalkboardTeacher, FaUserGraduate, FaUniversity } from 'react-icons/fa';
 
 export const OffersData = [
     {
         id: 1,
         title: 'Teacher Management',
-        description: 'Upload lessons, track assignments, manage attendance, and more.',
-        image: '/assets/images/teacher.jpg',
+        description: 'Teachers can upload lessons, assignments, and track attendance.',
+        icon: <FaChalkboardTeacher size={32} />,
       },
       {
         id: 2,
-        title: 'Student Access',
-        description: 'View attendance, check assignments, and monitor progress.',
-        image: '/assets/images/student.jpg',
+        title: 'Student Dashboard',
+        description: 'Students can track attendance, view assignments, and monitor progress.',
+        icon: <FaUserGraduate size={32} />,
       },
       {
         id: 3,
-        title: 'HoD Control',
-        description: 'Assign teachers to subjects and track department performance.',
-        image: '/assets/images/hod.jpg',
+        title: 'HoD Oversight',
+        description: 'HoDs can assign teachers to subjects and track performance.',
+        icon: <FaUniversity size={32} />,
       },
 ];

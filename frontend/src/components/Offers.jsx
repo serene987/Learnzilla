@@ -5,55 +5,57 @@ import { useState } from 'react';
 import {motion, AnimatePresence } from 'framer-motion';
 
 
-
 function Offers() {
     const [activeOffer, setActiveOffer] = useState(null);
   
-    // Toggle function for showing/hiding details
     const handleToggle = (offer) => {
       if (activeOffer?.id === offer.id) {
-        setActiveOffer(null); // Hide if clicked again
+        setActiveOffer(null); // Close the detail card if it's already open
       } else {
-        setActiveOffer(offer); // Show new details
+        setActiveOffer(offer); // Open the selected detail card
       }
     };
   
     return (
-      <section className={OfferStyle.offers}>
-        {/* Left Side - Cards */}
-        <div className={OfferStyle.container}>
-          <div className={OfferStyle.cards}>
+      <section className={OfferStyle.offersSection}>
+        {/* Left Side - SVG */}
+        <div className={OfferStyle.leftSide}>
+          <img src="/images/illustration.svg" alt="Illustration" />
+        </div>
+  
+        {/* Right Side - Cards and Details */}
+        <div className={OfferStyle.rightSide}>
+          {/* Cards */}
+          <motion.div
+            className={`${OfferStyle.cardsContainer} ${activeOffer ? OfferStyle.cardsShift : ''}`}
+            initial={{ y: 0 }}
+            animate={{ y: activeOffer ? -100 : 0 }} // Move up when a card is clicked
+            transition={{ type: 'spring', stiffness: 100 }}
+          >
             {OffersData.map((offer) => (
               <motion.div
                 key={offer.id}
-                className={`${OfferStyle.card} ${
-                  activeOffer?.id === offer.id ? OfferStyle.active : ''
-                }`}
+                className={`${OfferStyle.card} ${activeOffer?.id === offer.id ? OfferStyle.activeCard : ''}`}
                 onClick={() => handleToggle(offer)}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
+                {offer.icon}
                 <h3>{offer.title}</h3>
               </motion.div>
             ))}
-          </div>
+          </motion.div>
   
-          {/* Right Side - Details Card */}
+          {/* Details - Fade In/Out */}
           <AnimatePresence>
             {activeOffer && (
               <motion.div
-                key={activeOffer.id}
-                className={OfferStyle.details}
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 50 }}
-                transition={{ duration: 0.5, ease: 'easeInOut' }}
+                className={OfferStyle.detailsCard}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 20 }}
+                transition={{ duration: 0.4 }}
               >
-                <img
-                  src={activeOffer.image}
-                  alt={activeOffer.title}
-                  className={OfferStyle.image}
-                />
                 <h2>{activeOffer.title}</h2>
                 <p>{activeOffer.description}</p>
               </motion.div>
