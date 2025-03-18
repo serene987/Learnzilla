@@ -1,9 +1,14 @@
+/* Section with background image */
 .offers {
-    padding: 60px 20px;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('/assets/images/bgImg1.jpg'); /* Background image */
+    background-size: cover;
+    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--color-background);
   }
   
   .container {
@@ -11,8 +16,10 @@
     gap: 40px;
     width: 100%;
     max-width: 1200px;
+    padding: 20px;
   }
   
+  /* Left side - Cards */
   .cards {
     display: flex;
     flex-direction: column;
@@ -34,42 +41,39 @@
     background-color: var(--color-accent);
   }
   
+  /* Active card */
   .card.active {
     background-color: var(--color-success);
     color: var(--color-background);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   }
   
-  .slideshow {
+  /* Right side - Details Card */
+  .details {
     width: 60%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .slide {
-    width: 100%;
     padding: 20px;
     background-color: var(--color-primary);
-    border-radius: 12px;
     color: var(--color-text-primary);
-    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: opacity 0.3s ease;
   }
   
-  .slide img {
+  .details h2 {
+    margin-bottom: 8px;
+  }
+  
+  .details p {
+    font-size: 16px;
+    color: var(--color-text-secondary);
+  }
+  
+  /* Image inside details */
+  .image {
     width: 100%;
     height: 250px;
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 16px;
-  }
-  
-  h2 {
-    margin-bottom: 8px;
-  }
-  
-  p {
-    font-size: 16px;
-    color: var(--color-text-secondary);
   }
   
