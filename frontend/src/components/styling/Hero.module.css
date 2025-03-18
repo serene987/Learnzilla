@@ -1,134 +1,79 @@
-/* HERO SECTION */
+/* Hero container */
 .hero {
   position: relative;
   width: 100%;
-  height: 80vh;
-  overflow: hidden;
+  height: 500px; /* Adjust height as needed */
+  overflow: hidden; /* Hide overflow to prevent image flickering */
 }
 
-/* Slideshow container */
-.slideshow {
+/* Background image with framer-motion animation */
+.heroBackground {
   position: absolute;
   width: 100%;
   height: 100%;
-  display: flex;
-  animation: slideShow 9s infinite;
-}
-
-.slide {
-  min-width: 100%;
-  height: 100%;
-  background-size: cover;
+  background-size: cover; /* Ensure background image covers the entire area */
   background-position: center;
-  transition: transform 1s ease-in-out;
 }
 
-/* Stop slideshow on hover */
-.hero:hover .slideshow {
-  animation-play-state: paused;
-}
-
-@keyframes slideShow {
-  0%, 33% {
-    transform: translateX(0);
-  }
-  34%, 66% {
-    transform: translateX(-100%);
-  }
-  67%, 100% {
-    transform: translateX(-200%);
-  }
-}
-
-/* Overlay to make text stand out */
-.heroOverlay {
+/* Hero content (headings and buttons) */
+.heroContent {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(31, 41, 55, 0.7); /* Dark overlay */
-}
-
-/* Centering Content */
-.heroContainer {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 24px;
-  height: 100%;
-}
-
-/* Hero Image */
-.heroImage img {
-  max-width: 400px;
-  height: auto;
-}
-
-/* Hero Content */
-.heroContent h1 {
-  font-size: 48px;
-  font-weight: 700;
-  margin-bottom: 20px;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust exact center position */
+  text-align: center;
   color: var(--color-text-primary);
 }
 
-.heroContent p {
-  font-size: 18px;
-  margin-bottom: 30px;
+/* Main heading */
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Subtext under heading */
+p {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
   color: var(--color-text-secondary);
 }
 
-/* CTA Buttons */
+/* Container for buttons */
 .ctaButtons {
   display: flex;
-  gap: 16px;
+  gap: 1rem; /* Space between buttons */
+  justify-content: center;
 }
 
-.primaryBtn {
-  background-color: var(--color-success);
-  color: var(--color-text-primary);
-  padding: 12px 24px;
-  border-radius: 8px;
-  font-size: 18px;
+/* Primary button style */
+.primaryBtn, .secondaryBtn {
+  padding: 0.75rem 2rem;
   border: none;
+  border-radius: 0.5rem;
   cursor: pointer;
+  font-size: 1rem;
   transition: background-color 0.3s ease;
+}
+
+/* Primary button color based on theme */
+.primaryBtn {
+  background-color: var(--color-secondary);
+  color: var(--color-text-primary);
 }
 
 .primaryBtn:hover {
   background-color: var(--color-accent);
 }
 
+/* Secondary button with outline */
 .secondaryBtn {
   background-color: transparent;
   color: var(--color-secondary);
-  padding: 12px 24px;
   border: 2px solid var(--color-secondary);
-  border-radius: 8px;
-  font-size: 18px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.4s ease;
 }
 
 .secondaryBtn:hover {
   background-color: var(--color-secondary);
   color: var(--color-text-primary);
-}
-
-.title {
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 8px;
-  color: var(--color-primary);
-}
-
-.subtitle {
-  font-size: 18px;
-  color: var(--color-text-secondary);
-  margin-bottom: 40px;
 }
