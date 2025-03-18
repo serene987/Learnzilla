@@ -1,15 +1,18 @@
 .testimonials {
-  padding: 50px 20px;
+  height: 100vh;
   background-color: var(--color-background);
   color: var(--color-text-secondary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  height: 100vh;
 }
 
 .title {
   font-size: 2rem;
   color: var(--color-primary);
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 
 .inspiration {
@@ -18,28 +21,26 @@
   color: var(--color-primary);
 }
 
-/* Testimonials container - horizontal scroll if overflow */
+/* Wrapper to control width and alignment */
+.scrollWrapper {
+  overflow: hidden;
+  width: 80%; /* Match the width of the offers section */
+  display: flex;
+  justify-content: center;
+}
+
 .testimonialsContainer {
   display: flex;
-  align-items: center;
   gap: 20px;
-  overflow-x: auto;
-  padding-bottom: 12px;
+  padding-bottom: 10px;
   scroll-snap-type: x mandatory;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
-/* Scrollbar Styling */
+/* Hide default scrollbar */
 .testimonialsContainer::-webkit-scrollbar {
-  height: 8px;
-}
-
-.testimonialsContainer::-webkit-scrollbar-thumb {
-  background-color: var(--color-secondary);
-  border-radius: 8px;
-}
-
-.testimonialsContainer::-webkit-scrollbar-track {
-  background-color: var(--color-background-dark);
+  display: none;
 }
 
 /* Card Styling */
@@ -48,15 +49,15 @@
   color: var(--color-text-primary);
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  width: 300px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  width: 320px;
   flex-shrink: 0;
-  scroll-snap-align: start;
+  scroll-snap-align: center;
   transition: transform 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(5px);
 }
 
 /* Profile Icon */
@@ -77,4 +78,5 @@
 .text {
   font-size: 1rem;
   color: var(--color-text-secondary-dark);
+  line-height: 1.4;
 }
