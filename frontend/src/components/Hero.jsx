@@ -1,4 +1,3 @@
-// import styles from './Root.module.css';
 import heroStyles from './styling/Hero.module.css';
 
 // Adjust path as needed
