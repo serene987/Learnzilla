@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import Navbar from './components/Navbar.jsx';
 import Hero from './components/Hero.jsx';
+import Achievements from './components/Achievements.jsx' 
 import Testimonial from './components/Testimonial.jsx';
 import Footer from './components/Footer.jsx';
 
@@ -12,6 +13,7 @@ export default function Index({ darkMode, toggleDarkMode }){
         {/* Pass darkMode and toggleDarkMode as props */}
         <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         <Hero/>
+        <Achievements/>
         <Testimonial/>
         <Footer/>
         </>
