@@ -1,11 +1,22 @@
 import heroStyles from './styling/Hero.module.css';
 
-// Adjust path as needed
-// import heroImage from '../assets/hero-image.png'; 
+import bgImg1 from '../assets/images/bgImg1.jpg';
+import bgImg2 from '../assets/images/bgImg2.jpg';
+import bgImg3 from '../assets/images/bgImg3.jpg';
 
 function Hero() {
   return (
     <section className={heroStyles.hero}>
+      {/* Background slideshow */}
+      <div className={heroStyles.slideshow}>
+        <div className={heroStyles.slide} style={{ backgroundImage: `url(${bgImg1})` }}></div>
+        <div className={heroStyles.slide} style={{ backgroundImage: `url(${bgImg2})` }}></div>
+        <div className={heroStyles.slide} style={{ backgroundImage: `url(${bgImg3})` }}></div>
+      </div>
+
+      {/* Dark overlay */}
+      <div className={heroStyles.heroOverlay}></div>
+
       <div className={heroStyles.heroContainer}>
         <div className={heroStyles.heroContent}>
           <h1>Empower Your Learning Journey with Ease</h1>
@@ -18,7 +29,8 @@ function Hero() {
           </div>
         </div>
         <div className={heroStyles.heroImage}>
-          {/* <img src={heroImage} alt="Learning Illustration" /> */}
+          {/* Use direct import for the hero image */}
+          <img src={bgImg3} alt="Learning Illustration" />
         </div>
       </div>
     </section>

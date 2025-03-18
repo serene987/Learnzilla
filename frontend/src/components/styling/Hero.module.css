@@ -1,89 +1,134 @@
-
 /* HERO SECTION */
 .hero {
-    background-color: var(--color-background);
-    color: var(--color-primary);
-    padding: 40px 24px; /* Reduced padding for better centering */
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    padding: 60px 24px;
-    height: 80vh;
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+}
+
+/* Slideshow container */
+.slideshow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  animation: slideShow 9s infinite;
+}
+
+.slide {
+  min-width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 1s ease-in-out;
+}
+
+/* Stop slideshow on hover */
+.hero:hover .slideshow {
+  animation-play-state: paused;
+}
+
+@keyframes slideShow {
+  0%, 33% {
+    transform: translateX(0);
   }
-  
-  
-  .heroContainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0;
+  34%, 66% {
+    transform: translateX(-100%);
   }
-  
-  .heroImage img {
-    max-width: 400px;
-    height: auto;
+  67%, 100% {
+    transform: translateX(-200%);
   }
-  
-  
-  .heroContent h1 {
-    font-size: 48px;
-    font-weight: 700;
-    margin-bottom: 20px;
-  }
-  
-  .heroContent p {
-    font-size: 18px;
-    margin-bottom: 30px;
-    color: var(--color-primary);
-  }
-  
-  .ctaButtons {
-    display: flex;
-    gap: 16px;
-  }
-  
-  .primaryBtn {
-    background-color: var(--color-success);
-    color: var(--color-text-primary);
-    padding: 12px 24px;
-    border-radius: 8px;
-    font-size: 18px;
-    border: none;
-  }
-    
-  
-  .primaryBtn:hover {
-    background-color: var(--color-accent);
-  }
-  
-  .secondaryBtn {
-    background-color: transparent;
-    color: var(--color-secondary);
-    padding: 12px 24px;
-    border: 2px solid var(--color-secondary);
-    border-radius: 8px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.4s ease;
-  }
-  
-  .secondaryBtn:hover {
-    background-color: var(--color-secondary);
-    color: var(--color-text-primary);
-  }
-  
-    .title {
-      font-size: 32px;
-      font-weight: 700;
-      margin-bottom: 8px;
-      color: var(--color-primary);
-    }
-    
-    .subtitle {
-      font-size: 18px;
-      color: var(--color-text-secondary);
-      margin-bottom: 40px;
-    }
-    
+}
+
+/* Overlay to make text stand out */
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(31, 41, 55, 0.7); /* Dark overlay */
+}
+
+/* Centering Content */
+.heroContainer {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px;
+  height: 100%;
+}
+
+/* Hero Image */
+.heroImage img {
+  max-width: 400px;
+  height: auto;
+}
+
+/* Hero Content */
+.heroContent h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--color-text-primary);
+}
+
+.heroContent p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: var(--color-text-secondary);
+}
+
+/* CTA Buttons */
+.ctaButtons {
+  display: flex;
+  gap: 16px;
+}
+
+.primaryBtn {
+  background-color: var(--color-success);
+  color: var(--color-text-primary);
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.primaryBtn:hover {
+  background-color: var(--color-accent);
+}
+
+.secondaryBtn {
+  background-color: transparent;
+  color: var(--color-secondary);
+  padding: 12px 24px;
+  border: 2px solid var(--color-secondary);
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.4s ease;
+}
+
+.secondaryBtn:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-text-primary);
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--color-primary);
+}
+
+.subtitle {
+  font-size: 18px;
+  color: var(--color-text-secondary);
+  margin-bottom: 40px;
+}
