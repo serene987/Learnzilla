@@ -57,7 +57,8 @@ function Offers() {
                 exit={{ opacity: 0, y: 20 }}
                 transition={{ duration: 0.4 }}
               >
-                <h2>{activeOffer.title}</h2>
+                {/* The detailed card. Data in the OffersData */}
+                <h2>{activeOffer.title}</h2><br/>
                 <p>{activeOffer.description}</p>
               </motion.div>
             )}

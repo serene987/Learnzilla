@@ -26,6 +26,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    width: 100%;
   }
   
   .cardsContainer {
@@ -57,7 +59,6 @@
   .activeCard {
     background-color: var(--color-success);
   }
-  
   .detailsCard {
     background-color: var(--transparent);
     color: var(--color-text-primary);
@@ -67,5 +68,19 @@
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     margin-top: 15px;
     transition: opacity 0.4s ease;
+    
+    /* Make it match the width of all cards */
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center;
+    text-align: center;
   }
   
+  .detailsCard h2 {
+    margin-bottom: 8px; /* Space between the title and paragraph */
+  }
+  
+  .detailsCard p {
+    margin-top: 0;
+  }
