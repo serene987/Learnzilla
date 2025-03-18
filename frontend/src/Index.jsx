@@ -10,13 +10,13 @@ export default function Index(){
 
     return(
         <>
-        {/* Pass darkMode and toggleDarkMode as props */}
-        <Navbar/>
-        <Hero/>
-        <Achievements/>
-        <Offers/>
-        <Testimonial/>
-        <Footer/>
+            {/* Pass darkMode and toggleDarkMode as props */}
+            <Navbar/>
+            <Hero/>
+            <Achievements/>
+            <Offers/>
+            <Testimonial/>
+            <Footer/>
         </>
     );
 }
