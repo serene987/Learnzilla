@@ -1,6 +1,7 @@
 /* Hero container */
 .hero {
   position: relative;
+  margin-top: 5px; /*makes the slider come after the navbar*/
   width: 100%;
   height: 500px; /* Adjust height as needed */
   overflow: hidden; /* Hide overflow to prevent image flickering */
@@ -9,10 +10,13 @@
 /* Background image with framer-motion animation */
 .heroBackground {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background-size: cover; /* Ensure background image covers the entire area */
   background-position: center;
+  z-index: -1;
 }
 
 /* Hero content (headings and buttons) */
