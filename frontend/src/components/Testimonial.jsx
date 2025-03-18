@@ -1,32 +1,36 @@
 import testimonialStyle from './styling/Testimonial.module.css'
+import { FaUserCircle } from 'react-icons/fa';
 
 import {TestimonData} from './TestimonData.jsx';
 
 function Testimonial() {
- 
   return (
     <section className={testimonialStyle.testimonials}>
-      <div className={testimonialStyle.testimonialContainer}>
-        <h2 className={testimonialStyle.title}>What Our Learners Say</h2>
+      {/* Title */}
+      <h2 className={testimonialStyle.title}>What Our Users Say</h2>
+
+      {/* Inspiring message */}
+      <p className={testimonialStyle.inspiration}>
+        Empowering teachers and students to achieve more together.
+      </p>
+
+      {/* Testimonials container */}
+      <div className={testimonialStyle.testimonialsContainer}>
+        {TestimonData.map((testimonial) => (
+          <div key={testimonial.id} className={testimonialStyle.card}>
+            {/* Profile icon */}
+            <FaUserCircle className={testimonialStyle.profileIcon} />
+
+            {/* Name */}
+            <h3 className={testimonialStyle.name}>{testimonial.name}</h3>
+
+            {/* Testimonial */}
+            <p className={testimonialStyle.text}>{testimonial.text}</p>
+          </div>
+        ))}
       </div>
-      <div className={testimonialStyle.testimonialContainer}>
-        <p className={testimonialStyle.subtitle}>
-          Hear from students who have streamlined their learning with us.
-        </p>
-      </div>
-        <div className={testimonialStyle.testimonialGrid}>
-          {TestimonData.map((TestimonData) => (
-            <div key={TestimonData.id} className={testimonialStyle.testimonialCard}>
-              <img src={TestimonData.image} alt={TestimonData.name} className={testimonialStyle.avatar} />
-              <p className={testimonialStyle.quote}>“{TestimonData.quote}”</p>
-              <div className={testimonialStyle.author}>
-                <span className={testimonialStyle.name}>{TestimonData.name}</span>
-                <span className={testimonialStyle.role}>{TestimonData.role}</span>
-              </div>
-            </div>
-          ))}
-        </div>
     </section>
   );
 }
-  export default Testimonial;
+
+export default Testimonial;
