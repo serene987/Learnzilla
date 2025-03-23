@@ -4,7 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import Index from './Index.jsx';
 import SignIn from './components/SignIn.jsx';
 import Register from './components/Register.jsx';
-import TeacherDash from './components/TeacherDash.jsx';
+import TeacherDash from './TeacherDash.jsx';
 import './styles/global.css';
 
 
