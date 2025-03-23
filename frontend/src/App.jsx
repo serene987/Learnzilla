@@ -1,4 +1,4 @@
-// import { Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 // import Index from './Index.jsx';
 // import SignIn from './components/SignIn.jsx';
@@ -14,13 +14,15 @@ function App() {
 
   return (
     <>
-      {/* <Routes>
-        <Route
+      <Routes>
+        {/* <Route
           path='/'
           element={<Index/>} />
         <Route path='/signin' element={<SignIn />} />
-        <Route path='/register' element={<Register />} />
-      </Routes> */}
+        <Route path='/register' element={<Register />} /> */}
+
+        <Route path='/attendance' />
+      </Routes>
       
       <TeacherDash/>
     </>
