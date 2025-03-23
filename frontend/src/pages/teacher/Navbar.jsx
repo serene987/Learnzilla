@@ -30,12 +30,7 @@ const Navbar = () => {
       {/* Sidebar */}
       <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
         <ul className="nav-menu-items">
-          {/* Close Button */}
-          <li className="navbar-toggle">
-            <button className="close-button" onClick={closeSidebar}>
-              <AiOutlineClose />
-            </button>
-          </li>
+          <br />
           {SData.map((item, index) => (
             <li key={index} className={item.cName} onClick={(e) => e.stopPropagation()}>
               <Link to={item.path}>
