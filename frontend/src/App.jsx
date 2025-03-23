@@ -4,7 +4,10 @@ import { Routes, Route } from 'react-router-dom';
 import Index from './Index.jsx';
 import SignIn from './components/SignIn.jsx';
 import Register from './components/Register.jsx';
-import TeacherDash from './TeacherDash.jsx';
+
+// importing all styles here
+import './index.css';
+
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);

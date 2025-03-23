@@ -1,50 +1,45 @@
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-   /* Primary Colors */
-   --color-primary: #1f2937; /* Dark Blue */
-   --transparent: #314562bc; 
-   
-   /* Secondary and Accent Colors */
-   --color-accent: #1e40af; /* Deep Blue */
-   --color-secondary: #2563eb; /* Steel Blue */
-   
-   /* Background and Text Colors */
-   --color-background: #e5e7eb; /* Slightly darker gray */
-   --color-background-dark: #161e2a;
-   --color-text-primary: #ffffff; /* White */
-   --color-text-secondary: #94a3b8; /* Darker Slate Gray */
-   --color-text-secondary-dark: #66778e; /* Darker Slate Gray */
-   
-   /* State Colors */
-   --color-success: #059669; /* Emerald Green */
-   --color-warning: #f4a928; /* Amber */
-   --color-error: #dc2626; /* Crimson Red */
+  /* Primary Colors */
+  --color-primary: #1f2937; /* Dark Blue */
+  --transparent: #314562bc; 
+  
+  /* Secondary and Accent Colors */
+  --color-accent: #1e40af; /* Deep Blue */
+  --color-secondary: #2563eb; /* Steel Blue */
+  
+  /* Background and Text Colors */
+  --color-background: #e5e7eb; /* Slightly darker gray */
+  --color-background-dark: #161e2a;
+  --color-text-primary: #ffffff; /* White */
+  --color-text-secondary: #94a3b8; /* Darker Slate Gray */
+  --color-text-secondary-dark: #66778e; /* Darker Slate Gray */
+  
+  /* State Colors */
+  --color-success: #059669; /* Emerald Green */
+  --color-warning: #f4a928; /* Amber */
+  --color-error: #dc2626; /* Crimson Red */
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
   font-family: 'Arial', sans-serif;
-  background-color: var(--color-background);
-  margin: 0;
-  padding: 0;
+  background-color: #1e1b1b;
+  
 }
 
 a {
   text-decoration: none;
-  font-weight: 500;
-  color: var(--color-accent);
-}
-
-a:hover {
-  color: var(--color-secondary);
+  color: inherit;
 }
 
 button {
@@ -53,20 +48,6 @@ button {
   outline: none;
 }
 
-button:hover {
-  border-color: #646cff;
-}
-
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-} 
-
 ul, ol {
   list-style: none;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
 }
