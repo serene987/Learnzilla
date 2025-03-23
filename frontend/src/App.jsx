@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import Index from './Index.jsx';
 import SignIn from './components/SignIn.jsx';
 import Register from './components/Register.jsx';
+import TeacherDash from './components/TeacherDash.jsx';
 import './styles/global.css';
 
 
@@ -17,14 +18,15 @@ function App() {
 
   return (
     <>
-      <Routes>
+      {/* <Routes>
         <Route
           path='/'
-          element={<Index darkMode={darkMode} toggleDarkMode={toggleDarkMode} />}
-        />
+          element={<Index/>} />
         <Route path='/signin' element={<SignIn />} />
         <Route path='/register' element={<Register />} />
-      </Routes>
+      </Routes> */}
+      
+      <TeacherDash/>
     </>
   );
 }
