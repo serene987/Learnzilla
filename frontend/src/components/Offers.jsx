@@ -21,7 +21,7 @@ function Offers() {
       <section className={OfferStyle.offersSection}>
         {/* Left Side - SVG */}
         <div className={OfferStyle.leftSide}>
-          <img src="/public/images/offer4.png" alt="background" />
+          <img src="/images/offer4.png" alt="background" />
         </div>
   
         {/* Right Side - Cards and Details */}
