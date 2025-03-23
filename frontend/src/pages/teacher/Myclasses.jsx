@@ -20,7 +20,6 @@ function Myclasses() {
 
     return (
     <div className="my-classes-container">
-      <h1>My Classes</h1>
       <div className="search-sort">
         <input
           type="text"

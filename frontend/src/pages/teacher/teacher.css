@@ -148,6 +148,7 @@
 /* Search Bar */
 .class-search, .class-sort {
   width: 220px;
+  height: 100px;
   padding: 10px;
   font-size: 14px;
   border: 2px solid var(--color-secondary);
