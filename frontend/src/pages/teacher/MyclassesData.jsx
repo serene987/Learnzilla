@@ -1,4 +1,4 @@
-const classesData = [
+export const classesData = [
     { 
         id: 1, name: "Data Structures", 
         code: "CS301", 

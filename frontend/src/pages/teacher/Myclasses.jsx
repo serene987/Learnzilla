@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./teacher.css";
+import {classesData} from './MyclassesData.jsx'
 
 function Myclasses() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -34,7 +35,7 @@ function Myclasses() {
         </select>
       </div>
       <div className="classes-grid">
-        {filteredClasses.map((cls) => (
+        {classesData.map((cls) => (
           <div key={cls.id} className="class-card">
             <h2>📘 {cls.name}</h2>
             <p>🏷️ Code: {cls.code}</p>

@@ -7,7 +7,7 @@ import TeacherDash from './TeacherDash';
 import Attendance from './pages/teacher/Attendace.jsx';
 import Myclasses from './pages/teacher/Myclasses.jsx';
 import Mystudents from './pages/teacher/Mystudents.jsx';
-
+import Home from './pages/teacher/Home.jsx';
 import './index.css';
 
 
@@ -26,6 +26,7 @@ function App() {
         <Route path='/markattendance' element = {<Attendance/>}/>
         <Route path='/mystudents' element = {<Mystudents/>} />
         <Route path='/myclasses' element = {<Myclasses/>} />
+        <Route path='/home' element = {<Home/>} />
       </Routes>
       
       <TeacherDash/>
