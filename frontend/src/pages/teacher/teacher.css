@@ -1,0 +1,123 @@
+/* Navbar Styles */
+.navbar {
+  background-color: var(--color-primary);
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.menu-button {
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: var(--color-text-primary);
+  cursor: pointer;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--color-text-primary);
+  flex: 1;
+  text-align: center;
+}
+
+.nav-button {
+  background: var(--color-secondary);
+  color: var(--color-text-primary);
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Sidebar Container */
+.nav-menu {
+  background-color: var(--color-primary);
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  top: 30px;
+  left: -100%;
+  transition: 350ms;
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+}
+
+/* Active Sidebar */
+.nav-menu.active {
+  left: 0;
+  transition: 350ms;
+}
+
+/* Show close button when sidebar is active */
+.nav-menu.active .navbar-toggle {
+  display: flex;
+}
+
+/* Sidebar Items */
+.nav-menu-items {
+  padding: 20px;
+  margin: 10px;
+}
+
+/* Close Button Container */
+.navbar-toggle {
+  display: none;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+/* Sidebar Links */
+.nav-menu-items li {
+  list-style: none;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  transition: background 0.3s ease-in-out;
+}
+
+.nav-menu-items li a {
+  text-decoration: none;
+  color: var(--color-text-primary);
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-size: 19px;
+}
+.nav-menu-items li a span {
+  margin-left: 12px; /* Increase spacing */
+}
+
+/* Sidebar Item Hover */
+.nav-menu-items li:hover {
+  background-color: var(--color-secondary);
+}
+
+/* Icons */
+.menu-bars {
+  font-size: 24px;
+  color: var(--color-text-primary);
+  cursor: pointer;
+}
+
+/* Close Button */
+.navbar-toggle .menu-bars {
+  font-size: 28px;
+  padding: 5px;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  .nav-menu {
+    width: 200px;
+  }
+}
