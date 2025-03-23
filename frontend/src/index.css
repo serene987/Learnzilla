@@ -5,16 +5,16 @@
   font-weight: 400;
 
   /* Primary Colors */
-  --color-primary: #1f2937; /* Dark Blue */
-  --transparent: #314562bc; 
+  --color-primary: #253245; /* Dark Blue */
+  --transparent: #334a6cbc; 
   
   /* Secondary and Accent Colors */
-  --color-accent: #1e40af; /* Deep Blue */
-  --color-secondary: #2563eb; /* Steel Blue */
+  --color-accent: #1f398e; /* Deep Blue */
+  --color-secondary: #1557e5; /* Steel Blue */
   
   /* Background and Text Colors */
-  --color-background: #e5e7eb; /* Slightly darker gray */
-  --color-background-dark: #161e2a;
+  --color-background: #222121; /* Slightly darker gray */
+  --color-background-dark: #161e2a; /*dark greyish blue*/
   --color-text-primary: #ffffff; /* White */
   --color-text-secondary: #94a3b8; /* Darker Slate Gray */
   --color-text-secondary-dark: #66778e; /* Darker Slate Gray */
@@ -33,7 +33,7 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #1e1b1b;
+  background-color: var(--color-background);
   
 }
 

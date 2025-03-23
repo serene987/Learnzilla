@@ -24,4 +24,11 @@ export const classesData = [
         students: 42, 
         schedule: "Fri | 11:00 AM" 
     },
+    { 
+        id: 5, 
+        name: "Web Development Framework", 
+        code: "CS304", 
+        students: 42, 
+        schedule: "Fri | 11:00 AM" 
+    },
   ];
