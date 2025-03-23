@@ -4,7 +4,9 @@ import { Routes, Route } from 'react-router-dom';
 import Index from './Index.jsx';
 import SignIn from './components/SignIn.jsx';
 import Register from './components/Register.jsx';
-import './styles/global.css';
+
+// importing all styles here
+import './index.css';
 
 
 function App() {
