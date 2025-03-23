@@ -3,9 +3,9 @@ import * as AiIcons from 'react-icons/ai';
 
 import  { useState } from 'react';
 import { Link, } from 'react-router-dom';
-import { SData } from './SidebarData.jsx';
+import { SData } from './SData.jsx';
 import { IconContext } from 'react-icons';
-import './Sidenavbar.css';
+import './Sidebar.css'
 
 function Sidebar() {
   const [sidebar, setSidebar] = useState(false);

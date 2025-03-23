@@ -5,7 +5,7 @@ import  { useState } from 'react';
 import { Link, } from 'react-router-dom';
 import { SidebarData } from './SidebarData.jsx';
 import { IconContext } from 'react-icons';
-import './Sidenavbar.css';
+import '../components/styling/Sidenavbar.css'
 
 function SideNavbar() {
   const [sidebar, setSidebar] = useState(false);

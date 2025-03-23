@@ -1,5 +1,5 @@
-import Navbar from "../pages/teacher/Navbar";
-import Sidebar from "../pages/teacher/Sidebar";
+import Navbar from "../src/pages/teacher/Navbar.jsx";
+import Sidebar from "../src/pages/teacher/Sidebar.jsx";
 
 
 export default function TeacherDash(){

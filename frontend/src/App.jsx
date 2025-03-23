@@ -5,8 +5,8 @@ import Index from './Index.jsx';
 import SignIn from './components/SignIn.jsx';
 import Register from './components/Register.jsx';
 import TeacherDash from './TeacherDash.jsx';
-import './styles/global.css';
 
+import './Index.css'
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -18,13 +18,13 @@ function App() {
 
   return (
     <>
-      {/* <Routes>
+      <Routes>
         <Route
           path='/'
           element={<Index/>} />
         <Route path='/signin' element={<SignIn />} />
         <Route path='/register' element={<Register />} />
-      </Routes> */}
+      </Routes>
       
       <TeacherDash/>
     </>
