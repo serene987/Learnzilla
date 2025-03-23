@@ -1,13 +1,12 @@
-import Navbar from './pages/teacher/Navbar.jsx'
+import Navbar from './pages/teacher/Navbar.jsx';
+import Footer from './pages/teacher/Footer.jsx';
 
 export default function TeacherDash(){
 
     return(
         <>
             <Navbar/>
-            <div className='Navbar'>
-                <h1>Teacher Dashboard</h1>
-            </div>
+            <Footer/>
         </>
     );
 }

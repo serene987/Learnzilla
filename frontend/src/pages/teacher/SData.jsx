@@ -16,7 +16,7 @@ export const SData = [
   },
   {
     title: 'Mark Attendance',
-    path: '/attendance',
+    path: '/markattendance',
     icon: <FaIcons.FaEnvelopeOpenText />,
 
   },
@@ -26,10 +26,4 @@ export const SData = [
     icon: <PiIcons.PiStudentBold/>,
 
   },
-  {
-    title: 'Support',
-    path: '/support',
-    icon: <IoIcons.IoMdHelpCircle />,
-
-  }
 ];
