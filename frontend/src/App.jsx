@@ -23,10 +23,9 @@ function App() {
         <Route path='/signin' element={<SignIn />} />
         <Route path='/register' element={<Register />} /> */}
 
-        <Route path='/markattendance' />
-        <Route path='/mystudents' />
-        <Route path='/myclasses' />
-        <Route path='/support' />
+        <Route path='/markattendance' element = {<Attendance/>}/>
+        <Route path='/mystudents' element = {<Mystudents/>} />
+        <Route path='/myclasses' element = {<Myclasses/>} />
       </Routes>
       
       <TeacherDash/>
