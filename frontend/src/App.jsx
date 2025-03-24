@@ -1,11 +1,11 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 import Index from './Index.jsx';
 import SignIn from './components/SignIn.jsx';
 import Register from './components/Register.jsx';
+import Home from './pages/student/Home.jsx'; // ✅ Import Home component
 import './styles/global.css';
-
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -19,11 +19,12 @@ function App() {
     <>
       <Routes>
         <Route
-          path='/'
+          path="/"
           element={<Index darkMode={darkMode} toggleDarkMode={toggleDarkMode} />}
         />
-        <Route path='/signin' element={<SignIn />} />
-        <Route path='/register' element={<Register />} />
+        <Route path="/signin" element={<SignIn />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/student/home" element={<Home />} /> {/* ✅ Added route */}
       </Routes>
     </>
   );
