@@ -1,18 +1,23 @@
+import Navbar from "./Navbar"; // Import your existing Navbar component
 
 function Teacherdashboard() {
-    return (
-      <div className='Home'
+  return (
+    <div>
+      <Navbar /> 
+      <div
+        className="Home"
         style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "100vh",
-        textAlign: "center"
-      }}
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "100vh",
+          textAlign: "center",
+        }}
       >
-        <h1 >Home</h1>
+        <h1>Home</h1>
       </div>
-    );
-  }
-  
-  export default Teacherdashboard;
+    </div>
+  );
+}
+
+export default Teacherdashboard;
