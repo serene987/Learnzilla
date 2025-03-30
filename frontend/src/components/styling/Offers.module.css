@@ -1,86 +1,164 @@
+/* Offers Section */
 .offersSection {
-    display: flex;
-    width: 100%;
-    height: 99vh;
-    background-image: url('/images/background.jpg');
-    background-size: cover;
-    background-position: center;
-    padding: 40px;
-    background-color: var(--color-primary);
-  }
-  
-  .leftSide {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .leftSide img {
-    width: 80%;
-    max-width: 500px;
-  }
-  
-  .rightSide {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-  
-  .cardsContainer {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    transition: transform 0.3s ease;
-  }
-  
-  .card {
-    background-color: var(--color-secondary);
-    color: var(--color-text-primary);
-    padding: 35px;
-    border-radius: 12px;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 200px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.2s ease;
-  }
-  
-  .card:hover {
-    background-color: var(--color-accent);
-  }
-  
-  .activeCard {
-    background-color: var(--color-success);
-  }
-  .detailsCard {
+  display: flex;
+  flex-wrap: wrap; /* Allow stacking on smaller screens */
+  width: 100%;
+  height: auto;
+  min-height: 99vh;
+  background-image: url('/images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 40px 20px;
+  background-color: var(--color-primary);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Left Side - Image */
+.leftSide {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.leftSide img {
+  width: 80%;
+  max-width: 450px;
+  height: auto;
+}
+
+/* Right Side - Cards Container */
+.rightSide {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Cards Layout */
+.cardsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  transition: transform 0.3s ease;
+  max-width: 600px;
+}
+
+.card {
+  background-color: var(--color-background-dark);
+  color: var(--color-text-primary);
+  padding: 25px;
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 180px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease;
+}
+
+.card:hover {
+  background-color: var(--color-accent);
+}
+
+.activeCard {
+  background-color: var(--color-success);
+}
+
+/* Details for desktop Card */
+.detailsCardDesktop {
+  background-color: var(--transparent);
+  color: var(--color-text-primary);
+  padding: 25px;
+  align-items: center;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 15px;
+  transition: opacity 0.4s ease;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+  /* Details for mobile and tablets Card */
+
+  .detailsCardMobile {
+    width: 90%;
+    max-width: 300px;
+    margin-top: 10px;
+    padding: 20px;
     background-color: var(--transparent);
     color: var(--color-text-primary);
-    padding: 35px;
-    align-items: center;
     border-radius: 12px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    margin-top: 15px;
+    text-align: center;
     transition: opacity 0.4s ease;
-    
-    /* Make it match the width of all cards */
-    width: 100%;
+  }
+
+  /* Move Image to Top */
+  .leftSide {
+    order: -1;
     display: flex;
-    flex-direction: column; /* Stack items vertically */
     justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .leftSide img {
+    width: 70%;
+    max-width: 300px;
+  }
+
+  /* Cards Container */
+  .cardsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* Ensure All Cards Have the Same Width & Height */
+  .card {
+    width: 90%;
+    max-width: 300px;
+    min-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Offers Section */
+  .offersSection {
+    flex-direction: column;
+    align-items: center;
     text-align: center;
   }
-  
-  .detailsCard h2 {
-    margin-bottom: 8px; /* Space between the title and paragraph */
+}
+
+@media (max-width: 480px) {
+  .leftSide img {
+    width: 80%;
+    max-width: 250px;
   }
-  
-  .detailsCard p {
-    margin-top: 0;
+
+  .card {
+    width: 90%;
+    max-width: 280px;
   }
+
+  .detailsCardMobile {
+    width: 100%; /* Full width inside container */
+    max-width: 280px; /* Matches card width */
+  }
+}
+
