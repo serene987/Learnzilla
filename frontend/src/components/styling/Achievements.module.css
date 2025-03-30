@@ -1,49 +1,84 @@
 .achievements {
-    padding: 60px 20px;
-    background-color: var(--color-background);
-    text-align: center;
-  }
-  
+  padding: 60px 20px;
+  background-color: var(--color-background);
+  text-align: center;
+}
+
+/* Section Title */
+.title {
+  font-size: 2rem;
+  color: var(--color-primary);
+  margin-bottom: 30px;
+}
+
+/* Card Container */
+.cardContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Individual Cards */
+.card {
+  background-color: var(--color-text-primary);
+  color: var(--color-primary);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 180px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Card Icon */
+.icon {
+  margin-bottom: 10px;
+}
+
+/* Number in Card */
+.number {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: var(--color-accent); /* Changed for better contrast */
+}
+
+/* Description */
+.description {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+}
+
+/* 🔹 Responsive Design */
+
+/* Tablet View (Medium screens) */
+@media (max-width: 1024px) {
   .title {
-    font-size: 2rem;
-    color: var(--color-primary);
-    margin-bottom: 30px;
-  }
-  
-  .cardContainer {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-  
-  .card {
-    background-color: var(--color-text-primary);
-    color: var(--color-primary);
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 180px;
-    text-align: center;
-    transition: transform 0.3s ease;
-  }
-  
-  .card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .icon {
-    margin-bottom: 10px;
-  }
-  
-  .number {
     font-size: 1.75rem;
-    font-weight: bold;
-    color: var(--color-secondary);
   }
-  
-  .description {
-    font-size: 1rem;
-    color: var(--color-text-secondary);
+  .card {
+    width: 220px; /* Slightly larger for tablets */
+    padding: 24px;
   }
-  
+}
+
+/* Mobile View (Small screens) */
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.5rem;
+  }
+  .cardContainer {
+    flex-direction: column; /* Stack cards in one column */
+    align-items: center;
+  }
+  .card {
+    width: 90%; /* Use more screen space */
+    max-width: 300px;
+  }
+}

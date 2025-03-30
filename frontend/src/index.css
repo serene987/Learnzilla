@@ -10,14 +10,12 @@
 
 /* Secondary and Accent Colors */
   --color-accent: #2c9841; /* Deep Olive Green */
-  /* --color-secondary: #a7c957;  */
-  /* Mint Green */
 
 /* Background and Text Colors */
   --color-background: #dee0dd; /* Off-White */
-  --color-background-dark: #2d6a4f; /* Dark Green */
-  --color-text-primary: #000000; /* Forest Green */
-  --color-text-secondary: #ffffff; /* Dark Green */
+  --color-background-dark: #2d6a4f; 
+  --color-text-primary: #000000; 
+  --color-text-secondary: #ffffff; 
 
 /* State Colors */
   --color-success: #0ca320; /* Emerald Green */
