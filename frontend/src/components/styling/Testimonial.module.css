@@ -1,5 +1,5 @@
 .testimonials {
-  height: 100vh;
+  min-height: 100vh;
   background-color: var(--color-background);
   color: var(--color-text-secondary);
   display: flex;
@@ -7,6 +7,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 50px 20px;
 }
 
 .title {
@@ -21,29 +22,26 @@
   color: var(--color-primary);
 }
 
-/* Wrapper to control width and alignment */
+/* Wrapper to ensure responsiveness */
 .scrollWrapper {
   overflow: hidden;
-  width: 80%; /* Match the width of the offers section */
+  width: 80%;
+  max-width: 1200px;
   display: flex;
   justify-content: center;
 }
 
+/* Container for Testimonials */
 .testimonialsContainer {
   display: flex;
+  flex-wrap: wrap; /* Wraps to new line on smaller screens */
   gap: 20px;
-  padding-bottom: 10px;
-  scroll-snap-type: x mandatory;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
-/* Hide default scrollbar */
-.testimonialsContainer::-webkit-scrollbar {
-  display: none;
-}
-
-/* Card Styling */
+/* Individual Testimonial Card */
 .card {
   background-color: var(--color-primary);
   color: var(--color-text-primary);
@@ -51,9 +49,9 @@
   border-radius: 12px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   width: 320px;
-  flex-shrink: 0;
-  scroll-snap-align: center;
+  max-width: 90%;
   transition: transform 0.3s ease;
+  text-align: center;
 }
 
 .card:hover {
@@ -79,4 +77,118 @@
   font-size: 1rem;
   color: var(--color-text-secondary-dark);
   line-height: 1.4;
+}
+
+/* ----------- Responsive Adjustments ----------- */
+
+@media (max-width: 1024px) {
+  .testimonials {
+    min-height: auto;
+    padding: 40px 20px;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .inspiration {
+    font-size: 1.1rem;
+  }
+
+  .scrollWrapper {
+    width: 90%;
+  }
+
+  .testimonialsContainer {
+    gap: 15px;
+  }
+
+  .card {
+    width: 280px;
+    padding: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials {
+    padding: 30px 15px;
+  }
+
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .inspiration {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .scrollWrapper {
+    width: 95%;
+  }
+
+  .testimonialsContainer {
+    flex-direction: column; /* Stack testimonials vertically */
+    align-items: center;
+    gap: 16px;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 280px;
+    padding: 16px;
+  }
+
+  .profileIcon {
+    font-size: 40px;
+  }
+
+  .name {
+    font-size: 1rem;
+  }
+
+  .text {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonials {
+    padding: 20px 10px;
+  }
+
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .inspiration {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+  }
+
+  .scrollWrapper {
+    width: 100%;
+  }
+
+  .testimonialsContainer {
+    gap: 12px;
+  }
+
+  .card {
+    width: 95%;
+    max-width: 260px;
+    padding: 14px;
+  }
+
+  .profileIcon {
+    font-size: 36px;
+  }
+
+  .name {
+    font-size: 0.9rem;
+  }
+
+  .text {
+    font-size: 0.85rem;
+  }
 }
