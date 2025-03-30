@@ -2,7 +2,7 @@ import { FaAward, FaUniversity, FaStar } from 'react-icons/fa';
 
 export const achievementsData = [
   {
-    icon: <FaAward size={40} color="var(--color-background)" />,
+    icon: <FaAward size={40} color="var(--color-accent)" />,
     number: '50+',
     description: 'Awards Won',
   },
@@ -12,7 +12,7 @@ export const achievementsData = [
     description: 'Colleges Use It',
   },
   {
-    icon: <FaStar size={40} color="var(--color-background)" />,
+    icon: <FaStar size={40} color="var(--color-warning)" />,
     number: '95%',
     description: 'User Satisfaction',
   },
