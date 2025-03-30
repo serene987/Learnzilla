@@ -10,19 +10,13 @@ import './index.css';
 
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
-
-  const toggleDarkMode = () => {
-    setDarkMode((prevMode) => !prevMode);
-    document.body.classList.toggle('dark-mode', !darkMode);
-  };
 
   return (
     <>
       <Routes>
         <Route
           path='/'
-          element={<Index darkMode={darkMode} toggleDarkMode={toggleDarkMode} />}
+          element={<Index />}
         />
         <Route path='/signin' element={<SignIn />} />
         <Route path='/register' element={<Register />} />
