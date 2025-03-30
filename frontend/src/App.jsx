@@ -17,22 +17,11 @@ import Support from './pages/student/Support.jsx';
 import './index.css';
 
 function App() {
-<<<<<<< HEAD
-=======
-
->>>>>>> 6bd0e99ab92d019a0acc438ac03b30f33fbd0636
 
   return (
     <>
       <Routes>
-<<<<<<< HEAD
-        <Route
-          path='/'
-          element={<Index />}
-        />
-=======
         <Route path='/' element={<Index/>} />
->>>>>>> 6bd0e99ab92d019a0acc438ac03b30f33fbd0636
         <Route path='/signin' element={<SignIn />} />
       </Routes>
 
