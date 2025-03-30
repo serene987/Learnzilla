@@ -5,24 +5,25 @@
   font-weight: 400;
 
   /* Primary Colors */
-  --color-primary: #253245; /* Dark Blue */
-  --transparent: #334a6cbc; 
-  
-  /* Secondary and Accent Colors */
-  --color-accent: #1f398e; /* Deep Blue */
-  --color-secondary: #1557e5; /* Steel Blue */
-  
-  /* Background and Text Colors */
-  --color-background: #222121; /* Slightly darker gray */
-  --color-background-dark: #161e2a; /*dark greyish blue*/
-  --color-text-primary: #ffffff; /* White */
-  --color-text-secondary: #94a3b8; /* Darker Slate Gray */
-  --color-text-secondary-dark: #66778e; /* Darker Slate Gray */
-  
-  /* State Colors */
-  --color-success: #059669; /* Emerald Green */
-  --color-warning: #f4a928; /* Amber */
-  --color-error: #dc2626; /* Crimson Red */
+  --color-primary: #1b4332; /* Forest Green */
+  --transparent: #386641bc; /* Deep Olive Green with transparency */
+
+/* Secondary and Accent Colors */
+  --color-accent: #386641; /* Deep Olive Green */
+  --color-secondary: #a7c957; /* Mint Green */
+
+/* Background and Text Colors */
+  --color-background: #f5f5f5; /* Off-White */
+  --color-background-dark: #2d6a4f; /* Dark Green */
+  --color-text-primary: #1b4332; /* Forest Green */
+  --color-text-secondary: #2d6a4f; /* Dark Green */
+  --color-text-secondary-dark: #386641; /* Deep Olive Green */
+
+/* State Colors */
+  --color-success: #2d6a4f; /* Emerald Green */
+  --color-warning: #eab308; /* Golden Yellow */
+  --color-error: #b91c1c; /* Rust Red */
+
 }
 
 * {
