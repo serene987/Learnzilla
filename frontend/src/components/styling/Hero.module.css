@@ -1,7 +1,7 @@
 /* Hero container */
 .hero {
   position: relative;
-  margin-top: 5px; /*makes the slider come after the navbar*/
+  margin-top: 5px; /* Makes the slider come after the navbar */
   width: 100%;
   height: 95vh; /* Adjust height as needed */
   overflow: hidden; /* Hide overflow to prevent image flickering */
@@ -20,6 +20,17 @@
   z-index: -1;
 }
 
+/* Semi-transparent overlay to enhance text readability */
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+  z-index: 0; /* Sits between the background and the content */
+}
+
 /* Hero content (headings and buttons) */
 .heroContent {
   position: absolute;
@@ -27,7 +38,8 @@
   left: 50%; /* Center horizontally */
   transform: translate(-50%, -50%); /* Adjust exact center position */
   text-align: center;
-  color: var(--color-text-primary);
+  color: white;
+  z-index: 1; /* Ensure text is above the overlay */
 }
 
 /* Main heading */
@@ -41,44 +53,5 @@ h1 {
 p {
   font-size: 1.25rem;
   margin-bottom: 1.5rem;
-  color: var(--color-text-secondary);
-}
-
-/* Container for buttons */
-.ctaButtons {
-  display: flex;
-  gap: 1rem; /* Space between buttons */
-  justify-content: center;
-}
-
-/* Primary button style */
-.primaryBtn, .secondaryBtn {
-  padding: 0.75rem 2rem;
-  border: none;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.3s ease;
-}
-
-/* Primary button color based on theme */
-.primaryBtn {
-  background-color: var(--color-secondary);
-  color: var(--color-text-primary);
-}
-
-.primaryBtn:hover {
-  background-color: var(--color-accent);
-}
-
-/* Secondary button with outline */
-.secondaryBtn {
-  background-color: transparent;
-  color: var(--color-secondary);
-  border: 2px solid var(--color-secondary);
-}
-
-.secondaryBtn:hover {
-  background-color: var(--color-secondary);
-  color: var(--color-text-primary);
+  color: #f0f0f0; /* Slightly lighter text */
 }
