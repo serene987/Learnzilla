@@ -4,9 +4,8 @@ import heroStyles from './styling/Hero.module.css';
 
 // Array of slide images
 const slides = [
-  '/public/images/bgImg1.jpeg',
-  '/public/images/bgImg2.jpeg',
-  '/public/images/bgImg3.jpeg',
+  '/images/c1.jpeg',
+  '/images/bgImg1.jpeg',
 ];
 
 function Hero() {
@@ -30,37 +29,34 @@ function Hero() {
 
   return (
     <section 
-      className={heroStyles.hero}
-      onMouseEnter={() => setIsPaused(true)} // Pause slideshow on hover
-      onMouseLeave={() => setIsPaused(false)} // Resume slideshow when mouse leaves
-    >
-      {/* AnimatePresence handles mounting and unmounting animations */}
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={currentSlide} // Key ensures each slide is treated as a unique element
-          className={heroStyles.heroBackground}
-          initial={{ opacity: 0, x: 50 }} // Initial state when slide appears
-          animate={{ opacity: 1, x: 0 }} // Animate to this state
-          exit={{ opacity: 0, x: -50 }} // Exit animation
-          transition={{ duration: 0.7, ease: 'easeInOut' }} // Smooth transition effect
-          style={{ backgroundImage: `url(${slides[currentSlide]})` }} // Load current slide as background
-        />
-      </AnimatePresence>
+    className={heroStyles.hero}
+    onMouseEnter={() => setIsPaused(true)} // Pause slideshow on hover
+    onMouseLeave={() => setIsPaused(false)} // Resume slideshow when mouse leaves
+  >
+    {/* Background Slide */}
+    <AnimatePresence mode="wait">
+      <motion.div
+        key={currentSlide}
+        className={heroStyles.heroBackground}
+        initial={{ opacity: 0, x: 50 }}
+        animate={{ opacity: 1, x: 0 }}
+        exit={{ opacity: 0, x: -50 }}
+        transition={{ duration: 0.7, ease: 'easeInOut' }}
+        style={{ backgroundImage: `url(${slides[currentSlide]})` }}
+      />
+    </AnimatePresence>
 
-      {/* Content over the slideshow */}
-      <div className={heroStyles.heroContent}>
-        <h1>Empower Your Learning Journey with Ease</h1>
-        <p>
-          Streamline your courses, track progress, and enhance learning efficiency — all in one place.
-        </p>
+    {/* Semi-transparent overlay */}
+    <div className={heroStyles.heroOverlay}></div>
 
-        {/* Call-to-action buttons */}
-        <div className={heroStyles.ctaButtons}>
-          <button className={heroStyles.primaryBtn}>Get Started</button>
-          <button className={heroStyles.secondaryBtn}>Learn More</button>
-        </div>
-      </div>
-    </section>
+    {/* Content over the slideshow */}
+    <div className={heroStyles.heroContent}>
+      <h1>Empower Your Learning Journey with Ease</h1>
+      <p>
+        Streamline your courses, track progress, and enhance learning efficiency — all in one place.
+      </p>
+    </div>
+  </section>
   );
 }
 
