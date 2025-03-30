@@ -1,28 +1,28 @@
 
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Poppins", "Avenir", Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   /* Primary Colors */
-  --color-primary: #1f2937; /* Dark Blue */
-  --transparent: #314562bc; 
-  
-  /* Secondary and Accent Colors */
-  --color-accent: #1e40af; /* Deep Blue */
-  --color-secondary: #2563eb; /* Steel Blue */
-  
-  /* Background and Text Colors */
-  --color-background: #e5e7eb; /* Slightly darker gray */
-  --color-background-dark: #161e2a;
-  --color-text-primary: #ffffff; /* White */
-  --color-text-secondary: #94a3b8; /* Darker Slate Gray */
-  --color-text-secondary-dark: #66778e; /* Darker Slate Gray */
-  
-  /* State Colors */
-  --color-success: #059669; /* Emerald Green */
-  --color-warning: #f4a928; /* Amber */
-  --color-error: #dc2626; /* Crimson Red */
+  --color-primary: #275f48; /* Forest Green */
+  --transparent: #31633be6; /* Deep Olive Green with transparency */
+
+/* Secondary and Accent Colors */
+  --color-accent: #2c9841; /* Deep Olive Green */
+  /* --color-secondary: #a7c957;  */
+  /* Mint Green */
+
+/* Background and Text Colors */
+  --color-background: #dee0dd; /* Off-White */
+  --color-background-dark: #2d6a4f; /* Dark Green */
+  --color-text-primary: #000000; /* Forest Green */
+  --color-text-secondary: #ffffff; /* Dark Green */
+
+/* State Colors */
+  --color-success: #0ca320; /* Emerald Green */
+  --color-warning: #f8c62f; /* Golden Yellow */
+  --color-error: #b91c1c; /* Rust Red */
 }
 
 * {
@@ -33,7 +33,7 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #1e1b1b;
+  background-color: var(--color-background);
   
 }
 

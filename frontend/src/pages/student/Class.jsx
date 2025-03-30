@@ -1,5 +1,5 @@
 
-function Classes() {
+function Class() {
     return (
       <div className='Classes'>
         <h1>Classes</h1>
@@ -7,4 +7,4 @@ function Classes() {
     );
   }
   
-  export default Classes;
+  export default Class;
