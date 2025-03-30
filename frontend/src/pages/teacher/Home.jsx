@@ -1,8 +1,8 @@
 
-function Mystudents() {
+function Home() {
     return (
-      <div className='Mystudents'
-      style={{
+      <div className='Home'
+        style={{
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
@@ -10,9 +10,9 @@ function Mystudents() {
         textAlign: "center"
       }}
       >
-        <h1>My students</h1>
+        <h1 >Home</h1>
       </div>
     );
   }
   
-  export default Mystudents;
+  export default Home;

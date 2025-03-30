@@ -1,32 +1,35 @@
-import { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-import Index from './Index.jsx';
-import SignIn from './components/SignIn.jsx';
-import Register from './components/Register.jsx';
-
-// importing all styles here
+// import Index from './Index.jsx';
+// import SignIn from './components/SignIn.jsx';
+// import Register from './components/Register.jsx';
+import TeacherDash from './TeacherDash';
+import Attendance from './pages/teacher/Attendace.jsx';
+import Myclasses from './pages/teacher/Myclasses.jsx';
+import Mystudents from './pages/teacher/Mystudents.jsx';
+import Home from './pages/teacher/Home.jsx';
 import './index.css';
 
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
 
-  const toggleDarkMode = () => {
-    setDarkMode((prevMode) => !prevMode);
-    document.body.classList.toggle('dark-mode', !darkMode);
-  };
 
   return (
     <>
       <Routes>
-        <Route
+        {/* <Route
           path='/'
-          element={<Index darkMode={darkMode} toggleDarkMode={toggleDarkMode} />}
-        />
+          element={<Index/>} />
         <Route path='/signin' element={<SignIn />} />
-        <Route path='/register' element={<Register />} />
+        <Route path='/register' element={<Register />} /> */}
+
+        <Route path='/markattendance' element = {<Attendance/>}/>
+        <Route path='/mystudents' element = {<Mystudents/>} />
+        <Route path='/myclasses' element = {<Myclasses/>} />
+        <Route path='/home' element = {<Home/>} />
       </Routes>
+      
+      <TeacherDash/>
     </>
   );
 }
