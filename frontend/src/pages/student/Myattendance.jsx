@@ -1,5 +1,5 @@
 
-function Attendance() {
+function Myattendance() {
     return (
       <div className='Attendance'>
         <h1>Attendance</h1>
@@ -7,4 +7,4 @@ function Attendance() {
     );
   }
   
-  export default Attendance;
+  export default Myattendance;

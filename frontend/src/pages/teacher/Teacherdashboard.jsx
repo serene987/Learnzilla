@@ -1,5 +1,5 @@
 
-function Home() {
+function Teacherdashboard() {
     return (
       <div className='Home'
         style={{
@@ -15,4 +15,4 @@ function Home() {
     );
   }
   
-  export default Home;
+  export default Teacherdashboard;
