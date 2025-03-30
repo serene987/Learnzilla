@@ -4,9 +4,8 @@ import heroStyles from './styling/Hero.module.css';
 
 // Array of slide images
 const slides = [
+  '/images/c1.jpeg',
   '/images/bgImg1.jpeg',
-  '/images/bgImg2.jpeg',
-  '/images/bgImg3.jpeg',
 ];
 
 function Hero() {
