@@ -1,125 +1,60 @@
 /* Footer */
 .footer {
-  background-color: var(--color-primary); /* Dark background for footer */
-  color: var(--color-text-primary);
-  padding: 48px 20px;
+  background-color: var(--color-primary);
+  color: var(--color-text-secondary);
+  padding: 16px 20px;
   border-top: 2px solid var(--color-accent);
-}
-
-.footerContainer {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
-  margin: 0 auto;
-  max-width: 1200px;
-  align-items: start;
-}
-
-/* Column */
-.column h3 {
-  font-size: 18px;
-  margin-bottom: 12px;
-  color: var(--color-text-primary);
-  font-weight: 600;
-}
-
-.column p,
-.column ul {
-  font-size: 16px;
-  color: var(--color-text-secondary);
-  line-height: 1.6;
-}
-
-.column ul {
-  list-style: none;
-  padding: 0;
-}
-
-.column ul li {
-  margin-bottom: 8px;
-}
-
-.column ul li a {
-  text-decoration: none;
-  color: var(--color-text-secondary);
-  transition: color 0.3s ease;
-  font-size: 14px;
-}
-
-.column ul li a:hover {
-  color: var(--color-text-primary);
-}
-
-/* Social Icons */
-.socialIcons {
-  display: flex;
-  gap: 16px;
-  margin-top: 8px;
-}
-
-.socialIcons a {
-  font-size: 22px;
-  color: var(--color-text-secondary);
-  transition: color 0.3s ease, transform 0.2s ease;
-}
-
-.socialIcons a:hover {
-  color: var(--color-text-primary);
-  transform: scale(1.1);
 }
 
 /* Bottom Bar */
 .bottomBar {
-  margin-top: 32px;
-  padding-top: 16px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  text-align: center;
-  font-size: 14px;
-  color: var(--color-text-secondary);
-}
-
-.bottomBar p {
-  margin: 0;
-  letter-spacing: 0.5px;
-}
-
-/* Authentication Links */
-.authLinks {
   display: flex;
-  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  font-size: 14px;
+  text-align: center;
 }
 
-.button {
-  background-color: var(--color-secondary);
-  color: var(--color-text-primary);
-  padding: 8px 16px;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: 500;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s;
+/* Copyright Text - Small and Centered */
+.bottomBar p {
+  font-size: 12px;
+  margin: 0 auto;
 }
 
-.button:hover {
-  background-color: var(--color-accent);
-  transform: translateY(-2px);
-}
-
-.button:disabled {
-  background-color: var(--color-background);
+/* Sign-in Link on Right */
+.signInLink {
+  text-decoration: none;
   color: var(--color-text-secondary);
-  cursor: not-allowed;
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
 
-/* Responsive Fixes */
+/* h3 styling for Sign In */
+.bottomBar h3 {
+  position: absolute;
+  right: 20px;
+  margin: 0;
+  font-size: 16px;
+}
+
+.signInLink:hover {
+  color: var(--color-text-primary);
+}
+
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-  .footerContainer {
-    grid-template-columns: 1fr;
+  .bottomBar {
+    flex-direction: column;
     text-align: center;
+    gap: 8px;
+    position: static;
   }
 
-  .socialIcons {
-    justify-content: center;
+  .bottomBar h3 {
+    position: static;
+    margin-top: 8px;
   }
 }
