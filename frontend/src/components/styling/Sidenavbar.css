@@ -1,74 +1,111 @@
+/* Side Navbar Styles */
+.nav-menu {
+  background: #1e1e2d; /* Sleek dark background */
+  width: 60px; /* Default collapsed width */
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: width 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  overflow-x: hidden;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.3);
+}
 
+.nav-menu.active {
+  width: 250px; /* Expand on click */
+}
 
-.navbar {
-    background-color: var(--primary-color);
-    height: 80px;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-  }
-  
-  .menu-bars {
-    margin-left: 30px;
-    font-size: 30px;
-    background: none;
-  }
-  
-  .nav-menu {
-    background-color:var(--primary-color);
-    width: 200px;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    left: -100%;
-    transition: 850ms;
-  }
-  
-  .nav-menu.active {
-    left: 0;
-    transition: 350ms;
-  }
-  
-  .nav-text {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    padding: 5px 0px 5px 5px;
-    list-style: none;
-    height: 50px;
-  }
-  
-  .nav-text a {
-    text-decoration: none;
-    color:var(--white-color);
-    font-size: 17px;
-    width: 95%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    padding: 0 16px;
-    border-radius: 4px;
-  }
-  
-  .nav-text a:hover {
-    background-color: var(--secondary-color);
-  }
-  
-  .nav-menu-items {
-    width: 100%;
-  }
-  
-  .navbar-toggle {
-    background-color: var(--primary-color);
-    width: 80%;
-    height: 90px;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-  }
-  
-  span {
-    margin-left: 15px;
-  }
+/* Navbar Icon Styling */
+.menu-bars {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1000;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.menu-bars:hover {
+  transform: scale(1.1);
+}
+
+/* Sidebar Menu Items */
+.nav-menu-items {
+  width: 100%;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-menu-items li {
+  padding: 15px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 15px;
+  transition: background 0.3s ease;
+}
+
+.nav-menu-items li:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Sidebar Links */
+.nav-menu-items a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px 0;
+}
+
+/* Icons */
+.nav-menu-items a svg {
+  font-size: 22px;
+}
+
+/* Hide Text When Collapsed */
+.nav-menu-items a span {
+  margin-left: 10px;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.nav-menu.active .nav-menu-items a span {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Close Icon */
+.navbar-toggle {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.navbar-toggle .menu-bars {
+  font-size: 24px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+/* Wrapper for Content */
+.main-content {
+  margin-left: 60px; /* Default when sidebar is collapsed */
+  transition: margin-left 0.3s ease-in-out;
+  padding: 20px;
+}
+
+/* When Sidebar is Open */
+.main-content.active {
+  margin-left: 250px; /* Adjust to match sidebar width */
+}
