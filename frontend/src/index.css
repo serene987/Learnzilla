@@ -1,29 +1,28 @@
 
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Poppins", "Avenir", Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   /* Primary Colors */
-  --color-primary: #1b4332; /* Forest Green */
-  --transparent: #386641bc; /* Deep Olive Green with transparency */
+  --color-primary: #275f48; /* Forest Green */
+  --transparent: #31633be6; /* Deep Olive Green with transparency */
 
 /* Secondary and Accent Colors */
-  --color-accent: #386641; /* Deep Olive Green */
-  --color-secondary: #a7c957; /* Mint Green */
+  --color-accent: #2c9841; /* Deep Olive Green */
+  /* --color-secondary: #a7c957;  */
+  /* Mint Green */
 
 /* Background and Text Colors */
-  --color-background: #f5f5f5; /* Off-White */
+  --color-background: #dee0dd; /* Off-White */
   --color-background-dark: #2d6a4f; /* Dark Green */
-  --color-text-primary: #1b4332; /* Forest Green */
-  --color-text-secondary: #2d6a4f; /* Dark Green */
-  --color-text-secondary-dark: #386641; /* Deep Olive Green */
+  --color-text-primary: #000000; /* Forest Green */
+  --color-text-secondary: #ffffff; /* Dark Green */
 
 /* State Colors */
-  --color-success: #2d6a4f; /* Emerald Green */
-  --color-warning: #eab308; /* Golden Yellow */
+  --color-success: #0ca320; /* Emerald Green */
+  --color-warning: #f8c62f; /* Golden Yellow */
   --color-error: #b91c1c; /* Rust Red */
-
 }
 
 * {
