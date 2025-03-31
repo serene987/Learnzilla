@@ -1,20 +1,10 @@
 /* Student Portal Styles */
 
 /* General Styles */
-:root {
-    --color-background-dark: #2c3e50;
-    --color-text-primary: #ffffff;
-    --color-secondary: #3498db;
-    --color-warning: #e74c3c;
-    --theme-gray-primary: #ecf0f1;
-    --theme-gray-secondary: #bdc3c7;
-    --theme-gray-accent: #95a5a6;
-  }
-  /* Student Portal Styles */
 
 /* Navbar */
 .navbar {
-    background-color: var(--color-background-dark);
+    background-color: #2c3e50; /* Dark bluish grey */
     height: 70px;
     display: flex;
     justify-content: space-between;
@@ -26,92 +16,92 @@
     left: 0;
     z-index: 1000;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
-  }
-  
-  /* Announcements */
-  /* Announcements */
+}
+
+/* Announcements */
 .announcements-container {
     max-width: 800px;
     margin: 80px auto 20px;
     padding: 20px;
-    background: var(--theme-gray-background);
-    color: var(--theme-gray-text);
+    background: #f4f6f8; /* Lighter background for better readability */
+    color: #34495e; /* Darker text for readability */
     border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  .announcements-title {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.announcements-title {
     text-align: center;
     margin-bottom: 15px;
     font-size: 24px;
-    color: var(--color-primary);
+    color: #3498db; /* Bright blue for better contrast */
     font-weight: bold;
-  }
-  
-  .announcements-list {
+}
+
+.announcements-list {
     list-style: none;
     padding: 0;
-  }
-  
-  .announcement-item {
+}
+
+.announcement-item {
     padding: 10px;
-    border-bottom: 1px solid var(--theme-gray-secondary);
+    border-bottom: 1px solid #bdc3c7;
     font-size: 16px;
     transition: background 0.3s ease-in-out;
-  }
-  
-  .announcement-item:hover {
-    background-color: var(--theme-gray-hover);
-  }
-  
-  /* Highlight new announcements */
-  .new-announcement {
-    background-color: var(--color-accent-light);
+}
+
+.announcement-item:hover {
+    background-color: #ecf0f1; /* Lighter background on hover */
+}
+
+/* Highlight new announcements */
+.new-announcement {
+    background-color: #f39c12; /* Yellow for highlights */
     font-weight: bold;
-    color: var(--color-secondary);
-  }
-  
-  .new-announcement::before {
+    color: #fff;
+}
+
+.new-announcement::before {
     content: "NEW! ";
     font-weight: bold;
-    color: var(--color-warning);
-  }
-  
-  @media (max-width: 768px) {
+    color: #e74c3c; /* Red color for new alert */
+}
+
+@media (max-width: 768px) {
     .announcements-container {
-      width: 90%;
+        width: 90%;
     }
-  
+
     .announcements-title {
-      font-size: 20px;
+        font-size: 20px;
     }
-  
+
     .announcement-item {
-      font-size: 14px;
+        font-size: 14px;
     }
-  }
-  
-  @media (max-width: 480px) {
+}
+
+@media (max-width: 480px) {
     .announcements-title {
-      font-size: 18px;
+        font-size: 18px;
     }
-  
+
     .announcement-item {
-      font-size: 12px;
+        font-size: 12px;
     }
-  }
-  
-  /* Attendance */
-  .attendance-container {
+}
+
+/* Attendance */
+.attendance-container {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background: var(--theme-gray-background);
-    color: var(--theme-gray-text);
+    background: #f4f6f8;
+    color: #34495e;
     border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  /* Attendance Table */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Attendance Table */
 .attendance-table {
     width: 100%;
     border-collapse: collapse;
@@ -119,76 +109,74 @@
     background: white;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  .attendance-table th, 
-  .attendance-table td {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.attendance-table th,
+.attendance-table td {
     padding: 12px;
     text-align: left;
-    border-bottom: 1px solid var(--color-background-dark);
-  }
-  
-  .attendance-table th {
-    background: var(--color-background-dark);
-    color: white;
-  }
-  
-  .attendance-table tr:hover {
-    background: var(--theme-gray-accent);
-  }
+    border-bottom: 1px solid #34495e;
+}
 
-  
+.attendance-table th {
+    background: #2c3e50; /* Dark bluish grey */
+    color: white;
+}
+
+.attendance-table tr:hover {
+    background: #bdc3c7; /* Light grey on hover */
+}
+
 /* Attendance Status Colors */
 .attendance-success {
-    color: green;
+    color: #2ecc71; /* Green for success */
     font-weight: bold;
-  }
-  
-  .attendance-warning {
-    color: orange;
+}
+
+.attendance-warning {
+    color: #f39c12; /* Yellow for warning */
     font-weight: bold;
-  }
-  
-  .attendance-error {
-    color: red;
+}
+
+.attendance-error {
+    color: #e74c3c; /* Red for error */
     font-weight: bold;
-  }
-  
-  
-  /* Responsive */
-  @media (max-width: 768px) {
-    .attendance-table th, 
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .attendance-table th,
     .attendance-table td {
-      padding: 10px;
-      font-size: 14px;
+        padding: 10px;
+        font-size: 14px;
     }
-  }
-  
-  @media (max-width: 480px) {
-    .attendance-table th, 
+}
+
+@media (max-width: 480px) {
+    .attendance-table th,
     .attendance-table td {
-      font-size: 12px;
-      padding: 8px;
+        font-size: 12px;
+        padding: 8px;
     }
-  }
-  
-  .attendance-container h2 {
+}
+
+.attendance-container h2 {
     text-align: center;
     margin-bottom: 15px;
-  }
-  
-  .attendance-list {
+}
+
+.attendance-list {
     list-style: none;
     padding: 0;
-  }
-  
-  .attendance-list li {
+}
+
+.attendance-list li {
     padding: 10px;
-    border-bottom: 1px solid var(--theme-gray-secondary);
-  }
-  
-  /* Assignments */
+    border-bottom: 1px solid #bdc3c7;
+}
+
+/* Assignments */
 .assignments-container {
     max-width: 900px;
     margin: 20px auto;
@@ -196,102 +184,103 @@
     background: white;
     border-radius: 8px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .assignments-title {
+}
+
+.assignments-title {
     text-align: center;
     margin-bottom: 15px;
     font-size: 24px;
-    color: var(--color-primary);
+    color: #3498db; /* Bright blue for titles */
     font-weight: bold;
-  }
-  
-  .assignments-table {
+}
+
+.assignments-table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
-  }
-  
-  .assignments-table th,
-  .assignments-table td {
+}
+
+.assignments-table th,
+.assignments-table td {
     padding: 12px 15px;
     text-align: center;
-    border-bottom: 1px solid var(--theme-gray-secondary);
-  }
-  
-  .assignments-table th {
-    background-color: var(--color-primary);
-    color: var(--color-text-primary);
+    border-bottom: 1px solid #bdc3c7;
+}
+
+.assignments-table th {
+    background-color: #3498db; /* Bright blue for headers */
+    color: #ffffff;
     font-weight: bold;
-  }
-  
-  .assignments-table td {
-    background-color: var(--theme-gray-background);
-    color: var(--theme-gray-text);
-  }
-  
-  .assignments-table .pending {
-    color: var(--color-warning);
+}
+
+.assignments-table td {
+    background-color: #f4f6f8; /* Light grey for data cells */
+    color: #34495e; /* Dark text for readability */
+}
+
+.assignments-table .pending {
+    color: #f39c12; /* Yellow for pending tasks */
     font-weight: bold;
-  }
-  
-  .assignments-table .completed {
-    color: var(--color-success);
+}
+
+.assignments-table .completed {
+    color: #2ecc71; /* Green for completed tasks */
     font-weight: bold;
-  }
-  
-  /* File Upload Input */
-  .file-upload {
+}
+
+/* File Upload Input */
+.file-upload {
     padding: 6px 12px;
-    background-color: var( --theme-gray-accent);
+    background-color: #bdc3c7; /* Grey for upload button */
     border: none;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
-  
-  .file-upload:hover {
-    background-color: var(--color-secondary);
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
+}
+
+.file-upload:hover {
+    background-color: #3498db; /* Blue on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
     .assignments-container {
-      width: 90%;
+        width: 90%;
     }
-  
+
     .assignments-title {
-      font-size: 20px;
+        font-size: 20px;
     }
-  
+
     .assignments-table th,
     .assignments-table td {
-      padding: 10px 12px;
+        padding: 10px 12px;
     }
-  }
-  
-  @media (max-width: 480px) {
+}
+
+@media (max-width: 480px) {
     .assignments-title {
-      font-size: 18px;
+        font-size: 18px;
     }
-  
+
     .assignments-table th,
     .assignments-table td {
-      padding: 8px 10px;
+        padding: 8px 10px;
     }
-  }
-  
-  /* Grades */
-  .grades-container {
+}
+
+/* Grades */
+.grades-container {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background: var(--theme-gray-background);
-    color: var(--theme-gray-text);
+    background: #f4f6f8;
+    color: #34495e;
     border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  /* Grades Table */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Grades Table */
 .grades-table {
     width: 100%;
     border-collapse: collapse;
@@ -299,64 +288,63 @@
     background: white;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  .grades-table th, 
-  .grades-table td {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.grades-table th,
+.grades-table td {
     padding: 12px;
     text-align: left;
-    border-bottom: 1px solid var(--theme-gray-secondary);
-  }
-  
-  .grades-table th {
-    background: var(--color-background-dark);
+    border-bottom: 1px solid #bdc3c7;
+}
+
+.grades-table th {
+    background: #2c3e50; /* Dark bluish grey */
     color: white;
-  }
-  
-  .grades-table tr:hover {
-    background: var(--theme-gray-accent);
-  }
-  
-  /* Responsive */
-  @media (max-width: 768px) {
-    .grades-table th, 
+}
+
+.grades-table tr:hover {
+    background: #bdc3c7; /* Light grey on hover */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .grades-table th,
     .grades-table td {
-      padding: 10px;
-      font-size: 14px;
+        padding: 10px;
+        font-size: 14px;
     }
-  }
-  
-  @media (max-width: 480px) {
-    .grades-table th, 
+}
+
+@media (max-width: 480px) {
+    .grades-table th,
     .grades-table td {
-      font-size: 12px;
-      padding: 8px;
+        font-size: 12px;
+        padding: 8px;
     }
-  }
-  
-  .grades-container h2 {
+}
+
+.grades-container h2 {
     text-align: center;
     margin-bottom: 15px;
-  }
-  
-  .grades-list {
+}
+
+.grades-list {
     list-style: none;
     padding: 0;
-  }
-  
-  .grades-list li {
+}
+
+.grades-list li {
     padding: 10px;
-    border-bottom: 1px solid var(--theme-gray-secondary);
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
+    border-bottom: 1px solid #bdc3c7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
     .assignments-container,
     .grades-container,
     .attendance-container,
     .announcements-container {
-      width: 90%;
+        width: 90%;
     }
-  }
-  
+}
