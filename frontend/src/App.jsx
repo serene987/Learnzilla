@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 import Index from './Index.jsx';
@@ -6,8 +5,7 @@ import SignIn from './components/SignIn.jsx';
 
 import Teacherdashboard from './pages/teacher/Teacherdashboard.jsx';
 import Attendance from './pages/teacher/Attendace.jsx';
-import Myclasses from './pages/teacher/Myclasses.jsx';
-import Mystudents from './pages/teacher/Mystudents.jsx';
+import ManageCourses from './pages/teacher/ManageCourses.jsx';
 import Assignments from './pages/teacher/Assignments.jsx';
 
 import Home from './pages/student/Home.jsx';
@@ -34,10 +32,8 @@ function App() {
         {/* markattendance */}
         <Route path='/markattendance' element = {<Attendance/>}/>
         <Route path='/assignments' element = {<Assignments/>}/>
-        {/* mystudents */}
-        <Route path='/mystudents' element = {<Mystudents/>} />
-
-        <Route path='/myclasses' element = {<Myclasses/>} />
+        
+        <Route path='/managecourses' element = {<ManageCourses/>} />
       </Routes>
 
       <Routes>

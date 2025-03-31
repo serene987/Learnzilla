@@ -11,13 +11,7 @@ export const SData = [
   },
   {
     title: 'My classes',
-    path: '/myclasses',
+    path: '/managecourses',
     icon: <IoIcons.IoIosPaper />,
-  },
-  {
-    title: 'My Students',
-    path: '/mystudents',
-    icon: <PiIcons.PiStudentBold/>,
-
   },
 ];
