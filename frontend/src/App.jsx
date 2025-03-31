@@ -17,33 +17,26 @@ import Support from './pages/student/Support.jsx';
 import './index.css';
 
 function App() {
-
   return (
-    <>
-      <Routes>
-        <Route path='/' element={<Index/>} />
-        {/* sign in */}
-        <Route path='/signin' element={<SignIn />} />
-      </Routes>
+    <Routes>
+      <Route path='/' element={<Index />} />
+      
+      {/* Sign In */}
+      <Route path='/signin' element={<SignIn />} />
 
-      <Routes>
-        {/* teacherdashboard */}
-        <Route path='/teacherdashboard' element = {<Teacherdashboard/>} />
-        {/* markattendance */}
-        <Route path='/markattendance' element = {<Attendance/>}/>
-        <Route path='/assignments' element = {<Assignments/>}/>
-        
-        <Route path='/managecourses' element = {<ManageCourses/>} />
-      </Routes>
+      {/* Teacher Dashboard */}
+      <Route path='/teacherdashboard' element={<Teacherdashboard />} />
+      <Route path='/markattendance/:courseId' element={<Attendance />} />
+      <Route path='/assignments/:courseId' element={<Assignments />} />
+      <Route path='/managecourses' element={<ManageCourses />} />
 
-      <Routes>
-        <Route path='/myhome' element = {<Home/>}/>
-        <Route path='/myattendance' element = {<Myattendance/>}/>
-        <Route path='/classdetails' element = {<ClassDetails/>}/>
-        <Route path='/classes' element = {<Class/>}/>
-        <Route path='/support' element = {<Support/>}/>
-      </Routes>
-    </>
+      {/* Student Dashboard */}
+      <Route path='/myhome' element={<Home />} />
+      <Route path='/myattendance' element={<Myattendance />} />
+      <Route path='/classdetails/:courseId' element={<ClassDetails />} />
+      <Route path='/classes' element={<Class />} />
+      <Route path='/support' element={<Support />} />
+    </Routes>
   );
 }
 

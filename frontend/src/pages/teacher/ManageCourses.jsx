@@ -25,8 +25,12 @@ function ManageCourses() {
               <p><strong>Students:</strong> {course.students}</p>
               <p><strong>Schedule:</strong> {course.schedule}</p>
               <div className="course-actions">
-                <button onClick={() => navigate(`/markattendance`)}>Mark Attendance</button>
-                <button onClick={() => navigate(`/class/${course.id}`)}>View Class</button>
+              <button onClick={() => navigate(`/markattendance/${course.id}`)}>
+                Mark Attendance
+              </button>
+              <button onClick={() => navigate(`/assignments/${course.id}`)}>
+                View Class
+              </button>
               </div>
             </div>
           ))}

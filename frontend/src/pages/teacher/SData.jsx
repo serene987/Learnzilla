@@ -10,7 +10,7 @@ export const SData = [
     icon: <AiIcons.AiFillHome />,
   },
   {
-    title: 'My classes',
+    title: 'My Courses',
     path: '/managecourses',
     icon: <IoIcons.IoIosPaper />,
   },
