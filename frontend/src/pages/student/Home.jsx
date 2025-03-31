@@ -25,7 +25,7 @@ const Home = () => {
       <StudentGrades/>
       <StudentAssignments/>
       <StudentAttendance/>
-      {/* <Card/> */}
+      <Card/>
     </>
   );
 };
