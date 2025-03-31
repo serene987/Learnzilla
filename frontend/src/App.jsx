@@ -23,13 +23,18 @@ function App() {
     <>
       <Routes>
         <Route path='/' element={<Index/>} />
+        {/* sign in */}
         <Route path='/signin' element={<SignIn />} />
       </Routes>
 
       <Routes>
+        {/* teacherdashboard */}
         <Route path='/teacherdashboard' element = {<Teacherdashboard/>} />
+        {/* markattendance */}
         <Route path='/markattendance' element = {<Attendance/>}/>
+        {/* mystudents */}
         <Route path='/mystudents' element = {<Mystudents/>} />
+        
         <Route path='/myclasses' element = {<Myclasses/>} />
       </Routes>
 

@@ -6,7 +6,7 @@ import * as PiIcons from "react-icons/pi";
 export const SData = [
   {
     title: 'Home',
-    path: '/home',
+    path: '/teacherdashboard',
     icon: <AiIcons.AiFillHome />,
   },
   {

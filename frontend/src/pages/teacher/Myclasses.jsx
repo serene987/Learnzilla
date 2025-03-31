@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./teacher.css";
 import {classesData} from './MyclassesData.jsx'
+import Navbar from "./Navbar"; // Import your existing Navbar component
 
 function Myclasses() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -19,36 +20,40 @@ function Myclasses() {
 
 
     return (
-    <div className="my-classes-container">
-      <div className="search-sort">
-        <input
-          type="text"
-          placeholder="Search by course name or code..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-        />
-        <select onChange={(e) => setSortBy(e.target.value)}>
-          <option value="">Sort By</option>
-          <option value="name">Course Name (A-Z)</option>
-          <option value="students">Students (High - Low)</option>
-        </select>
-      </div>
+      <>
+        <Navbar /> 
 
-      <div className="classes-grid">
-        {classesData.map((cls) => (
-          <div key={cls.id} className="class-card">
-            <h2>{cls.name}</h2>
-            <p>🏷️ Code: {cls.code}</p>
-            <p>👥 Students: {cls.students}</p>
-            <p>📅 Schedule: {cls.schedule}</p>
-            <div className="card-actions">
-              <button className="view-btn">View Class</button>
-              <button className="attendance-btn">Mark Attendance</button>
+          <div className="my-classes-container">
+            <div className="search-sort">
+              <input
+                type="text"
+                placeholder="Search by course name or code..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+              />
+              <select onChange={(e) => setSortBy(e.target.value)}>
+                <option value="">Sort By</option>
+                <option value="name">Course Name (A-Z)</option>
+                <option value="students">Students (High - Low)</option>
+              </select>
+            </div>
+
+            <div className="classes-grid">
+              {classesData.map((cls) => (
+                <div key={cls.id} className="class-card">
+                  <h2>{cls.name}</h2>
+                  <p>🏷️ Code: {cls.code}</p>
+                  <p>👥 Students: {cls.students}</p>
+                  <p>📅 Schedule: {cls.schedule}</p>
+                  <div className="card-actions">
+                    <button className="view-btn">View Class</button>
+                    <button className="attendance-btn">Mark Attendance</button>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
-        ))}
-      </div>
-    </div>
+        </>
   );
 };
 

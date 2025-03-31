@@ -1,4 +1,4 @@
-/* ================== Navbar Styles ================== */
+/* Navbar */
 .navbar {
   background-color: var(--color-primary);
   height: 70px;
@@ -16,22 +16,17 @@
 
 /* Menu Button */
 .menu-button {
-  font-size: 20px;
+  font-size: 22px;
   background: none;
   border: none;
   color: var(--color-text-primary);
   cursor: pointer;
-  transition: transform 0.2s ease-in-out;
-}
-
-.menu-button:hover {
-  transform: scale(1.08);
 }
 
 /* Logo */
 .logo {
   font-size: 20px;
-  font-weight: 600;
+  font-weight: bold;
   color: var(--color-text-primary);
   text-align: center;
   flex: 1;
@@ -45,76 +40,56 @@
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  font-size: 12px;
-  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
-.nav-button:hover {
-  background: var(--color-accent);
-  transform: scale(1.04);
-}
-
-/* ================== Sidebar Styles ================== */
-.nav-menu {
-  background-color: var(--color-primary);
-  width: 240px;
-  height: 100vh;
+/* Sidebar */
+.sidebar {
   position: fixed;
-  top: 0;
-  left: -100%;
-  transition: 0.3s ease-in-out;
-  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
-  overflow-y: auto;
-  padding-top: 70px;
+  top: 70px;
+  left: -250px;
+  width: 250px;
+  height: calc(100vh - 70px);
+  background: var(--color-primary);
+  transition: left 0.3s ease-in-out;
+  padding-top: 10px;
+  z-index: 999;
 }
 
 /* Sidebar Active */
-.nav-menu.active {
+.sidebar.show {
   left: 0;
 }
 
 /* Sidebar Items */
-.nav-menu-items {
-  padding: 8px;
+.sidebar-items {
+  list-style: none;
+  padding: 0;
 }
 
-.nav-menu-items li {
-  list-style: none;
-  padding: 8px 12px;
+.sidebar-item {
+  padding: 12px 20px;
   display: flex;
   align-items: center;
-  border-radius: 6px;
-  transition: background 0.3s ease-in-out;
-  cursor: pointer;
 }
 
-.nav-menu-items li a {
+.sidebar-item a {
   text-decoration: none;
   color: var(--color-text-primary);
   display: flex;
   align-items: center;
+}
+
+.sidebar-item a span {
+  margin-left: 10px;
+}
+
+/* Sidebar Overlay */
+.overlay {
+  position: fixed;
+  top: 70px;
+  left: 0;
   width: 100%;
-  font-size: 16px;
-}
-
-.nav-menu-items li a span {
-  margin-left: 12px;
-}
-
-/* Sidebar Item Hover */
-.nav-menu-items li:hover {
-  background-color: var(--color-secondary);
-}
-
-/* Sidebar Toggle */
-.navbar-toggle {
-  display: flex;
-  justify-content: flex-end;
-  padding: 8px;
-}
-
-.navbar-toggle .menu-bars {
-  font-size: 24px;
-  padding: 4px;
-  cursor: pointer;
+  height: calc(100vh - 70px);
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 998;
 }
