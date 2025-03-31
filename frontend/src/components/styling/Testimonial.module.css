@@ -61,7 +61,7 @@
 /* Profile Icon */
 .profileIcon {
   font-size: 48px;
-  color: var(--color-secondary);
+  color: var(--color-secondary-inner);
   margin-bottom: 12px;
 }
 
