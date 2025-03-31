@@ -253,3 +253,93 @@
     margin-left: 0;
   }
 }
+
+/* Attendance css */
+.attendance-container {
+  margin-top: 20vh; /* 20% gap below the navbar */
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box; /* Prevents padding from affecting width */
+}
+
+.search-input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid var(--theme-gray-primary);
+  border-radius: 5px;
+}
+
+.add-assignment {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.add-assignment input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid var(--theme-gray-primary);
+  border-radius: 5px;
+}
+
+.add-assignment button {
+  background: var(--theme-gray-accent);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.assignments-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.assignments-table th, .assignments-table td {
+  padding: 10px;
+  border-bottom: 1px solid var(--theme-gray-secondary);
+  text-align: left;
+}
+
+.assignments-table th {
+  background: var(--theme-gray-primary);
+  color: white;
+}
+
+.edit-icon, .delete-icon {
+  cursor: pointer;
+  margin: 0 5px;
+  color: var(--theme-gray-accent);
+}
+
+.edit-icon:hover, .delete-icon:hover {
+  color: var(--theme-gray-secondary);
+}
+
+/* Adjust gap for smaller screens */
+@media (max-width: 768px) {
+  .attendance-container {
+    margin-top: 15vh; /* Reduce the gap on smaller screens */
+    padding: 15px;
+  }
+
+  .add-assignment {
+    flex-direction: column; /* Stack inputs and button */
+  }
+
+  .add-assignment button {
+    width: 100%; /* Full-width button for mobile */
+    text-align: center;
+  }
+
+  .assignments-table th, .assignments-table td {
+    font-size: 14px; /* Adjust font size for smaller screens */
+    padding: 8px;
+  }
+
+  .edit-icon, .delete-icon {
+    font-size: 16px; /* Keep icons proportionate */
+  }
+}

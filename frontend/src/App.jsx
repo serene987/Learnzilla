@@ -8,6 +8,7 @@ import Teacherdashboard from './pages/teacher/Teacherdashboard.jsx';
 import Attendance from './pages/teacher/Attendace.jsx';
 import Myclasses from './pages/teacher/Myclasses.jsx';
 import Mystudents from './pages/teacher/Mystudents.jsx';
+import Assignments from './pages/teacher/Assignments.jsx';
 
 import Home from './pages/student/Home.jsx';
 import Myattendance from './pages/student/Myattendance.jsx';
@@ -32,9 +33,10 @@ function App() {
         <Route path='/teacherdashboard' element = {<Teacherdashboard/>} />
         {/* markattendance */}
         <Route path='/markattendance' element = {<Attendance/>}/>
+        <Route path='/assignments' element = {<Assignments/>}/>
         {/* mystudents */}
         <Route path='/mystudents' element = {<Mystudents/>} />
-        
+
         <Route path='/myclasses' element = {<Myclasses/>} />
       </Routes>
 
