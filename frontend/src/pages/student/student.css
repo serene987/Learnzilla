@@ -2,13 +2,13 @@
 
 /* General Styles */
 :root {
-    --color-background-dark: #2c3e50;
-    --color-text-primary: #ffffff;
-    --color-secondary: #3498db;
-    --color-warning: #e74c3c;
-    --theme-gray-primary: #ecf0f1;
-    --theme-gray-secondary: #bdc3c7;
-    --theme-gray-accent: #95a5a6;
+    --color-background-inner-dark: #2c3e50;
+    --color-text-inner-primary: #ffffff;
+    --color-secondary-inner: #3498db;
+    --color-warning-percent-inner: #e74c3c;
+    --theme-gray-primary-inner: #ecf0f1;
+    --theme-gray-secondary-inner: #bdc3c7;
+    --theme-gray-accent-inner: #95a5a6;
   }
   /* Student Portal Styles */
 
@@ -74,7 +74,7 @@
   .new-announcement::before {
     content: "NEW! ";
     font-weight: bold;
-    color: var(--color-warning);
+    color: var(--color-warning-percent);
   }
   
   @media (max-width: 768px) {
@@ -231,7 +231,7 @@
   }
   
   .assignments-table .pending {
-    color: var(--color-warning);
+    color: var(--color-warning-percent);
     font-weight: bold;
   }
   
