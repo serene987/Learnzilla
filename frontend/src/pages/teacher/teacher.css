@@ -1,6 +1,6 @@
 /* Navbar */
 .navbar {
-  background-color: var(--color-background-dark);
+  background-color: var(--transparent);
   height: 70px;
   display: flex;
   justify-content: space-between;
@@ -195,7 +195,7 @@
 
 /* Tables for Assignments & Submissions */
 .table-container {
-  margin-top: 30px;
+  margin-top: 90px auto 20px;
   overflow-x: auto;
 }
 
@@ -256,7 +256,7 @@
 .attendance-table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 15px;
+  margin-top: 90px auto 20px;
 }
 
 .attendance-table th,
