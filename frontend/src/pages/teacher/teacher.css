@@ -254,92 +254,153 @@
   }
 }
 
-/* Attendance css */
+/* Assignments css */
+
 .attendance-container {
-  margin-top: 20vh; /* 20% gap below the navbar */
-  width: 100%;
+  max-width: 600px;
+  margin: 40px auto;
   padding: 20px;
-  box-sizing: border-box; /* Prevents padding from affecting width */
+  background: var(--theme-gray-background-dark);
+  color: var(--theme-gray-text-secondary);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
 }
 
-.search-input {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 10px;
-  border: 1px solid var(--theme-gray-primary);
-  border-radius: 5px;
-}
-
-.add-assignment {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 15px;
-}
-
-.add-assignment input {
-  flex: 1;
-  padding: 8px;
-  border: 1px solid var(--theme-gray-primary);
-  border-radius: 5px;
-}
-
-.add-assignment button {
-  background: var(--theme-gray-accent);
-  color: white;
-  border: none;
-  padding: 8px 12px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.assignments-table {
+.attendance-table {
   width: 100%;
   border-collapse: collapse;
+  margin-top: 15px;
 }
 
-.assignments-table th, .assignments-table td {
-  padding: 10px;
-  border-bottom: 1px solid var(--theme-gray-secondary);
+.attendance-table th,
+.attendance-table td {
+  padding: 12px;
   text-align: left;
+  border-bottom: 1px solid var(--theme-gray-secondary);
 }
 
-.assignments-table th {
+.attendance-table th {
   background: var(--theme-gray-primary);
   color: white;
 }
 
-.edit-icon, .delete-icon {
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
   cursor: pointer;
-  margin: 0 5px;
-  color: var(--theme-gray-accent);
 }
 
-.edit-icon:hover, .delete-icon:hover {
-  color: var(--theme-gray-secondary);
+
+/* Attendance Container */
+/* Attendance Container */
+.attendance-container {
+  max-width: 800px;
+  margin: 12% auto 40px auto;
+  padding: 20px;
+  background: var(--theme-gray-background);
+  color: var(--theme-gray-text);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow-x: auto;
 }
 
-/* Adjust gap for smaller screens */
+/* Date Picker */
+.date-picker {
+  margin-bottom: 15px;
+}
+
+.date-picker label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.date-picker input {
+  padding: 8px;
+  border: 1px solid var(--theme-gray-secondary);
+  border-radius: 5px;
+}
+
+/* Selected Date Display */
+.selected-date {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Attendance Table */
+.attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.attendance-table th, .attendance-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--theme-gray-secondary);
+}
+
+.attendance-table th {
+  background: var(--theme-gray-text-secondary);
+  color: white;
+}
+
+/* Checkbox Styling */
+.attendance-table input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* Submit Button */
+.submit-button {
+  margin-top: 15px;
+  padding: 10px 15px;
+  background: var(--theme-gray-accent);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.submit-button:hover {
+  background: var(--theme-gray-secondary);
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
   .attendance-container {
-    margin-top: 15vh; /* Reduce the gap on smaller screens */
-    padding: 15px;
+    width: 90%;
+    margin-top: 15%;
   }
 
-  .add-assignment {
-    flex-direction: column; /* Stack inputs and button */
+  .attendance-table th, .attendance-table td {
+    padding: 10px;
+    font-size: 14px;
   }
 
-  .add-assignment button {
-    width: 100%; /* Full-width button for mobile */
-    text-align: center;
+  .attendance-table input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .attendance-container {
+    width: 95%;
+    margin-top: 18%;
   }
 
-  .assignments-table th, .assignments-table td {
-    font-size: 14px; /* Adjust font size for smaller screens */
+  .attendance-table th, .attendance-table td {
+    font-size: 12px;
     padding: 8px;
   }
 
-  .edit-icon, .delete-icon {
-    font-size: 16px; /* Keep icons proportionate */
+  .attendance-table input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+  }
+
+  .submit-button {
+    width: 100%;
   }
 }
