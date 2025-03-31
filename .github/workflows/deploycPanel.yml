@@ -17,4 +17,4 @@ jobs:
           server: ftpupload.net  # FTP server on infinity free hosting
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: learnzilla.infinityfreeapp.com
+          server-dir: /learnzilla.infinityfreeapp.com/
