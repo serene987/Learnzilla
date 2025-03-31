@@ -7,6 +7,7 @@ import Teacherdashboard from './pages/teacher/Teacherdashboard.jsx';
 import Attendance from './pages/teacher/Attendace.jsx';
 import ManageCourses from './pages/teacher/ManageCourses.jsx';
 import Assignments from './pages/teacher/Assignments.jsx';
+import ViewClass from './pages/teacher/ViewClass.jsx';
 
 import Home from './pages/student/Home.jsx';
 import Myattendance from './pages/student/Myattendance.jsx';
@@ -29,6 +30,7 @@ function App() {
       <Route path='/markattendance/:courseId' element={<Attendance />} />
       <Route path='/assignments/:courseId' element={<Assignments />} />
       <Route path='/managecourses' element={<ManageCourses />} />
+      <Route path='/viewclass' element={<ViewClass />} />
 
       {/* Student Dashboard */}
       <Route path='/myhome' element={<Home />} />
