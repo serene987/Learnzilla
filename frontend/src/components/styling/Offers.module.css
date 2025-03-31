@@ -50,7 +50,7 @@
 }
 
 .card {
-  background-color: var(--color-background-dark);
+  background-color: var(--color-green-inner);
   color: var(--color-text-primary);
   padding: 25px;
   border-radius: 12px;
