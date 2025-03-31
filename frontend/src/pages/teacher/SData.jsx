@@ -15,12 +15,6 @@ export const SData = [
     icon: <IoIcons.IoIosPaper />,
   },
   {
-    title: 'Mark Attendance',
-    path: '/markattendance',
-    icon: <FaIcons.FaEnvelopeOpenText />,
-
-  },
-  {
     title: 'My Students',
     path: '/mystudents',
     icon: <PiIcons.PiStudentBold/>,
