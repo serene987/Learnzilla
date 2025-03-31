@@ -15,24 +15,20 @@ const Navbar = () => {
     <>
       {/* Navbar */}
       <div className="navbar">
-        {/* Menu Button (Toggles Sidebar) */}
         <button className="menu-button" onClick={toggleSidebar}>
           {sidebar ? <AiOutlineClose /> : <FaBars />}
         </button>
 
-        {/* Logo Centered */}
         <div className="logo">Learnzilla</div>
 
-        {/* Auth Button */}
         <button className="nav-button">Sign Out</button>
       </div>
 
       {/* Sidebar */}
-      <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
-        <ul className="nav-menu-items">
-          <br />
+      <div className={`sidebar ${sidebar ? "show" : ""}`}>
+        <ul className="sidebar-items">
           {SData.map((item, index) => (
-            <li key={index} className={item.cName} onClick={(e) => e.stopPropagation()}>
+            <li key={index} className="sidebar-item" onClick={closeSidebar}>
               <Link to={item.path}>
                 {item.icon}
                 <span>{item.title}</span>
@@ -40,7 +36,10 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-      </nav>
+      </div>
+
+      {/* Overlay to close sidebar on click */}
+      {sidebar && <div className="overlay" onClick={closeSidebar}></div>}
     </>
   );
 };

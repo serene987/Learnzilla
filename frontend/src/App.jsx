@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 import Index from './Index.jsx';
@@ -6,8 +5,9 @@ import SignIn from './components/SignIn.jsx';
 
 import Teacherdashboard from './pages/teacher/Teacherdashboard.jsx';
 import Attendance from './pages/teacher/Attendace.jsx';
-import Myclasses from './pages/teacher/Myclasses.jsx';
-import Mystudents from './pages/teacher/Mystudents.jsx';
+import ManageCourses from './pages/teacher/ManageCourses.jsx';
+import Assignments from './pages/teacher/Assignments.jsx';
+import ViewClass from './pages/teacher/ViewClass.jsx';
 
 import Home from './pages/student/Home.jsx';
 import Myattendance from './pages/student/Myattendance.jsx';
@@ -18,29 +18,27 @@ import Support from './pages/student/Support.jsx';
 import './index.css';
 
 function App() {
-
   return (
-    <>
-      <Routes>
-        <Route path='/' element={<Index/>} />
-        <Route path='/signin' element={<SignIn />} />
-      </Routes>
+    <Routes>
+      <Route path='/' element={<Index />} />
+      
+      {/* Sign In */}
+      <Route path='/signin' element={<SignIn />} />
 
-      <Routes>
-        <Route path='/teacherdashboard' element = {<Teacherdashboard/>} />
-        <Route path='/markattendance' element = {<Attendance/>}/>
-        <Route path='/mystudents' element = {<Mystudents/>} />
-        <Route path='/myclasses' element = {<Myclasses/>} />
-      </Routes>
+      {/* Teacher Dashboard */}
+      <Route path='/teacherdashboard' element={<Teacherdashboard />} />
+      <Route path='/markattendance/:courseId' element={<Attendance />} />
+      <Route path='/assignments/:courseId' element={<Assignments />} />
+      <Route path='/managecourses' element={<ManageCourses />} />
+      <Route path='/viewclass' element={<ViewClass />} />
 
-      <Routes>
-        <Route path='/myhome' element = {<Home/>}/>
-        <Route path='/myattendance' element = {<Myattendance/>}/>
-        <Route path='/classdetails' element = {<ClassDetails/>}/>
-        <Route path='/classes' element = {<Class/>}/>
-        <Route path='/support' element = {<Support/>}/>
-      </Routes>
-    </>
+      {/* Student Dashboard */}
+      <Route path='/myhome' element={<Home />} />
+      <Route path='/myattendance' element={<Myattendance />} />
+      <Route path='/classdetails/:courseId' element={<ClassDetails />} />
+      <Route path='/classes' element={<Class />} />
+      <Route path='/support' element={<Support />} />
+    </Routes>
   );
 }
 

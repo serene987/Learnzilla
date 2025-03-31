@@ -1,4 +1,4 @@
-export const classesData = [
+export const courseData = [
     { 
         id: 1, name: "Data Structures", 
         code: "CS301", 
@@ -30,5 +30,12 @@ export const classesData = [
         code: "CS304", 
         students: 42, 
         schedule: "Fri | 11:00 AM" 
+    },
+    { 
+        id: 6, 
+        name: "C programming", 
+        code: "CS309", 
+        students: 30, 
+        schedule: "Weds | 11:00 AM" 
     },
   ];
