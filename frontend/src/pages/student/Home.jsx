@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import SideNavbar from "../../components/SideNavbar";
 import Navbar from "../../components/Navbar";
 import Card from "../../components/Card";
-import "../../styles/Home.css";
+import "../../styles/Card.css";
 
 const courses = [
   { title: "XII", course: "Science", teacher: "Mr. Sharma", backgroundImage: "science.jpg" },
