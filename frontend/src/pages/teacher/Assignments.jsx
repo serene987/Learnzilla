@@ -5,6 +5,7 @@ import { FaEdit, FaTrash, FaPlus } from "react-icons/fa";
 import Navbar from "./Navbar";
 
 function Assignments() {
+  
   const { courseId } = useParams(); // ✅ Get courseId from the URL
   const [assignments, setAssignments] = useState([
     { id: 1, title: "Math Homework", dueDate: "2025-04-05", status: "Pending" },

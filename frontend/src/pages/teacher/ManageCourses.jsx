@@ -17,7 +17,7 @@ function ManageCourses() {
     <>
     <Navbar/>
       <div className="courses-container">
-        <h2>Manage Courses</h2>
+        <h2 className="title">Manage Courses</h2>
         <div className="courses-grid">
           {courseData.map((course) => (
             <div key={course.id} className="course-card">
