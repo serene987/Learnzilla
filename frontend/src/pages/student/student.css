@@ -29,7 +29,8 @@
   }
   
   /* Announcements */
-  .announcements-container {
+  /* Announcements */
+.announcements-container {
     max-width: 800px;
     margin: 80px auto 20px;
     padding: 20px;
@@ -39,19 +40,65 @@
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   }
   
-  .announcements-container h2 {
+  .announcements-title {
     text-align: center;
     margin-bottom: 15px;
+    font-size: 24px;
+    color: var(--color-primary);
+    font-weight: bold;
   }
   
-  .announcements-container ul {
+  .announcements-list {
     list-style: none;
     padding: 0;
   }
   
-  .announcements-container li {
+  .announcement-item {
     padding: 10px;
     border-bottom: 1px solid var(--theme-gray-secondary);
+    font-size: 16px;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .announcement-item:hover {
+    background-color: var(--theme-gray-hover);
+  }
+  
+  /* Highlight new announcements */
+  .new-announcement {
+    background-color: var(--color-accent-light);
+    font-weight: bold;
+    color: var(--color-secondary);
+  }
+  
+  .new-announcement::before {
+    content: "NEW! ";
+    font-weight: bold;
+    color: var(--color-warning);
+  }
+  
+  @media (max-width: 768px) {
+    .announcements-container {
+      width: 90%;
+    }
+  
+    .announcements-title {
+      font-size: 20px;
+    }
+  
+    .announcement-item {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .announcements-title {
+      font-size: 18px;
+    }
+  
+    .announcement-item {
+      font-size: 12px;
+    }
   }
   
   /* Attendance */
@@ -142,7 +189,7 @@
   }
   
   /* Assignments */
-  .assignments-container {
+.assignments-container {
     max-width: 900px;
     margin: 20px auto;
     padding: 20px;
@@ -151,19 +198,87 @@
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   }
   
-  .assignments-container h2 {
+  .assignments-title {
     text-align: center;
     margin-bottom: 15px;
+    font-size: 24px;
+    color: var(--color-primary);
+    font-weight: bold;
   }
   
-  .assignments-list {
-    list-style: none;
-    padding: 0;
+  .assignments-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
   }
   
-  .assignments-list li {
-    padding: 10px;
+  .assignments-table th,
+  .assignments-table td {
+    padding: 12px 15px;
+    text-align: center;
     border-bottom: 1px solid var(--theme-gray-secondary);
+  }
+  
+  .assignments-table th {
+    background-color: var(--color-primary);
+    color: var(--color-text-primary);
+    font-weight: bold;
+  }
+  
+  .assignments-table td {
+    background-color: var(--theme-gray-background);
+    color: var(--theme-gray-text);
+  }
+  
+  .assignments-table .pending {
+    color: var(--color-warning);
+    font-weight: bold;
+  }
+  
+  .assignments-table .completed {
+    color: var(--color-success);
+    font-weight: bold;
+  }
+  
+  /* File Upload Input */
+  .file-upload {
+    padding: 6px 12px;
+    background-color: var( --theme-gray-accent);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .file-upload:hover {
+    background-color: var(--color-secondary);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .assignments-container {
+      width: 90%;
+    }
+  
+    .assignments-title {
+      font-size: 20px;
+    }
+  
+    .assignments-table th,
+    .assignments-table td {
+      padding: 10px 12px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .assignments-title {
+      font-size: 18px;
+    }
+  
+    .assignments-table th,
+    .assignments-table td {
+      padding: 8px 10px;
+    }
   }
   
   /* Grades */

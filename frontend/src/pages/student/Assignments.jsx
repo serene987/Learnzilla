@@ -1,4 +1,3 @@
-// StudentAssignments.jsx
 import { useState } from "react";
 
 function StudentAssignments() {
@@ -12,16 +11,34 @@ function StudentAssignments() {
   };
 
   return (
-    <div>
-      <h2>Assignments</h2>
-      <ul>
-        {assignments.map((assignment) => (
-          <li key={assignment.id}>
-            {assignment.title} - Due: {assignment.dueDate}
-            <input type="file" onChange={(e) => handleFileUpload(assignment.id, e)} />
-          </li>
-        ))}
-      </ul>
+    <div className="assignments-container">
+      <h2 className="assignments-title">Assignments</h2>
+      <table className="assignments-table">
+        <thead>
+          <tr>
+            <th>Assignment</th>
+            <th>Due Date</th>
+            <th>Status</th>
+            <th>Upload File</th>
+          </tr>
+        </thead>
+        <tbody>
+          {assignments.map((assignment) => (
+            <tr key={assignment.id}>
+              <td>{assignment.title}</td>
+              <td>{assignment.dueDate}</td>
+              <td className={assignment.status.toLowerCase()}>{assignment.status}</td>
+              <td>
+                <input
+                  type="file"
+                  className="file-upload"
+                  onChange={(e) => handleFileUpload(assignment.id, e)}
+                />
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }
