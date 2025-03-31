@@ -6,24 +6,12 @@ import * as PiIcons from "react-icons/pi";
 export const SData = [
   {
     title: 'Home',
-    path: '/home',
+    path: '/teacherdashboard',
     icon: <AiIcons.AiFillHome />,
   },
   {
-    title: 'My classes',
-    path: '/myclasses',
+    title: 'My Courses',
+    path: '/managecourses',
     icon: <IoIcons.IoIosPaper />,
-  },
-  {
-    title: 'Mark Attendance',
-    path: '/markattendance',
-    icon: <FaIcons.FaEnvelopeOpenText />,
-
-  },
-  {
-    title: 'My Students',
-    path: '/mystudents',
-    icon: <PiIcons.PiStudentBold/>,
-
   },
 ];

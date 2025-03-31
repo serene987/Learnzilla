@@ -8,8 +8,6 @@ import StudentGrades from "./Grades.jsx";
 import StudentAnnouncements from "./Announcement.jsx";
 import StudentAttendance from './Myattendance.jsx' 
 
-import "../../styles/Card.css";
-
 const courses = [
   { title: "XII", course: "Science", teacher: "Mr. Sharma", backgroundImage: "science.jpg" },
   { title: "XI", course: "Commerce", teacher: "Mrs. Patel", backgroundImage: "commerce.jpg" },

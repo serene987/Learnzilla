@@ -1,37 +1,31 @@
-
-/* ================== Navbar Styles ================== */
+/* Navbar */
 .navbar {
-  background-color: var(--color-primary);
-  height: 80px;
+  background-color: var(--color-background-dark);
+  height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
+  padding: 0 16px;
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 1000;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
 }
 
 /* Menu Button */
 .menu-button {
-  font-size: 24px;
+  font-size: 22px;
   background: none;
   border: none;
   color: var(--color-text-primary);
   cursor: pointer;
-  transition: transform 0.2s ease-in-out;
-}
-
-.menu-button:hover {
-  transform: scale(1.1);
 }
 
 /* Logo */
 .logo {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   color: var(--color-text-primary);
   text-align: center;
@@ -42,200 +36,508 @@
 .nav-button {
   background: var(--color-secondary);
   color: var(--color-text-primary);
-  padding: 10px 18px;
+  padding: 8px 14px;
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  font-size: 14px;
-  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
-.nav-button:hover {
-  background: var(--color-accent);
-  transform: scale(1.05);
-}
-
-/* ================== Sidebar Styles ================== */
-.nav-menu {
-  background-color: var(--color-primary);
-  width: 260px;
-  height: 100vh;
+/* Sidebar */
+.sidebar {
   position: fixed;
-  top: 0;
-  left: -100%;
-  transition: 0.3s ease-in-out;
-  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
-  overflow-y: auto;
-  padding-top: 80px; /* So content doesn't overlap with navbar */
+  top: 70px;
+  left: -250px;
+  width: 250px;
+  height: calc(100vh - 70px);
+  background: var(--color-background-dark);
+  transition: left 0.3s ease-in-out;
+  padding-top: 10px;
+  z-index: 999;
 }
 
 /* Sidebar Active */
-.nav-menu.active {
+.sidebar.show {
   left: 0;
 }
 
 /* Sidebar Items */
-.nav-menu-items {
-  padding: 10px;
+.sidebar-items {
+  list-style: none;
+  padding: 0;
 }
 
-.nav-menu-items li {
-  list-style: none;
-  padding: 10px 15px;
+.sidebar-item {
+  padding: 12px 20px;
   display: flex;
   align-items: center;
-  border-radius: 6px;
-  transition: background 0.3s ease-in-out;
-  cursor: pointer;
 }
 
-.nav-menu-items li a {
+.sidebar-item a {
   text-decoration: none;
   color: var(--color-text-primary);
   display: flex;
   align-items: center;
-  width: 100%;
-  font-size: 18px;
-}
-
-.nav-menu-items li a span {
-  margin-left: 15px;
-}
-
-/* Sidebar Item Hover */
-.nav-menu-items li:hover {
   background-color: var(--color-secondary);
 }
 
-/* Sidebar Toggle */
-.navbar-toggle {
+.sidebar-item a span {
+  margin-left: 10px;
+}
+
+/* Sidebar Item */
+.sidebar-item {
+  list-style: none;
+}
+
+.sidebar-item a {
+  text-decoration: none;
+  color: var(--color-text-primary);
   display: flex;
-  justify-content: flex-end;
-  padding: 10px;
-}
-
-.navbar-toggle .menu-bars {
-  font-size: 28px;
-  padding: 5px;
-  cursor: pointer;
-}
-
-/* ================== Page Container Adjustments ================== */
-.my-classes-container {
-  max-width: 1500px;
-  margin: 100px auto 20px;
-  padding: 20px;
-  background: var(--color-background-dark);
-  border-radius: 8px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  transition: margin-left 0.3s ease-in-out;
-}
-
-/* Move content when sidebar is open */
-.nav-menu.active ~ .my-classes-container {
-  margin-left: 260px;
-}
-
-/* ================== Search & Sort Controls ================== */
-.class-controls {
-  display: flex;
-  justify-content: flex-end;
   align-items: center;
-  gap: 12px;
+  padding: 12px 20px;
+  position: relative;
+}
+
+/* Animated Underline */
+.sidebar-item a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Adjust this to move the underline closer/farther */
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-warning);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.sidebar-item a:hover::after {
+  transform: scaleX(1);
+}
+
+/* Sidebar Overlay */
+.overlay {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 70px);
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+}
+
+/* Teacher's dashboard css */
+
+/* Teacher Dashboard Main Container */
+.dashboard-container {
+  padding: 80px 20px;
+  transition: margin-left 0.3s ease-in-out, transform 0.3s ease-in-out;
+  width: calc(100% - 250px);
+  margin: auto;
+}
+
+
+/* Dashboard Stats Section */
+.dashboard-stats {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
   margin-bottom: 20px;
 }
 
-/* Search Bar */
-.class-search, .class-sort {
+/* Individual Stat Cards */
+.stat-card {
+  background: var(--theme-gray-primary);
+  color: var(--theme-gray-text-primary);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
   width: 220px;
-  height: 100px;
-  padding: 10px;
-  font-size: 14px;
-  border: 2px solid var(--color-secondary);
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Quick Access Buttons */
+.quick-access {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.quick-access button {
+  background: var(--theme-gray-accent);
+  color: var(--theme-gray-text-primary);
+  padding: 12px 20px;
+  border: none;
+  margin: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.2s ease;
   border-radius: 6px;
-  background-color: var(--color-background);
-  color: var(--color-text-secondary);
-  transition: border 0.2s ease-in-out;
+  font-size: 14px;
 }
 
-.class-search:focus, .class-sort:focus {
-  border-color: var(--color-accent);
-  outline: none;
+.quick-access button:hover {
+  background: var(--theme-gray-secondary);
+  transform: scale(1.05);
 }
 
-/* ================== Class Cards ================== */
-/* Class Card Grid */
-.classes-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px; /* Adds 10px spacing between cards */
-  justify-content: flex-start; /* Aligns cards to start */
-}
-
-/* Individual Class Card */
-.class-card {
-  flex: 1 1 calc(25% - 10px); /* Ensures 4 cards per row with spacing */
-  max-width: calc(25% - 10px); /* Ensures each card takes 1/4th of the container width */
-  background: var(--color-primary);
-  color: var(--color-text-secondary);
+/* Recent Activity & Upcoming Events */
+.recent-activity,
+.upcoming-events {
+  margin-top: 30px;
   padding: 15px;
   border-radius: 8px;
-  text-align: center;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s ease-in-out, background 0.3s ease-in-out;
+  background: var(--theme-gray-background-dark);
+  color: var(--theme-gray-text-secondary);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* Hover Effect */
-.class-card:hover {
-  transform: translateY(5px);
-  background: var(--transparent);
+/* Tables for Assignments & Submissions */
+.table-container {
+  margin-top: 30px;
+  overflow-x: auto;
 }
 
-/* Class Title */
-.class-title {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 5px;
+.dashboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--theme-gray-secondary);
+  color: var(--theme-gray-text-primary);
+  border-radius: 8px;
+  overflow: hidden;
 }
 
-/* Class Info */
-.class-info {
-  font-size: 14px;
-  color: var(--color-text-secondary);
+.dashboard-table th,
+.dashboard-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid var(--theme-gray-accent);
 }
 
-/* ================== Responsive Design ================== */
-@media screen and (max-width: 1024px) {
-  .class-card {
-    flex: 1 1 calc(33.33% - 20px); /* 3 Cards per row */
-  }
+.dashboard-table th {
+  background: var(--theme-gray-primary);
+  text-align: left;
 }
 
-@media screen and (max-width: 768px) {
-  .nav-menu {
-    width: 220px;
-  }
+.dashboard-table tr:hover {
+  background: var(--theme-gray-accent);
+}
 
-  .class-card {
-    flex: 1 1 calc(50% - 20px); /* 2 Cards per row */
-  }
-
-  .class-controls {
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .dashboard-stats {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
 
-  .class-search, .class-sort {
+  .stat-card {
+    width: 90%;
+    margin-bottom: 10px;
+  }
+
+  .dashboard-container {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+/* Assignments css */
+
+.attendance-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background: var(--theme-gray-background-dark);
+  color: var(--theme-gray-text-secondary);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+.attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.attendance-table th,
+.attendance-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--theme-gray-secondary);
+}
+
+.attendance-table th {
+  background: var(--theme-gray-primary);
+  color: white;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+
+/* Attendance Container */
+/* Attendance Container */
+.attendance-container {
+  max-width: 800px;
+  margin: 12% auto 40px auto;
+  padding: 20px;
+  background: var(--theme-gray-background);
+  color: var(--theme-gray-text);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+/* Date Picker */
+.date-picker {
+  margin-bottom: 15px;
+}
+
+.date-picker label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.date-picker input {
+  padding: 8px;
+  border: 1px solid var(--theme-gray-secondary);
+  border-radius: 5px;
+}
+
+/* Selected Date Display */
+.selected-date {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+/* Attendance Table */
+.attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.attendance-table th, .attendance-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--theme-gray-secondary);
+}
+
+.attendance-table th {
+  background: var(--theme-gray-text-secondary);
+  color: white;
+}
+
+/* Checkbox Styling */
+.attendance-table input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* Submit Button */
+.submit-button {
+  margin-top: 15px;
+  padding: 10px 15px;
+  background: var(--theme-gray-accent);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.submit-button:hover {
+  background: var(--theme-gray-secondary);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .attendance-container {
+    width: 90%;
+    margin-top: 15%;
+  }
+
+  .attendance-table th, .attendance-table td {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .attendance-table input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .attendance-container {
+    width: 95%;
+    margin-top: 18%;
+  }
+
+  .attendance-table th, .attendance-table td {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .attendance-table input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+  }
+
+  .submit-button {
     width: 100%;
   }
 }
 
-@media screen and (max-width: 480px) {
-  .nav-menu {
-    width: 200px;
+
+/* ManageCourses css */
+
+.courses-container {
+  padding: 20px;
+  margin: 50px auto 20px; /* 150px from the top */
+
+}
+.title{
+  text-align: center;
+  padding: 20px;
+}
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.course-card {
+  background: var(--theme-gray-primary);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.course-card h3 {
+  margin-bottom: 8px;
+  color: var(--theme-gray-accent);
+}
+
+.course-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.course-actions button {
+  background: var(--theme-gray-accent);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Assignments Page Container */
+.assignments-container {
+  max-width: 900px;
+  margin: 150px auto 20px; /* 150px from the top */
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+.assignments-container h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Search Input */
+.search-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+/* Add Assignment Form */
+.add-assignment {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.add-assignment input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.add-assignment button {
+  background-color: var(--color-primary, #1c583f);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.add-assignment button:hover {
+  background-color: var(--color-accent, #2c9841);
+}
+
+/* Assignments Table */
+.assignments-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.assignments-table th,
+.assignments-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.assignments-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+/* Edit and Delete Icons */
+.edit-icon,
+.delete-icon {
+  cursor: pointer;
+  font-size: 18px;
+  margin-left: 10px;
+  transition: color 0.2s ease-in-out;
+}
+
+.edit-icon:hover {
+  color: #f8c62f; /* Golden Yellow */
+}
+
+.delete-icon:hover {
+  color: #b91c1c; /* Rust Red */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .add-assignment {
+    flex-direction: column;
   }
 
-  .class-card {
-    flex: 1 1 100%; /* 1 Card per row */
+  .assignments-table th,
+  .assignments-table td {
+    font-size: 14px;
+    padding: 8px;
   }
 }
