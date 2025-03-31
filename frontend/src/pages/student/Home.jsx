@@ -22,9 +22,9 @@ const Home = () => {
     <>
       <Navbar />
       <StudentAnnouncements/>
-      <StudentAttendance/>
       <StudentGrades/>
       <StudentAssignments/>
+      <StudentAttendance/>
       {/* <Card/> */}
     </>
   );

@@ -1,23 +1,40 @@
-
-// StudentAttendance.jsx
 import { useState } from "react";
 
 function StudentAttendance() {
   const [attendance, setAttendance] = useState([
-    { date: "2025-03-30", status: "Present" },
-    { date: "2025-03-29", status: "Absent" },
+    { className: "Math", attendancePercentage: 90 },
+    { className: "Science", attendancePercentage: 85 },
+    { className: "English", attendancePercentage: 45 },
+    { className: "History", attendancePercentage: 30 },
   ]);
 
+  const getAttendanceClass = (percentage) => {
+    if (percentage >= 75) return "attendance-success";
+    if (percentage >= 40) return "attendance-warning";
+    return "attendance-error";
+  };
+
   return (
-    <div>
+     <div className="attendance-container">
       <h2>Attendance</h2>
-      <ul>
-        {attendance.map((record, index) => (
-          <li key={index}>
-            {record.date} - Status: {record.status}
-          </li>
-        ))}
-      </ul>
+      <table className="attendance-table">
+        <thead>
+          <tr>
+            <th>Class</th>
+            <th>Attendance Percentage</th>
+          </tr>
+        </thead>
+        <tbody>
+          {attendance.map((record, index) => (
+            <tr key={index}>
+              <td>{record.className}</td>
+              <td className={getAttendanceClass(record.attendancePercentage)}>
+                {record.attendancePercentage}%
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }
