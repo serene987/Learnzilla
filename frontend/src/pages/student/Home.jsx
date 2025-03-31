@@ -1,8 +1,11 @@
 import React, { useState } from "react";
-import SideNavbar from "../../components/SideNavbar";
-import Navbar from "../../components/Navbar";
-import Card from "../../components/Card";
-import "../../styles/Card.css";
+import Navbar from "./Navbar.jsx";
+import Card from "../../components/Card.jsx";
+
+import StudentAssignments from "./Assignments.jsx";
+import StudentGrades from "./Grades.jsx";
+import StudentAnnouncements from "./Announcement.jsx";
+import StudentAttendance from './Myattendance.jsx' 
 
 const courses = [
   { title: "XII", course: "Science", teacher: "Mr. Sharma", backgroundImage: "science.jpg" },
@@ -16,15 +19,14 @@ const Home = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
-    <div className="home-page">
+    <>
       <Navbar />
-      <SideNavbar toggleSidebar={setSidebarOpen} />
-      <div className={`card-container ${sidebarOpen ? "expanded" : ""}`}>
-        {courses.map((course, index) => (
-          <Card key={index} {...course} />
-        ))}
-      </div>
-    </div>
+      <StudentAnnouncements/>
+      <StudentGrades/>
+      <StudentAssignments/>
+      <StudentAttendance/>
+      {/* <Card/> */}
+    </>
   );
 };
 export default Home;

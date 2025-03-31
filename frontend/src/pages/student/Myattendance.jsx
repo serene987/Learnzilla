@@ -1,10 +1,42 @@
+import { useState } from "react";
 
-function Myattendance() {
-    return (
-      <div className='Attendance'>
-        <h1>Attendance</h1>
-      </div>
-    );
-  }
-  
-  export default Myattendance;
+function StudentAttendance() {
+  const [attendance, setAttendance] = useState([
+    { className: "Math", attendancePercentage: 90 },
+    { className: "Science", attendancePercentage: 85 },
+    { className: "English", attendancePercentage: 45 },
+    { className: "History", attendancePercentage: 30 },
+  ]);
+
+  const getAttendanceClass = (percentage) => {
+    if (percentage >= 75) return "attendance-success";
+    if (percentage >= 40) return "attendance-warning";
+    return "attendance-error";
+  };
+
+  return (
+     <div className="attendance-container">
+      <h2>Attendance</h2>
+      <table className="attendance-table">
+        <thead>
+          <tr>
+            <th>Class</th>
+            <th>Attendance Percentage</th>
+          </tr>
+        </thead>
+        <tbody>
+          {attendance.map((record, index) => (
+            <tr key={index}>
+              <td>{record.className}</td>
+              <td className={getAttendanceClass(record.attendancePercentage)}>
+                {record.attendancePercentage}%
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+export default StudentAttendance;

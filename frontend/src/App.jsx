@@ -10,10 +10,13 @@ import Assignments from './pages/teacher/Assignments.jsx';
 import ViewClass from './pages/teacher/ViewClass.jsx';
 
 import Home from './pages/student/Home.jsx';
-import Myattendance from './pages/student/Myattendance.jsx';
 import ClassDetails from './pages/student/ClassDetails.jsx';
 import Class from './pages/student/Class.jsx';
-import Support from './pages/student/Support.jsx';
+import StudentAssignments from "./pages/student/Assignments.jsx";
+import StudentGrades from "./pages/student/Grades.jsx";
+import StudentAnnouncements from "./pages/student/Announcement.jsx";
+import StudentAttendance from './pages/student/Myattendance.jsx' 
+
 
 import './index.css';
 
@@ -34,10 +37,12 @@ function App() {
 
       {/* Student Dashboard */}
       <Route path='/myhome' element={<Home />} />
-      <Route path='/myattendance' element={<Myattendance />} />
+      <Route path='/myattendance' element={<StudentAttendance />} />
       <Route path='/classdetails/:courseId' element={<ClassDetails />} />
       <Route path='/classes' element={<Class />} />
-      <Route path='/support' element={<Support />} />
+      <Route path='/assignments' element={<StudentAssignments />} />
+      <Route path='/grades' element={<StudentGrades />} />
+      <Route path='/annoucements' element={<StudentAnnouncements />} />
     </Routes>
   );
 }
