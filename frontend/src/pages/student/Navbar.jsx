@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaBars } from 'react-icons/fa';
 import { AiOutlineClose } from 'react-icons/ai';
-import { SData } from './SData.jsx';
-import './teacher.css';
+import { NavbarData } from './NavbarData.jsx';
+import './student.css';
 
 const Navbar = () => {
   const [sidebar, setSidebar] = useState(false);
@@ -21,13 +21,13 @@ const Navbar = () => {
 
         <div className="logo">Learnzilla</div>
 
-        <button className="nav-button">Sign Out</button>
+        <button className="nav-button">Log Out</button>
       </div>
 
       {/* Sidebar */}
       <div className={`sidebar ${sidebar ? "show" : ""}`}>
         <ul className="sidebar-items">
-          {SData.map((item, index) => (
+          {NavbarData.map((item, index) => (
             <li key={index} className="sidebar-item" onClick={closeSidebar}>
               <Link to={item.path}>
                 {item.icon}

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import SideNavbar from "../../components/SideNavbar.jsx";
-import Navbar from "../../components/Navbar.jsx";
+import Navbar from "./Navbar.jsx";
 import Card from "../../components/Card.jsx";
 
 import StudentAssignments from "./Assignments.jsx";
@@ -22,16 +21,11 @@ const Home = () => {
   return (
     <>
       <Navbar />
-      <SideNavbar toggleSidebar={setSidebarOpen} />
-      <div className="home-page">
-        <div className={`card-container ${sidebarOpen ? "expanded" : ""}`}>
-          {courses.map((course, index) => (
-            <Card key={index} {...course} />
-          ))}
-        </div>
-      </div>
       <StudentAnnouncements/>
-
+      <StudentAttendance/>
+      <StudentGrades/>
+      <StudentAssignments/>
+      {/* <Card/> */}
     </>
   );
 };

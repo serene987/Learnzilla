@@ -1,5 +1,26 @@
-/* Navbar */
-.navbar {
+/* Student Portal Styles */
+
+/* General Styles */
+:root {
+    --color-background-dark: #2c3e50;
+    --color-text-primary: #ffffff;
+    --color-secondary: #3498db;
+    --color-warning: #e74c3c;
+    --theme-gray-primary: #ecf0f1;
+    --theme-gray-secondary: #bdc3c7;
+    --theme-gray-accent: #95a5a6;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--theme-gray-primary);
+    color: #333;
+  }
+  
+  /* Navbar */
+  .navbar {
     background-color: var(--color-background-dark);
     height: 70px;
     display: flex;
@@ -14,32 +35,10 @@
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
   }
   
-  /* Menu Button */
-  .menu-button {
-    font-size: 22px;
-    background: none;
-    border: none;
-    color: var(--color-text-primary);
-    cursor: pointer;
-  }
-  
-  /* Logo */
   .logo {
     font-size: 20px;
     font-weight: bold;
     color: var(--color-text-primary);
-    text-align: center;
-    flex: 1;
-  }
-  
-  /* Navbar Button */
-  .nav-button {
-    background: var(--color-secondary);
-    color: var(--color-text-primary);
-    padding: 8px 14px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
   }
   
   /* Sidebar */
@@ -55,75 +54,66 @@
     z-index: 999;
   }
   
-  /* Sidebar Active */
   .sidebar.show {
     left: 0;
   }
   
-  /* Sidebar Items */
-  .sidebar-items {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .sidebar-item {
-    padding: 12px 20px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .sidebar-item a {
-    text-decoration: none;
-    color: var(--color-text-primary);
-    display: flex;
-    align-items: center;
-    background-color: var(--color-secondary);
-  }
-  
-  .sidebar-item a span {
-    margin-left: 10px;
-  }
-  
-  /* Sidebar Item */
-  .sidebar-item {
-    list-style: none;
-  }
-  
   .sidebar-item a {
     text-decoration: none;
     color: var(--color-text-primary);
     display: flex;
     align-items: center;
     padding: 12px 20px;
-    position: relative;
   }
   
-  /* Animated Underline */
-  .sidebar-item a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -2px; /* Adjust this to move the underline closer/farther */
-    width: 100%;
-    height: 2px;
-    background-color: var(--color-warning);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.3s ease-in-out;
+  /* Main Content */
+  .main-container {
+    padding: 80px 20px;
+    width: calc(100% - 250px);
+    margin: auto;
+    transition: margin-left 0.3s ease-in-out;
   }
   
-  .sidebar-item a:hover::after {
-    transform: scaleX(1);
+  /* Cards */
+  .card {
+    background: var(--theme-gray-secondary);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   }
   
-  /* Sidebar Overlay */
-  .overlay {
-    position: fixed;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    height: calc(100vh - 70px);
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 998;
+  /* Assignments & Grades */
+  .container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+  }
+  
+  .container h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .main-container {
+      width: 100%;
+      margin-left: 0;
+    }
+    .card {
+      width: 90%;
+      margin: auto;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      width: 95%;
+      padding: 15px;
+    }
   }
   
