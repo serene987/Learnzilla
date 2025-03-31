@@ -33,25 +33,6 @@ function TeacherDashboard() {
           </div>
         </div>
 
-        {/* Quick Actions */}
-        <div className="quick-actions">
-          <button className="action-button">
-            <FaPlusCircle /> Create Assignment
-          </button>
-          <button className="action-button">
-            <FaPlusCircle /> Post Announcement
-          </button>
-        </div>
-
-        {/* Recent Activity */}
-        <div className="recent-activity">
-          <h3>Recent Activity</h3>
-          <ul>
-            <li>Graded John Doe's assignment</li>
-            <li>Posted a new announcement in Math 101</li>
-            <li>Created a new assignment for Science</li>
-          </ul>
-        </div>
       </main>
     </div>
   );
