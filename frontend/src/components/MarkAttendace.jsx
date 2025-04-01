@@ -1,7 +1,8 @@
 import { useState } from "react";
-import "./teacher.css";
-import Navbar from "./Navbar";
-import axios from "axios"; // Import Axios for API calls
+import Navbar from "./TNavbar.jsx";
+import Axios from "axios"; // Import Axios for API calls
+
+import markStyles from './styling/teacher/Markattendance.module.css';
 
 function AttendanceTable() {
   // State for students (all present by default)
@@ -47,7 +48,7 @@ function AttendanceTable() {
     }
 
     try {
-      await axios.post("http://localhost:5000/api/attendance", {
+      await Axios.post("http://localhost:5000/api/attendance", {
         date: selectedDate,
         attendance: students.map(({ id, present }) => ({ id, present })),
       });
@@ -61,11 +62,11 @@ function AttendanceTable() {
   return (
     <>
       <Navbar />
-      <div className="attendance-container">
+      <div className={markStyles.attendance-container}>
         <h2>Attendance Marking</h2>
 
         {/* Date Picker */}
-        <div className="date-picker">
+        <div className={markStyles.date-picker}>
           <label>Select Date: </label>
           <input
             type="date"
@@ -76,10 +77,10 @@ function AttendanceTable() {
         </div>
 
         {/* Display selected date */}
-        {selectedDate && <p className="selected-date">Date: {formatDate(selectedDate)}</p>}
+        {selectedDate && <p className={markStyles.selected-date}>Date: {formatDate(selectedDate)}</p>}
 
         {/* Attendance Table */}
-        <table className="attendance-table">
+        <table className={markStyles.attendance-table}>
           <thead>
             <tr>
               <th>#</th>
@@ -105,7 +106,7 @@ function AttendanceTable() {
         </table>
 
         {/* Submit Button */}
-        <button className="submit-button" onClick={handleSubmit}>
+        <button className={markStyles.submit-button} onClick={handleSubmit}>
           Submit Attendance
         </button>
       </div>

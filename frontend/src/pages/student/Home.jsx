@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import Navbar from "./Navbar.jsx";
+import Navbar from "../../components/StudentNavbar.jsx";
 import Card from "../../components/Card.jsx";
 
-import StudentAssignments from "./Assignments.jsx";
-import StudentGrades from "./Grades.jsx";
-import StudentAnnouncements from "./Announcement.jsx";
-import StudentAttendance from './Myattendance.jsx' 
+import StudentAssignments from "../../components/Assignments.jsx";
+import StudentGrades from "../../components/Grades.jsx";
+import StudentAnnouncements from "../../components/Announcement.jsx";
+import StudentAttendance from '../../components/Myattendance.jsx' 
 
 const courses = [
   { title: "XII", course: "Science", teacher: "Mr. Sharma", backgroundImage: "science.jpg" },

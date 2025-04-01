@@ -1,4 +1,5 @@
 import { useState } from "react";
+import GradeStyle from '../components/styling/Grades.module.css';
 
 function StudentGrades() {
   const [grades, setGrades] = useState([
@@ -8,9 +9,9 @@ function StudentGrades() {
   ]);
 
   return (
-    <div className="grades-container">
-      <h2 className="grades-title">Grades</h2>
-      <table className="grades-table">
+    <div className={GradeStyle.grades-container}>
+      <h2 className={GradeStyle.grades-title}>Grades</h2>
+      <table className={GradeStyle.grades-table}>
         <thead>
           <tr>
             <th>Assignment</th>

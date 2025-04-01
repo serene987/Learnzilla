@@ -1,0 +1,80 @@
+/* Announcements */
+.announcements-container {
+    max-width: 800px;
+    margin: 80px auto 20px;
+    padding: 20px;
+    background: #f4f6f8; /* Lighter background for better readability */
+    color: #34495e; /* Darker text for readability */
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.announcements-title {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #3498db; /* Bright blue for better contrast */
+    font-weight: bold;
+}
+
+.announcements-list {
+    list-style: none;
+    padding: 0;
+}
+
+.announcement-item {
+    padding: 10px;
+    border-bottom: 1px solid #bdc3c7;
+    font-size: 16px;
+    transition: background 0.3s ease-in-out;
+}
+
+.announcement-item:hover {
+    background-color: #ecf0f1; /* Lighter background on hover */
+}
+
+/* Highlight new announcements */
+.new-announcement {
+    background-color: #f39c12; /* Yellow for highlights */
+    font-weight: bold;
+    color: #fff;
+}
+
+.new-announcement::before {
+    content: "NEW! ";
+    font-weight: bold;
+    color: #e74c3c; /* Red color for new alert */
+}
+
+@media (max-width: 768px) {
+    .announcements-container {
+        width: 90%;
+    }
+
+    .announcements-title {
+        font-size: 20px;
+    }
+
+    .announcement-item {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .announcements-title {
+        font-size: 18px;
+    }
+
+    .announcement-item {
+        font-size: 12px;
+    }
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    
+    .announcements-container {
+        width: 90%;
+    }
+}

@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import { FaBars } from 'react-icons/fa';
 import { AiOutlineClose } from 'react-icons/ai';
 import { NavbarData } from './NavbarData.jsx';
-import './student.css';
+
+import NavbarStyle from './styling/student/SNavbar.module.css';
 
 const Navbar = () => {
   const [sidebar, setSidebar] = useState(false);
@@ -14,21 +15,21 @@ const Navbar = () => {
   return (
     <>
       {/* Navbar */}
-      <div className="navbar">
-        <button className="menu-button" onClick={toggleSidebar}>
+      <div className={NavbarStyle.navbar}>
+        <button className={NavbarStyle.menu-button} onClick={toggleSidebar}>
           {sidebar ? <AiOutlineClose /> : <FaBars />}
         </button>
 
-        <div className="logo">Learnzilla</div>
+        <div className={NavbarStyle.logo}>Learnzilla</div>
 
-        <button className="nav-button">Log Out</button>
+        <button className={NavbarStyle.nav-button}>Log Out</button>
       </div>
 
       {/* Sidebar */}
       <div className={`sidebar ${sidebar ? "show" : ""}`}>
-        <ul className="sidebar-items">
+        <ul className={NavbarStyle.sidebar-items}>
           {NavbarData.map((item, index) => (
-            <li key={index} className="sidebar-item" onClick={closeSidebar}>
+            <li key={index} className={NavbarStyle.sidebar-item} onClick={closeSidebar}>
               <Link to={item.path}>
                 {item.icon}
                 <span>{item.title}</span>
@@ -39,7 +40,7 @@ const Navbar = () => {
       </div>
 
       {/* Overlay to close sidebar on click */}
-      {sidebar && <div className="overlay" onClick={closeSidebar}></div>}
+      {sidebar && <div className={NavbarStyle.overlay} onClick={closeSidebar}></div>}
     </>
   );
 };

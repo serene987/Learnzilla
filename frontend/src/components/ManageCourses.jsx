@@ -1,12 +1,10 @@
 import { useNavigate } from "react-router-dom";
-import "./teacher.css";
-import Navbar from "./Navbar";
+import Navbar from "./TNavbar.jsx";
+import manageStyles from './styling/teacher/Manage.module.css';
 
 import {courseData} from './CourseData.jsx';
 function ManageCourses() {
   const navigate = useNavigate();
-
-
 
   const courses = [
     { id: 1, name: "Math 101", students: 30, schedule: "Mon & Wed, 10:00 AM" },
@@ -16,15 +14,15 @@ function ManageCourses() {
   return (
     <>
     <Navbar/>
-      <div className="courses-container">
-        <h2 className="title">Manage Courses</h2>
-        <div className="courses-grid">
+      <div className={manageStyles.courses-container}>
+        <h2 className={manageStyles.title}>Manage Courses</h2>
+        <div className={manageStyles.courses-grid}>
           {courseData.map((course) => (
-            <div key={course.id} className="course-card">
+            <div key={course.id} className={manageStyles.course-card}>
               <h3>{course.name}</h3>
               <p><strong>Students:</strong> {course.students}</p>
               <p><strong>Schedule:</strong> {course.schedule}</p>
-              <div className="course-actions">
+              <div className={manageStyles.course-actions}>
               <button onClick={() => navigate(`/markattendance/${course.id}`)}>
                 Mark Attendance
               </button>

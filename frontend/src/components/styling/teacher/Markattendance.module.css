@@ -1,0 +1,149 @@
+
+.attendance-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background: var(--theme-gray-background-dark);
+    color: var(--theme-gray-text-secondary);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+  }
+  
+  .attendance-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 90px auto 20px;
+  }
+  
+  .attendance-table th,
+  .attendance-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--theme-gray-secondary);
+  }
+  
+  .attendance-table th {
+    background: var(--theme-gray-primary);
+    color: white;
+  }
+  
+  input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  
+  /* Attendance Container */
+  .attendance-container {
+    max-width: 800px;
+    margin: 12% auto 40px auto;
+    padding: 20px;
+    background: var(--theme-gray-background);
+    color: var(--theme-gray-text);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow-x: auto;
+  }
+  
+  /* Date Picker */
+  .date-picker {
+    margin-bottom: 15px;
+  }
+  
+  .date-picker label {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .date-picker input {
+    padding: 8px;
+    border: 1px solid var(--theme-gray-secondary);
+    border-radius: 5px;
+  }
+  
+  /* Selected Date Display */
+  .selected-date {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #000;
+  }
+  
+  /* Attendance Table */
+  .attendance-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .attendance-table th, .attendance-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--theme-gray-secondary);
+  }
+  
+  .attendance-table th {
+    background: var(--theme-gray-text-secondary);
+    color: white;
+  }
+  
+  /* Checkbox Styling */
+  .attendance-table input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  
+  /* Submit Button */
+  .submit-button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background: var(--theme-gray-accent);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .submit-button:hover {
+    background: var(--theme-gray-secondary);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .attendance-container {
+      width: 90%;
+      margin-top: 15%;
+    }
+  
+    .attendance-table th, .attendance-table td {
+      padding: 10px;
+      font-size: 14px;
+    }
+  
+    .attendance-table input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .attendance-container {
+      width: 95%;
+      margin-top: 18%;
+    }
+  
+    .attendance-table th, .attendance-table td {
+      font-size: 12px;
+      padding: 8px;
+    }
+  
+    .attendance-table input[type="checkbox"] {
+      width: 16px;
+      height: 16px;
+    }
+  
+    .submit-button {
+      width: 100%;
+    }
+  }
+  

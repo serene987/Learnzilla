@@ -2,8 +2,8 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 import "./teacher.css";
 import { FaEdit, FaTrash, FaPlus } from "react-icons/fa";
-import Navbar from "./Navbar";
-import Assignments from "./Assignments";
+import Navbar from "../../components/TNavbar";
+import Assignments from "../../components/GiveAssignments";
 
 function ViewClass() {
   const { courseId } = useParams();

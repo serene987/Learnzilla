@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Navbar from "./Navbar";
+import Navbar from "../../components/TNavbar";
 import "./teacher.css";
 import { FaBook, FaClipboard, FaCheckCircle, FaPlusCircle } from "react-icons/fa";
 

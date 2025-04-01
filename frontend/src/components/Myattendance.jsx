@@ -1,4 +1,5 @@
 import { useState } from "react";
+import AttendanceStyle from '../components/styling/StudentAttendance.module.css';
 
 function StudentAttendance() {
   const [attendance, setAttendance] = useState([
@@ -15,9 +16,9 @@ function StudentAttendance() {
   };
 
   return (
-     <div className="attendance-container">
+     <div className={AttendanceStyle.attendance-container}>
       <h2>Attendance</h2>
-      <table className="attendance-table">
+      <table className={AttendanceStyle.attendance-table}>
         <thead>
           <tr>
             <th>Class</th>

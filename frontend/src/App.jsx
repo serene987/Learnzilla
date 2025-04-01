@@ -4,18 +4,18 @@ import Index from './Index.jsx';
 import SignIn from './components/SignIn.jsx';
 
 import Teacherdashboard from './pages/teacher/Teacherdashboard.jsx';
-import Attendance from './pages/teacher/Attendace.jsx';
-import ManageCourses from './pages/teacher/ManageCourses.jsx';
-import Assignments from './pages/teacher/Assignments.jsx';
+import Attendance from './components/MarkAttendace.jsx';
+import ManageCourses from './components/ManageCourses.jsx';
+import Assignments from './components/GiveAssignments.jsx';
 import ViewClass from './pages/teacher/ViewClass.jsx';
 
 import Home from './pages/student/Home.jsx';
-import ClassDetails from './pages/student/ClassDetails.jsx';
-import Class from './pages/student/Class.jsx';
-import StudentAssignments from "./pages/student/Assignments.jsx";
-import StudentGrades from "./pages/student/Grades.jsx";
-import StudentAnnouncements from "./pages/student/Announcement.jsx";
-import StudentAttendance from './pages/student/Myattendance.jsx' 
+import ClassDetails from './components/ClassDetails.jsx';
+import Class from './components/Class.jsx';
+import StudentAssignments from './components/Assignments.jsx';
+import StudentGrades from './components/Grades.jsx';
+import StudentAnnouncements from './components/Announcement.jsx';
+import StudentAttendance from './components/Myattendance.jsx'; 
 
 
 import './index.css';
