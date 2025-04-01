@@ -1,5 +1,5 @@
 import { useState } from "react";
-import TNavbar from '../../components/TNavbar.jsx'
+import TeacherSideNavbar from '../../components/TeacherNavbar.jsx'
 import dashStyle from '../../components/styling/teacher/Dashboard.module.css';
 import { FaBook, FaClipboard, FaCheckCircle, FaPlusCircle } from "react-icons/fa";
 
@@ -11,8 +11,9 @@ function TeacherDashboard() {
   };
 
   return (
-    <div className={dashStyle.dashboardWrapper}>
-      <Navbar sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
+<>
+
+      <TeacherSideNavbar sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
       <main className={`dashboard-container ${sidebarOpen ? "shifted" : ""}`}>
         {/* Quick Stats */}
         <div className={dashStyle.dashboardStats}>
@@ -34,7 +35,7 @@ function TeacherDashboard() {
         </div>
 
       </main>
-    </div>
+    </>
   );
 }
 
