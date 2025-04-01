@@ -3,9 +3,9 @@ import * as AiIcons from 'react-icons/ai';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import { TeacherSidebarData } from './SidebarData.jsx';
+import { TeacherSidebarData } from './TeacherSidebarData.jsx';
 import { IconContext } from 'react-icons';
-import '../components/styling/TeacherSidenavbar.css'
+// import TeacherSidebar from '../components/styling/TeacherSidenavbar.css'
 
 function SideNavbar({ toggleSidebar }) {
   const [sidebar, setSidebar] = useState(false);

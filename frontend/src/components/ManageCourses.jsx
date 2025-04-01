@@ -15,15 +15,15 @@ function ManageCourses() {
   return (
     <>
     <TeacherNavbar/>
-      <div className={manageStyles.courses-container}>
+      <div className={manageStyles.coursesContainer}>
         <h2 className={manageStyles.title}>Manage Courses</h2>
-        <div className={manageStyles.courses-grid}>
+        <div className={manageStyles.coursesGrid}>
           {courseData.map((course) => (
-            <div key={course.id} className={manageStyles.course-card}>
+            <div key={courses.id} className={manageStyles.courseCard}>
               <h3>{course.name}</h3>
               <p><strong>Students:</strong> {course.students}</p>
               <p><strong>Schedule:</strong> {course.schedule}</p>
-              <div className={manageStyles.course-actions}>
+              <div className={manageStyles.courseActions}>
               <button onClick={() => navigate(`/markattendance/${course.id}`)}>
                 Mark Attendance
               </button>
