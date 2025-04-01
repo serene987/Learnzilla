@@ -16,9 +16,9 @@ const StudentNavbar = () => {
     <>
       {/* Navbar */}
       <div className={NavbarStyle.navbar}>
-        <button className={NavbarStyle.menuButton} onClick={toggleSidebar}>
+        {/* <button className={NavbarStyle.menuButton} onClick={toggleSidebar}>
           {sidebar ? <AiOutlineClose /> : <FaBars />}
-        </button>
+        </button> */}
 
         <div className={NavbarStyle.logo}>Learnzilla</div>
 
