@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import Navbar from "./TNavbar.jsx";
+import TeacherNavbar  from './TeacherNavbar.jsx';
+
 import manageStyles from './styling/teacher/Manage.module.css';
 
 import {courseData} from './CourseData.jsx';
@@ -13,7 +14,7 @@ function ManageCourses() {
 
   return (
     <>
-    <Navbar/>
+    <TeacherNavbar/>
       <div className={manageStyles.courses-container}>
         <h2 className={manageStyles.title}>Manage Courses</h2>
         <div className={manageStyles.courses-grid}>

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom"; // ✅ Import useParams
 import { FaEdit, FaTrash, FaPlus } from "react-icons/fa";
-import Navbar from "./TNavbar";
+import TeacherNavbar  from './TeacherNavbar.jsx';
 
 import assignStyles from '../components/styling/teacher/GiveAssignments.module.css';
 function Assignments() {
@@ -40,7 +40,7 @@ function Assignments() {
 
   return (
     <>
-      <Navbar />
+      <TeacherNavbar />
       <div className={assignStyles.assignments-container}>
         <h2>Assignments for Course ID: {courseId}</h2> {/* ✅ Show Course ID */}
 
