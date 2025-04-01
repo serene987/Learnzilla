@@ -20,11 +20,11 @@ const Home = () => {
   return (
     <>
       <StudentNavbar />
+      <Card/>
       <StudentAnnouncements/>
       <StudentGrades/>
       <StudentAssignments/>
       <StudentAttendance/>
-      <Card/>
     </>
   );
 };

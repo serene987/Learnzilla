@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import Index from './Index.jsx';
 import SignIn from './components/SignIn.jsx';
 
-import Teacherdashboard from './components/Teacherdashboard.jsx';
+import Teacherdashboard from './pages/teacher/Teacherdashboard.jsx';
 import Attendance from './components/MarkAttendace.jsx';
 import ManageCourses from './components/ManageCourses.jsx';
 import Assignments from './components/GiveAssignments.jsx';

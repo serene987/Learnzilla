@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Navbar from "./TNavbar";
-import dashStyle from './styling/teacher/Dashboard.module.css';
+import TNavbar from '../../components/TNavbar.jsx'
+import dashStyle from '../../components/styling/teacher/Dashboard.module.css';
 import { FaBook, FaClipboard, FaCheckCircle, FaPlusCircle } from "react-icons/fa";
 
 function TeacherDashboard() {
