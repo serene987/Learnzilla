@@ -1,4 +1,4 @@
-import Navbar from "../../components/StudentNavbar.jsx";
+import StudentNavbar from "../../components/StudentNavbar.jsx";
 import Card from "../../components/Card.jsx";
 
 import StudentAssignments from "../../components/Assignments.jsx";
@@ -19,7 +19,7 @@ const Home = () => {
 
   return (
     <>
-      <Navbar />
+      <StudentNavbar />
       <StudentAnnouncements/>
       <StudentGrades/>
       <StudentAssignments/>

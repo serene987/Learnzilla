@@ -6,7 +6,7 @@ import { NavbarData } from './NavbarData.jsx';
 
 import NavbarStyle from './styling/student/SNavbar.module.css';
 
-const Navbar = () => {
+const StudentNavbar = () => {
   const [sidebar, setSidebar] = useState(false);
 
   const toggleSidebar = () => setSidebar(!sidebar);
@@ -29,7 +29,7 @@ const Navbar = () => {
       <div className={`sidebar ${sidebar ? "show" : ""}`}>
         <ul className={NavbarStyle.sidebarItems}>
           {NavbarData.map((item, index) => (
-            <li key={index} className={NavbarStyle.sidebar-item} onClick={closeSidebar}>
+            <li key={index} className={NavbarStyle.sidebarItem} onClick={closeSidebar}>
               <Link to={item.path}>
                 {item.icon}
                 <span>{item.title}</span>
@@ -45,4 +45,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default StudentNavbar;
