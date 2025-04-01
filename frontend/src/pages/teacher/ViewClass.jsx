@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import "./teacher.css";
 import { FaEdit, FaTrash, FaPlus } from "react-icons/fa";
 import Navbar from "../../components/TNavbar";
 import Assignments from "../../components/GiveAssignments";
@@ -10,6 +9,7 @@ function ViewClass() {
   
   const [newAnnouncement, setNewAnnouncement] = useState("");
   const [announcements, setAnnouncements] = useState([]);
+  const [assignments, setAssignments] = useState([]);
 
   const [grades, setGrades] = useState({});
   

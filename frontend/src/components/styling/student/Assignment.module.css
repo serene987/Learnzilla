@@ -1,6 +1,6 @@
 
 /* Assignments */
-.assignments-container {
+.assignmentsContainer {
     max-width: 900px;
     margin: 20px auto;
     padding: 20px;
@@ -9,7 +9,7 @@
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.assignments-title {
+.assignmentsTitle {
     text-align: center;
     margin-bottom: 15px;
     font-size: 24px;
@@ -17,42 +17,42 @@
     font-weight: bold;
 }
 
-.assignments-table {
+.assignmentsTable {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
 }
 
-.assignments-table th,
-.assignments-table td {
+.assignmentsTable th,
+.assignmentsTable td {
     padding: 12px 15px;
     text-align: center;
     border-bottom: 1px solid #bdc3c7;
 }
 
-.assignments-table th {
+.assignmentsTable th {
     background-color: #3498db; /* Bright blue for headers */
     color: #ffffff;
     font-weight: bold;
 }
 
-.assignments-table td {
+.assignmentsTable td {
     background-color: #f4f6f8; /* Light grey for data cells */
     color: #34495e; /* Dark text for readability */
 }
 
-.assignments-table .pending {
+.assignmentsTable .pending {
     color: #f39c12; /* Yellow for pending tasks */
     font-weight: bold;
 }
 
-.assignments-table .completed {
+.assignmentsTable .completed {
     color: #2ecc71; /* Green for completed tasks */
     font-weight: bold;
 }
 
 /* File Upload Input */
-.file-upload {
+.fileUpload {
     padding: 6px 12px;
     background-color: #bdc3c7; /* Grey for upload button */
     border: none;
@@ -67,27 +67,27 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .assignments-container {
+    .assignmentsContainer {
         width: 90%;
     }
 
-    .assignments-title {
+    .assignmentsTitle {
         font-size: 20px;
     }
 
-    .assignments-table th,
-    .assignments-table td {
+    .assignmentsTable th,
+    .assignmentsTable td {
         padding: 10px 12px;
     }
 }
 
 @media (max-width: 480px) {
-    .assignments-title {
+    .assignmentsTitle {
         font-size: 18px;
     }
 
-    .assignments-table th,
-    .assignments-table td {
+    .assignmentsTable th,
+    .assignmentsTable td {
         padding: 8px 10px;
     }
 }

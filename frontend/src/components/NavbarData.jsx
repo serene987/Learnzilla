@@ -11,7 +11,7 @@ export const NavbarData = [
   },
   {
     title: 'My Grades',
-    path: '/mygrades',
+    path: '/grades',
     icon: <IoIcons.IoIosPaper />,
   },
 ];

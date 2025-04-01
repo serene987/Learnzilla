@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import assignStyle from './styling/student/Assignment.module.css'
 function StudentAssignments() {
   const [assignments, setAssignments] = useState([
     { id: 1, title: "Math Homework", dueDate: "2025-04-05", status: "Pending" },
@@ -11,9 +11,9 @@ function StudentAssignments() {
   };
 
   return (
-    <div className="assignments-container">
-      <h2 className="assignments-title">Assignments</h2>
-      <table className="assignments-table">
+    <div className={assignStyle.assignmentsContainer}>
+      <h2 className={assignStyle.assignmentsTitle}>Assignments</h2>
+      <table className={assignStyle.assignmentsTable}>
         <thead>
           <tr>
             <th>Assignment</th>
@@ -31,7 +31,7 @@ function StudentAssignments() {
               <td>
                 <input
                   type="file"
-                  className="file-upload"
+                  className={assignStyle.fileUpload}
                   onChange={(e) => handleFileUpload(assignment.id, e)}
                 />
               </td>
