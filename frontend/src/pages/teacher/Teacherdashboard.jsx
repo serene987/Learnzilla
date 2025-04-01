@@ -12,7 +12,7 @@ function TeacherDashboard() {
 
   return (
     <div className={dashStyle.dashboardWrapper}>
-      <Navbar sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
+      <TeacherNavbar sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
       <main className={`dashboard-container ${sidebarOpen ? "shifted" : ""}`}>
         {/* Quick Stats */}
         <div className={dashStyle.dashboardStats}>
