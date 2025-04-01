@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Studentstyle from '../components/styling/SAnnounce.module.css';
+import Studentstyle from '../components/styling/student/Announce.module.css';
 function StudentAnnouncements() {
   const [announcements, setAnnouncements] = useState([
     "Project submission deadline on April 10th.",
@@ -7,9 +7,9 @@ function StudentAnnouncements() {
   ]);
 
   return (
-    <div className={Studentstyle.announcements-container}>
-      <h2 className={Studentstyle.announcements-title}>Announcements</h2>
-      <ul className={Studentstyle.announcements-list}>
+    <div className={Studentstyle.announcementsContainer}>
+      <h2 className={Studentstyle.announcementsTitle}>Announcements</h2>
+      <ul className={Studentstyle.announcementsList}>
         {announcements.map((announcement, index) => (
           <li
             key={index}

@@ -1,0 +1,115 @@
+
+/* Teacher Dashboard Main Container */
+.dashboardContainer {
+    padding: 80px 20px;
+    transition: margin-left 0.3s ease-in-out, transform 0.3s ease-in-out;
+    width: calc(100% - 250px);
+    margin: auto;
+  }
+  
+  
+  /* Dashboard Stats Section */
+  .dashboardStats {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+  /* Individual Stat Cards */
+  .statCard {
+    background: var(--theme-gray-primary);
+    color: var(--theme-gray-text-primary);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 220px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Quick Access Buttons */
+  .quickAccess {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .quickAccess button {
+    background: var(--theme-gray-accent);
+    color: var(--theme-gray-text-primary);
+    padding: 12px 20px;
+    border: none;
+    margin: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s ease;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  
+  .quickAccess button:hover {
+    background: var(--theme-gray-secondary);
+    transform: scale(1.05);
+  }
+  
+  /* Recent Activity & Upcoming Events */
+  .recentActivity,
+  .upcomingEvents {
+    margin-top: 30px;
+    padding: 15px;
+    border-radius: 8px;
+    background: var(--theme-gray-background-dark);
+    color: var(--theme-gray-text-secondary);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Tables for Assignments & Submissions */
+  .tableContainer {
+    margin-top: 90px auto 20px;
+    overflow-x: auto;
+  }
+  
+  .dashboardTable {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--theme-gray-secondary);
+    color: var(--theme-gray-text-primary);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .dashboardTable th,
+  .dashboardTable td {
+    padding: 12px 15px;
+    border-bottom: 1px solid var(--theme-gray-accent);
+  }
+  
+  .dashboardTable th {
+    background: var(--theme-gray-primary);
+    text-align: left;
+  }
+  
+  .dashboardTable tr:hover {
+    background: var(--theme-gray-accent);
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .dashboardStats {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .statCard {
+      width: 90%;
+      margin-bottom: 10px;
+    }
+  
+    .dashboardContainer {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+  
+  
+  

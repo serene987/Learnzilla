@@ -1,6 +1,6 @@
 
 /* Grades */
-.grades-container {
+.gradesContainer {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
@@ -11,7 +11,7 @@
 }
 
 /* Grades Table */
-.grades-table {
+.gradesTable {
     width: 100%;
     border-collapse: collapse;
     margin-top: 15px;
@@ -21,50 +21,50 @@
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.grades-table th,
-.grades-table td {
+.gradesTable th,
+.gradesTable td {
     padding: 12px;
     text-align: left;
     border-bottom: 1px solid #bdc3c7;
 }
 
-.grades-table th {
+.gradesTable th {
     background: #2c3e50; /* Dark bluish grey */
     color: white;
 }
 
-.grades-table tr:hover {
+.gradesTable tr:hover {
     background: #bdc3c7; /* Light grey on hover */
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-    .grades-table th,
-    .grades-table td {
+    .gradesTable th,
+    .gradesTable td {
         padding: 10px;
         font-size: 14px;
     }
 }
 
 @media (max-width: 480px) {
-    .grades-table th,
-    .grades-table td {
+    .gradesTable th,
+    .gradesTable td {
         font-size: 12px;
         padding: 8px;
     }
 }
 
-.grades-container h2 {
+.gradesContainer h2 {
     text-align: center;
     margin-bottom: 15px;
 }
 
-.grades-list {
+.gradesList {
     list-style: none;
     padding: 0;
 }
 
-.grades-list li {
+.gradesList li {
     padding: 10px;
     border-bottom: 1px solid #bdc3c7;
 }
@@ -72,7 +72,7 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .grades-container {
+    .gradesContainer {
         width: 90%;
     }
 }

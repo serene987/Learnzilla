@@ -1,5 +1,5 @@
 /* Announcements */
-.announcements-container {
+.announcementsContainer {
     max-width: 800px;
     margin: 80px auto 20px;
     padding: 20px;
@@ -9,7 +9,7 @@
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.announcements-title {
+.announcementsTitle {
     text-align: center;
     margin-bottom: 15px;
     font-size: 24px;
@@ -17,55 +17,55 @@
     font-weight: bold;
 }
 
-.announcements-list {
+.announcementsList {
     list-style: none;
     padding: 0;
 }
 
-.announcement-item {
+.announcementItem {
     padding: 10px;
     border-bottom: 1px solid #bdc3c7;
     font-size: 16px;
     transition: background 0.3s ease-in-out;
 }
 
-.announcement-item:hover {
+.announcementItem:hover {
     background-color: #ecf0f1; /* Lighter background on hover */
 }
 
 /* Highlight new announcements */
-.new-announcement {
+.newAnnouncement {
     background-color: #f39c12; /* Yellow for highlights */
     font-weight: bold;
     color: #fff;
 }
 
-.new-announcement::before {
+.newAnnouncement::before {
     content: "NEW! ";
     font-weight: bold;
     color: #e74c3c; /* Red color for new alert */
 }
 
 @media (max-width: 768px) {
-    .announcements-container {
+    .announcementsContainer {
         width: 90%;
     }
 
-    .announcements-title {
+    .announcementsTitle {
         font-size: 20px;
     }
 
-    .announcement-item {
+    .announcementItem {
         font-size: 14px;
     }
 }
 
 @media (max-width: 480px) {
-    .announcements-title {
+    .announcementsTitle {
         font-size: 18px;
     }
 
-    .announcement-item {
+    .announcementItem {
         font-size: 12px;
     }
 }
@@ -74,7 +74,7 @@
 /* Responsive Design */
 @media (max-width: 768px) {
     
-    .announcements-container {
+    .announcementsContainer {
         width: 90%;
     }
 }

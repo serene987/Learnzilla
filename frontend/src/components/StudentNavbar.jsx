@@ -16,18 +16,18 @@ const Navbar = () => {
     <>
       {/* Navbar */}
       <div className={NavbarStyle.navbar}>
-        <button className={NavbarStyle.menu-button} onClick={toggleSidebar}>
+        <button className={NavbarStyle.menuButton} onClick={toggleSidebar}>
           {sidebar ? <AiOutlineClose /> : <FaBars />}
         </button>
 
         <div className={NavbarStyle.logo}>Learnzilla</div>
 
-        <button className={NavbarStyle.nav-button}>Log Out</button>
+        <button className={NavbarStyle.navButton}>Log Out</button>
       </div>
 
       {/* Sidebar */}
       <div className={`sidebar ${sidebar ? "show" : ""}`}>
-        <ul className={NavbarStyle.sidebar-items}>
+        <ul className={NavbarStyle.sidebarItems}>
           {NavbarData.map((item, index) => (
             <li key={index} className={NavbarStyle.sidebar-item} onClick={closeSidebar}>
               <Link to={item.path}>

@@ -15,18 +15,18 @@ const Navbar = () => {
     <>
       {/* Navbar */}
       <div className={navStlye.navbar}>
-        <button className={navStlye.menu-button} onClick={toggleSidebar}>
+        <button className={navStlye.menuButton} onClick={toggleSidebar}>
           {sidebar ? <AiOutlineClose /> : <FaBars />}
         </button>
 
         <div className={navStlye.logo}>Learnzilla</div>
 
-        <button className={navStlye.nav-button}>Sign Out</button>
+        <button className={navStlye.navButton}>Sign Out</button>
       </div>
 
       {/* Sidebar */}
       <div className={`sidebar ${sidebar ? "show" : ""}`}>
-        <ul className={navStlye.sidebar-items}>
+        <ul className={navStlye.sidebarItems}>
           {SData.map((item, index) => (
             <li key={index} className={navStlye.sidebar-item} onClick={closeSidebar}>
               <Link to={item.path}>

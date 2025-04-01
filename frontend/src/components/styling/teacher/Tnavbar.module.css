@@ -15,7 +15,7 @@
   }
   
   /* Menu Button */
-  .menu-button {
+  .menuButton {
     font-size: 22px;
     background: none;
     border: none;
@@ -33,7 +33,7 @@
   }
   
   /* Navbar Button */
-  .nav-button {
+  .navButton {
     background: var(--color-secondary);
     color: var(--color-text-primary);
     padding: 8px 14px;
@@ -61,18 +61,18 @@
   }
   
   /* Sidebar Items */
-  .sidebar-items {
+  .sidebarItems {
     list-style: none;
     padding: 0;
   }
   
-  .sidebar-item {
+  .sidebarItem {
     padding: 12px 20px;
     display: flex;
     align-items: center;
   }
   
-  .sidebar-item a {
+  .sidebarItem a {
     text-decoration: none;
     color: var(--color-text-primary);
     display: flex;
@@ -80,16 +80,16 @@
     background-color: var(--color-secondary);
   }
   
-  .sidebar-item a span {
+  .sidebarItem a span {
     margin-left: 10px;
   }
   
   /* Sidebar Item */
-  .sidebar-item {
+  .sidebarItem {
     list-style: none;
   }
   
-  .sidebar-item a {
+  .sidebarItem a {
     text-decoration: none;
     color: var(--color-text-primary);
     display: flex;
@@ -99,7 +99,7 @@
   }
   
   /* Animated Underline */
-  .sidebar-item a::after {
+  .sidebarItem a::after {
     content: "";
     position: absolute;
     left: 0;
@@ -112,7 +112,7 @@
     transition: transform 0.3s ease-in-out;
   }
   
-  .sidebar-item a:hover::after {
+  .sidebarItem a:hover::after {
     transform: scaleX(1);
   }
   
