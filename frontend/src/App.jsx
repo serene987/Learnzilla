@@ -10,7 +10,6 @@ import Assignments from './components/GiveAssignments.jsx';
 import ViewClass from './pages/teacher/ViewClass.jsx';
 
 import Home from './pages/student/Home.jsx';
-import ClassDetails from './components/ClassDetails.jsx';
 import Class from './components/Class.jsx';
 import StudentAssignments from './components/Assignments.jsx';
 import StudentGrades from './components/Grades.jsx';
@@ -38,7 +37,6 @@ function App() {
       {/* Student Dashboard */}
       <Route path='/myhome' element={<Home />} />
       <Route path='/myattendance' element={<StudentAttendance />} />
-      <Route path='/classdetails/' element={<ClassDetails />} />
       <Route path='/classes' element={<Class />} />
       <Route path='/assignments' element={<StudentAssignments />} />
       <Route path='/grades' element={<StudentGrades />} />

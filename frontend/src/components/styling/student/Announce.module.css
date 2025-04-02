@@ -46,9 +46,22 @@
     color: #e74c3c; /* Red color for new alert */
 }
 
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .mainContent {
+        margin-left: 60px;
+    }
+    .mainContent.active {
+        margin-left: 250px;
+    }
+}
+
 @media (max-width: 768px) {
     .announcementsContainer {
-        width: 90%;
+        width: 50%;
+        padding: 15px;
+        margin-left: 5; /* Prevents overlap with sidebar */
     }
 
     .announcementsTitle {
@@ -57,24 +70,32 @@
 
     .announcementItem {
         font-size: 14px;
+        padding: 10px;
+    }
+
+    .mainContent {
+        margin-left: 60px;
     }
 }
 
 @media (max-width: 480px) {
+    .announcementsContainer {
+        width: 95%;
+        margin: 60px auto 15px;
+        padding: 10px;
+        margin-left: 5;
+    }
+
     .announcementsTitle {
         font-size: 18px;
     }
 
     .announcementItem {
-        font-size: 12px;
+        font-size: 13px;
+        padding: 8px;
     }
-}
 
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    
-    .announcementsContainer {
-        width: 90%;
+    .mainContent {
+        margin-left: 5;
     }
 }
