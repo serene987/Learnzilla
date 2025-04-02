@@ -1,6 +1,6 @@
 /* Navbar */
 .navbar {
-    background-color: var(--transparent);
+    background-color:  #26264a;
     height: 70px;
     display: flex;
     justify-content: space-between;

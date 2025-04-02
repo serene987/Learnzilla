@@ -5,12 +5,10 @@ import SignIn from './components/SignIn.jsx';
 
 import Teacherdashboard from './pages/teacher/Teacherdashboard.jsx';
 import Attendance from './components/MarkAttendace.jsx';
-import ManageCourses from './components/ManageCourses.jsx';
 import Assignments from './components/GiveAssignments.jsx';
 import ViewClass from './pages/teacher/ViewClass.jsx';
 
 import Home from './pages/student/Home.jsx';
-import ClassDetails from './components/ClassDetails.jsx';
 import Class from './components/Class.jsx';
 import StudentAssignments from './components/Assignments.jsx';
 import StudentGrades from './components/Grades.jsx';
@@ -22,6 +20,7 @@ import './index.css';
 
 function App() {
   return (
+    <>
     <Routes>
       <Route path='/' element={<Index />} />
       
@@ -30,20 +29,19 @@ function App() {
 
       {/* Teacher Dashboard */}
       <Route path='/teacherdashboard' element={<Teacherdashboard />} />
-      <Route path='/markattendance/:courseId' element={<Attendance />} />
-      <Route path='/assignments/:courseId' element={<Assignments />} />
-      <Route path='/managecourses' element={<ManageCourses />} />
-      <Route path='/viewclass' element={<ViewClass />} />
+      <Route path='/markattendance/:id' element={<Attendance />} />
+      <Route path='/giveassignments/:id' element={<Assignments />} />
+      <Route path='/viewclass/:id' element={<ViewClass />} />
 
       {/* Student Dashboard */}
       <Route path='/myhome' element={<Home />} />
       <Route path='/myattendance' element={<StudentAttendance />} />
-      <Route path='/classdetails/:courseId' element={<ClassDetails />} />
       <Route path='/classes' element={<Class />} />
       <Route path='/assignments' element={<StudentAssignments />} />
       <Route path='/grades' element={<StudentGrades />} />
       <Route path='/annoucements' element={<StudentAnnouncements />} />
     </Routes>
+    </>
   );
 }
 

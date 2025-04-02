@@ -10,6 +10,12 @@ export const SidebarData = [
     cName: 'nav-text'
   },
   {
+    title: 'Annoucements',
+    path: '/annoucements',
+    icon: <FaIcons.FaBullhorn />,
+    cName: 'nav-text'
+  },
+  {
     title: 'Attendance',
     path: '/myattendance',
     icon: <FaIcons.FaEnvelopeOpenText />,
@@ -25,12 +31,6 @@ export const SidebarData = [
     title: 'Grades',
     path: '/grades',
     icon: <FaIcons.FaFirstOrderAlt />,
-    cName: 'nav-text'
-  },
-  {
-    title: 'Annoucements',
-    path: '/annoucements',
-    icon: <FaIcons.FaBullhorn />,
     cName: 'nav-text'
   },
 ];
