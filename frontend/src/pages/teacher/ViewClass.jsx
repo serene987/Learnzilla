@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { FaEdit, FaTrash, FaPlus } from "react-icons/fa";
-import Navbar from "../../components/TNavbar";
+import Navbar from "../../components/TeacherNavbar";
 import Assignments from "../../components/GiveAssignments";
 
 function ViewClass() {
