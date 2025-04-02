@@ -30,8 +30,8 @@ function App() {
 
       {/* Teacher Dashboard */}
       <Route path='/teacherdashboard' element={<Teacherdashboard />} />
-      <Route path='/markattendance/' element={<Attendance />} />
-      <Route path='/giveassignments/' element={<Assignments />} />
+      <Route path='/markattendance' element={<Attendance />} />
+      <Route path='/giveassignments' element={<Assignments />} />
       <Route path='/managecourses' element={<ManageCourses />} />
       <Route path='/viewclass' element={<ViewClass />} />
 
