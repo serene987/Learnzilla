@@ -1,9 +1,6 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { FaEdit, FaTrash, FaPlus } from "react-icons/fa";
-<<<<<<< HEAD
-import TeacherNavbar  from './TeacherNavbar.jsx';
-=======
 import Navbar from "./TeacherNavbar";
 import assignStyles from "../components/styling/teacher/GiveAssignments.module.css";
 
@@ -29,7 +26,6 @@ const getTodayDate = () => {
   const dd = String(today.getDate()).padStart(2, "0");
   return `${yyyy}-${mm}-${dd}`;
 };
->>>>>>> 29a1c15296cf809af01299adca97535fa9278cbe
 
 function Assignments() {
   const { courseId } = useParams();
