@@ -5,7 +5,6 @@ import SignIn from './components/SignIn.jsx';
 
 import Teacherdashboard from './pages/teacher/Teacherdashboard.jsx';
 import Attendance from './components/MarkAttendace.jsx';
-import ManageCourses from './components/ManageCourses.jsx';
 import Assignments from './components/GiveAssignments.jsx';
 import ViewClass from './pages/teacher/ViewClass.jsx';
 
@@ -32,7 +31,6 @@ function App() {
       <Route path='/teacherdashboard' element={<Teacherdashboard />} />
       <Route path='/markattendance/:id' element={<Attendance />} />
       <Route path='/giveassignments/:id' element={<Assignments />} />
-      <Route path='/teacherdashboard' element={<ManageCourses />} />
       <Route path='/viewclass/:id' element={<ViewClass />} />
 
       {/* Student Dashboard */}

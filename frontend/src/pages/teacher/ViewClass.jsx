@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { FaPlus } from "react-icons/fa";
 import Navbar from "../../components/TeacherNavbar";
-import Assignments from "../../components/GiveAssignments";
 import styles from "../../components/styling/teacher/ViewClass.module.css"; // Import CSS Module
 
 function ViewClass() {
@@ -59,8 +58,28 @@ function ViewClass() {
   return (
     <>
       <Navbar />
-      <Assignments />
+      
       <div className={styles.viewClassContainer}>
+         {/* Post Announcements */}
+         {/* <div className={styles.announcementsSection}>
+          <h3>Post Announcements</h3>
+          <input
+            type="text"
+            placeholder="Write an announcement..."
+            value={newAnnouncement}
+            onChange={(e) => setNewAnnouncement(e.target.value)}
+            className={styles.announcementInput}
+          />
+          <button onClick={handleAddAnnouncement} className={styles.announcementButton}>
+            <FaPlus /> Post
+          </button>
+          <ul className={styles.announcementsList}>
+            {announcements.map((announcement, index) => (
+              <li key={index} className={styles.announcementItem}>{announcement}</li>
+            ))}
+          </ul>
+        </div> */}
+        
         <h2>Class Details - Course ID: {courseId}</h2>
 
         {/* Enrolled Students */}
@@ -86,41 +105,7 @@ function ViewClass() {
           </table>
         </div>
 
-        {/* Grade Submissions */}
-        {/* <div className={styles.gradingSection}>
-          <h3>Grade Submissions</h3>
-          <table className={styles.gradesTable}>
-            <thead>
-              <tr>
-                <th>Assignment</th>
-                <th>Grade</th>
-              </tr>
-            </thead>
-            <tbody> */}
-              {/* Assuming assignments are fetched in the Assignments component */}
-            {/* </tbody>
-          </table>
-        </div> */}
-
-        {/* Post Announcements */}
-        <div className={styles.announcementsSection}>
-          <h3>Post Announcements</h3>
-          <input
-            type="text"
-            placeholder="Write an announcement..."
-            value={newAnnouncement}
-            onChange={(e) => setNewAnnouncement(e.target.value)}
-            className={styles.announcementInput}
-          />
-          <button onClick={handleAddAnnouncement} className={styles.announcementButton}>
-            <FaPlus /> Post
-          </button>
-          <ul className={styles.announcementsList}>
-            {announcements.map((announcement, index) => (
-              <li key={index} className={styles.announcementItem}>{announcement}</li>
-            ))}
-          </ul>
-        </div>
+       
       </div>
     </>
   );
