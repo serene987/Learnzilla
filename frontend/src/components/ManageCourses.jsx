@@ -20,7 +20,7 @@ function ManageCourses() {
               <button onClick={() => navigate(`/markattendance/${course.id}`)}>
                 Mark Attendance
               </button>
-              <button onClick={() => navigate(`/assignments/${course.id}`)}>
+              <button onClick={() => navigate(`/viewclass/${course.id}`)}>
                 View Class
               </button>
               </div>

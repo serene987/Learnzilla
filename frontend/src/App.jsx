@@ -21,6 +21,7 @@ import './index.css';
 
 function App() {
   return (
+    <>
     <Routes>
       <Route path='/' element={<Index />} />
       
@@ -29,10 +30,10 @@ function App() {
 
       {/* Teacher Dashboard */}
       <Route path='/teacherdashboard' element={<Teacherdashboard />} />
-      <Route path='/markattendance' element={<Attendance />} />
-      <Route path='/giveassignments' element={<Assignments />} />
-      <Route path='/managecourses' element={<ManageCourses />} />
-      <Route path='/viewclass' element={<ViewClass />} />
+      <Route path='/markattendance/:id' element={<Attendance />} />
+      <Route path='/giveassignments/:id' element={<Assignments />} />
+      <Route path='/teacherdashboard' element={<ManageCourses />} />
+      <Route path='/viewclass/:id' element={<ViewClass />} />
 
       {/* Student Dashboard */}
       <Route path='/myhome' element={<Home />} />
@@ -42,6 +43,7 @@ function App() {
       <Route path='/grades' element={<StudentGrades />} />
       <Route path='/annoucements' element={<StudentAnnouncements />} />
     </Routes>
+    </>
   );
 }
 
