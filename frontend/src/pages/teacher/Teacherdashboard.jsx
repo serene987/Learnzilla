@@ -1,13 +1,13 @@
-import TeacherSideNavbar from '../../components/TeacherNavbar.jsx'
+import Navbar from '../../components/TeacherNavbar.jsx';
+
 import dashStyle from '../../components/styling/teacher/Dashboard.module.css';
 import { FaBook, FaClipboard, FaCheckCircle, FaPlusCircle } from "react-icons/fa";
 
 function TeacherDashboard() {
 
   return (
-<>
-
-      <TeacherSideNavbar />
+  <>
+      <Navbar />
       <main className={dashStyle.dashboardContainer}>
         {/* Quick Stats */}
         <div className={dashStyle.dashboardStats}>

@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import Navbar from "./TNavbar.jsx";
+import Navbar from "./TeacherNavbar.jsx";
 import manageStyles from './styling/teacher/Manage.module.css';
 
 import {courseData} from './CourseData.jsx';

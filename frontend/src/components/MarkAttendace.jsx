@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Navbar from "./TNavbar.jsx";
+import Navbar from "./TeacherNavbar.jsx";
 import Axios from "axios"; // Import Axios for API calls
 
 import markStyles from './styling/teacher/Markattendance.module.css';
