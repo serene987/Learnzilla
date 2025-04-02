@@ -20,7 +20,7 @@
     padding: 12px;
     text-align: left;
     border-bottom: 1px solid var(--theme-gray-secondary);
-  }T
+  }
   .attendanceTable th {
     background: var(--theme-gray-primary);
     color: white;
@@ -78,7 +78,7 @@
     padding: 12px;
     text-align: left;
     border-bottom: 1px solid var(--theme-gray-secondary);
-  }T
+  }
   .attendanceTable th {
     background: var(--theme-gray-text-secondary);
     color: white;
@@ -112,11 +112,11 @@
       width: 90%;
       margin-top: 15%;
     }
-  T   .attendanceTable th, .attendanceTable td {
+     .attendanceTable th, .attendanceTable td {
       padding: 10px;
       font-size: 14px;
     }
-  T   .attendanceTable input[type="checkbox"] {
+     .attendanceTable input[type="checkbox"] {
       width: 18px;
       height: 18px;
     }
@@ -127,11 +127,11 @@
       width: 95%;
       margin-top: 18%;
     }
-  T   .attendanceTable th, .attendanceTable td {
+    .attendanceTable th, .attendanceTable td {
       font-size: 12px;
       padding: 8px;
     }
-  T   .attendanceTable input[type="checkbox"] {
+     .attendanceTable input[type="checkbox"] {
       width: 16px;
       height: 16px;
     }

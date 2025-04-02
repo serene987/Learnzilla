@@ -6,7 +6,6 @@ import TeacherSideNavbar  from './TeacherSideNavbar.jsx';
 const Navbar = () => {
   const [sidebar, setSidebar] = useState(false);
 
-  const toggleSidebar = () => setSidebar(!sidebar);
   const closeSidebar = () => setSidebar(false);
 
   return (
