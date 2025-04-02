@@ -48,9 +48,11 @@
   }
   
   .professor {
-    font-size: 17px;
-    color: #d1d5db;
-    margin-bottom: 2rem;
+    
+    font-size: 20px;         
+  font-weight: 600;          
+  color: #d1d5db;
+  margin-bottom: 2rem;
   }
   
   .buttons {
@@ -59,16 +61,7 @@
     gap: 0.75rem;
   }
   
-  .buttons button {
-    padding: 0.6rem 1.2rem;
-    background-color: #111827;
-    border-radius: 0.5rem;
-    font-size: 14px;
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: background 0.2s ease;
-  }
+  
   
   .buttons button:hover {
     background-color: #1f2937;
