@@ -30,15 +30,15 @@ function App() {
 
       {/* Teacher Dashboard */}
       <Route path='/teacherdashboard' element={<Teacherdashboard />} />
-      <Route path='/markattendance/:courseId' element={<Attendance />} />
-      <Route path='/assignments/:courseId' element={<Assignments />} />
+      <Route path='/markattendance/' element={<Attendance />} />
+      <Route path='/giveassignments/' element={<Assignments />} />
       <Route path='/managecourses' element={<ManageCourses />} />
       <Route path='/viewclass' element={<ViewClass />} />
 
       {/* Student Dashboard */}
       <Route path='/myhome' element={<Home />} />
       <Route path='/myattendance' element={<StudentAttendance />} />
-      <Route path='/classdetails/:courseId' element={<ClassDetails />} />
+      <Route path='/classdetails/' element={<ClassDetails />} />
       <Route path='/classes' element={<Class />} />
       <Route path='/assignments' element={<StudentAssignments />} />
       <Route path='/grades' element={<StudentGrades />} />

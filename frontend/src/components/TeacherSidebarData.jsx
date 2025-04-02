@@ -5,31 +5,31 @@ import * as IoIcons from 'react-icons/io';
 export const TeacherSidebarData = [
   {
     title: 'Home',
-    path: '/myhome',
+    path: '/teacherdashboard',
     icon: <AiIcons.AiFillHome />,
     cName: 'nav-text'
   },
   {
-    title: 'Attendance',
-    path: '/myattendance',
+    title: 'Mark Attendance',
+    path: '/markattendance',
     icon: <FaIcons.FaEnvelopeOpenText />,
     cName: 'nav-text'
   },
   {
-    title: 'Assignments',
-    path: '/assignments',
+    title: 'Give Assignments',
+    path: '/giveassignments',
     icon: <IoIcons.IoIosPaper />,
     cName: 'nav-text'
   },
   {
-    title: 'Grades',
-    path: '/grades',
+    title: 'Courses',
+    path: '/managecourses',
     icon: <FaIcons.FaFirstOrderAlt />,
     cName: 'nav-text'
   },
   {
-    title: 'Annoucements',
-    path: '/annoucements',
+    title: 'View Class',
+    path: '/viewclass',
     icon: <FaIcons.FaBullhorn />,
     cName: 'nav-text'
   },
