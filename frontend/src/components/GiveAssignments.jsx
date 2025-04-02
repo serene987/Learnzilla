@@ -1,30 +1,63 @@
 import { useState } from "react";
-import { useParams } from "react-router-dom"; // ✅ Import useParams
+import { useParams } from "react-router-dom";
 import { FaEdit, FaTrash, FaPlus } from "react-icons/fa";
 import Navbar from "./TeacherNavbar";
+import assignStyles from "../components/styling/teacher/GiveAssignments.module.css";
 
-import assignStyles from '../components/styling/teacher/GiveAssignments.module.css';
+// Convert YYYY-MM-DD to DD-MM-YYYY for display
+const formatDateToDisplay = (dateStr) => {
+  if (!dateStr) return "DD-MM-YYYY"; // Placeholder if no date selected
+  const [year, month, day] = dateStr.split("-");
+  return `${day}-${month}-${year}`;
+};
+
+// Convert DD-MM-YYYY to YYYY-MM-DD for input field
+const formatDateForInput = (dateStr) => {
+  if (!dateStr || dateStr === "DD-MM-YYYY") return "";
+  const [day, month, year] = dateStr.split("-");
+  return `${year}-${month}-${day}`;
+};
+
+// Get today's date in YYYY-MM-DD format (for min attribute)
+const getTodayDate = () => {
+  const today = new Date();
+  const yyyy = today.getFullYear();
+  const mm = String(today.getMonth() + 1).padStart(2, "0"); // Month is 0-based
+  const dd = String(today.getDate()).padStart(2, "0");
+  return `${yyyy}-${mm}-${dd}`;
+};
+
 function Assignments() {
-  
-  const { courseId } = useParams(); // ✅ Get courseId from the URL
+  const { courseId } = useParams();
   const [assignments, setAssignments] = useState([
-    { id: 1, title: "Math Homework", dueDate: "2025-04-05", status: "Pending" },
-    { id: 2, title: "Science Lab Report", dueDate: "2025-04-10", status: "Completed" },
+    { id: 1, title: "Math Homework", dueDate: "05-04-2025", status: "Pending" },
+    { id: 2, title: "Science Lab Report", dueDate: "10-04-2025", status: "Completed" },
   ]);
 
-  const [newAssignment, setNewAssignment] = useState({ title: "", dueDate: "" });
+  const [newAssignment, setNewAssignment] = useState({ title: "", dueDate: "DD-MM-YYYY" });
   const [editing, setEditing] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
 
   const handleAddAssignment = () => {
-    if (!newAssignment.title || !newAssignment.dueDate) return;
-    setAssignments([...assignments, { id: Date.now(), ...newAssignment, status: "Pending" }]);
-    setNewAssignment({ title: "", dueDate: "" });
+    if (!newAssignment.title || newAssignment.dueDate === "DD-MM-YYYY") return;
+
+    setAssignments([
+      ...assignments,
+      { 
+        id: Date.now(), 
+        title: newAssignment.title, 
+        dueDate: newAssignment.dueDate, 
+        status: "Pending" 
+      },
+    ]);
+    setNewAssignment({ title: "", dueDate: "DD-MM-YYYY" });
   };
 
   const handleEditAssignment = (id) => {
     const edited = assignments.map((assignment) =>
-      assignment.id === id ? { ...assignment, ...editing } : assignment
+      assignment.id === id
+        ? { ...assignment, ...editing }
+        : assignment
     );
     setAssignments(edited);
     setEditing(null);
@@ -41,8 +74,8 @@ function Assignments() {
   return (
     <>
       <Navbar />
-      <div className={assignStyles.assignments-container}>
-        <h2>Assignments for Course ID: {courseId}</h2> {/* ✅ Show Course ID */}
+      <div className={assignStyles.assignmentsContainer}>
+        <h2>Assignments for Course ID: {courseId}</h2>
 
         {/* Search Bar */}
         <input
@@ -50,11 +83,11 @@ function Assignments() {
           placeholder="Search assignments..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          className={assignStyles.search-input}
+          className={assignStyles.searchInput}
         />
 
         {/* Add Assignment */}
-        <div className={assignStyles.add-assignment}>
+        <div className={assignStyles.addAssignment}>
           <input
             type="text"
             placeholder="Assignment Title"
@@ -63,8 +96,9 @@ function Assignments() {
           />
           <input
             type="date"
-            value={newAssignment.dueDate}
-            onChange={(e) => setNewAssignment({ ...newAssignment, dueDate: e.target.value })}
+            value={formatDateForInput(newAssignment.dueDate)}
+            onChange={(e) => setNewAssignment({ ...newAssignment, dueDate: formatDateToDisplay(e.target.value) })}
+            min={getTodayDate()} // Restrict past dates
           />
           <button onClick={handleAddAssignment}>
             <FaPlus /> Add
@@ -72,7 +106,7 @@ function Assignments() {
         </div>
 
         {/* Assignments Table */}
-        <table className={assignStyles.assignments-table}>
+        <table className={assignStyles.assignmentsTable}>
           <thead>
             <tr>
               <th>Title</th>
@@ -99,8 +133,9 @@ function Assignments() {
                   {editing?.id === assignment.id ? (
                     <input
                       type="date"
-                      value={editing.dueDate}
-                      onChange={(e) => setEditing({ ...editing, dueDate: e.target.value })}
+                      value={formatDateForInput(editing.dueDate)}
+                      onChange={(e) => setEditing({ ...editing, dueDate: formatDateToDisplay(e.target.value) })}
+                      min={getTodayDate()} // Restrict past dates
                     />
                   ) : (
                     assignment.dueDate
@@ -111,9 +146,9 @@ function Assignments() {
                   {editing?.id === assignment.id ? (
                     <button onClick={() => handleEditAssignment(assignment.id)}>Save</button>
                   ) : (
-                    <FaEdit onClick={() => setEditing(assignment)} className={assignStyles.edit-icon} />
+                    <FaEdit onClick={() => setEditing(assignment)} className={assignStyles.editIcon} />
                   )}
-                  <FaTrash onClick={() => handleDeleteAssignment(assignment.id)} className={assignStyles.delete-icon} />
+                  <FaTrash onClick={() => handleDeleteAssignment(assignment.id)} className={assignStyles.deleteIcon} />
                 </td>
               </tr>
             ))}

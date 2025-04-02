@@ -140,4 +140,45 @@
       width: 100%;
     }
   }
-  
+ /* Responsive Design */
+@media (max-width: 768px) {
+  .attendanceContainer {
+    margin-left: 60px;
+    width: calc(100% - 60px);
+    padding: 15px;
+  }
+
+  .attendanceTable th,
+  .attendanceTable td {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .attendanceTable input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .attendanceContainer {
+    width: 100%;
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  .attendanceTable th,
+  .attendanceTable td {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .attendanceTable input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+  }
+
+  .submitButton {
+    width: 100%;
+  }
+}

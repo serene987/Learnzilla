@@ -1,105 +1,193 @@
-
 /* Assignments Page Container */
-.assignments-container {
-    max-width: 900px;
-    margin: 150px auto 20px; /* 150px from the top */
-    padding: 20px;
-    background: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+.assignmentsContainer {
+  max-width: 900px;
+  margin: 100px auto 20px; /* Adjusted for better spacing */
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+.assignmentsContainer h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Search Input */
+.searchInput {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+/* Add Assignment Form */
+.addAssignment {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.addAssignment input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.addAssignment button {
+  background-color: var(--color-primary, #1c583f);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.addAssignment button:hover {
+  background-color: var(--color-accent, #2c9841);
+}
+
+/* Assignments Table */
+.assignmentsTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.assignmentsTable th,
+.assignmentsTable td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.assignmentsTable th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+/* Edit and Delete Icons */
+.editIcon,
+.deleteIcon {
+  cursor: pointer;
+  font-size: 18px;
+  margin-left: 10px;
+  transition: color 0.2s ease-in-out;
+}
+
+.editIcon:hover {
+  color: #f8c62f; /* Golden Yellow */
+}
+
+.deleteIcon:hover {
+  color: #b91c1c; /* Rust Red */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .assignmentsContainer {
+    margin: 80px 20px 20px; /* Adjust margins for smaller screens */
+    padding: 15px;
   }
-  
-  /* Heading */
-  .assignments-container h2 {
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #333;
+}
+
+@media (max-width: 768px) {
+  .assignmentsContainer {
+    margin: 70px 15px 20px;
+    padding: 15px;
+    margin-left: 5;
   }
-  
-  /* Search Input */
-  .search-input {
-    width: 100%;
+
+  .addAssignment {
+    flex-direction: column;
+  }
+
+  .assignmentsTable th,
+  .assignmentsTable td {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .assignmentsContainer {
+    margin: 50px 10px 20px;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 15px;
-    font-size: 16px;
+    margin-left: 5;
   }
   
-  /* Add Assignment Form */
-  .add-assignment {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
+  .assignmentsContainer h2 {
+    font-size: 20px;
   }
   
-  .add-assignment input {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  .searchInput {
+    font-size: 14px;
+    padding: 8px;
   }
-  
-  .add-assignment button {
-    background-color: var(--color-primary, #1c583f);
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease-in-out;
+
+  .addAssignment input {
+    font-size: 14px;
+    padding: 8px;
   }
-  
-  .add-assignment button:hover {
-    background-color: var(--color-accent, #2c9841);
+
+  .addAssignment button {
+    font-size: 14px;
+    padding: 8px;
   }
-  
-  /* Assignments Table */
-  .assignments-table {
+
+  .assignmentsTable th,
+  .assignmentsTable td {
+    font-size: 12px;
+    padding: 6px;
+  }
+}
+
+/* Responsive Design */
+@media (min-width: 1025px) {
+  .assignmentsContainer {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .assignmentsContainer {
+    margin-left: 220px;
+    width: calc(100% - 220px);
+  }
+}
+
+@media (max-width: 768px) {
+  .assignmentsContainer {
+    margin-left: 60px;
+    width: calc(100% - 60px);
+    padding: 15px;
+  }
+
+  .addAssignment {
+    flex-direction: column;
+  }
+
+  .assignmentsTable th,
+  .assignmentsTable td {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .assignmentsContainer {
     width: 100%;
-    border-collapse: collapse;
+    margin: 20px auto;
+    padding: 15px;
   }
-  
-  .assignments-table th,
-  .assignments-table td {
-    padding: 12px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  .assignments-table th {
-    background-color: #f4f4f4;
-    font-weight: bold;
-  }
-  
-  /* Edit and Delete Icons */
-  .edit-icon,
-  .delete-icon {
-    cursor: pointer;
-    font-size: 18px;
-    margin-left: 10px;
-    transition: color 0.2s ease-in-out;
-  }
-  
-  .edit-icon:hover {
-    color: #f8c62f; /* Golden Yellow */
-  }
-  
-  .delete-icon:hover {
-    color: #b91c1c; /* Rust Red */
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .add-assignment {
-      flex-direction: column;
-    }
-  
-    .assignments-table th,
-    .assignments-table td {
-      font-size: 14px;
-      padding: 8px;
-    }
-  }
-  
+}

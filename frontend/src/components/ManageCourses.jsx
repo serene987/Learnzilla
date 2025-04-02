@@ -23,6 +23,9 @@ function ManageCourses() {
               <button onClick={() => navigate(`/viewclass/${course.id}`)}>
                 View Class
               </button>
+              <button onClick={() => navigate(`/giveassignments/${course.id}`)}>
+                Give Assignment
+              </button>
               </div>
             </div>
           ))}
