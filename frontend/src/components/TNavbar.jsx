@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { FaBars } from 'react-icons/fa';
 import { AiOutlineClose } from 'react-icons/ai';
 import { SData } from './SData.jsx';
-import navStlye from './styling/teacher/Tnavbar.module.css';
+import navStlye from './styling/teacher/Navbar.module.css';
 
 const Navbar = () => {
   const [sidebar, setSidebar] = useState(false);

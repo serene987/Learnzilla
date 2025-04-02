@@ -1,19 +1,15 @@
-import { useState } from "react";
+
 import TNavbar from '../../components/TNavbar.jsx'
 import dashStyle from '../../components/styling/teacher/Dashboard.module.css';
 import { FaBook, FaClipboard, FaCheckCircle, FaPlusCircle } from "react-icons/fa";
 
 function TeacherDashboard() {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-
-  const toggleSidebar = () => {
-    setSidebarOpen(!sidebarOpen);
-  };
 
   return (
     <div className={dashStyle.dashboardWrapper}>
-      <TeacherNavbar sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
-      <main className={`dashboard-container ${sidebarOpen ? "shifted" : ""}`}>
+      <TeacherNavbar />
+
+      <main className={`dashboard-container`}>
         {/* Quick Stats */}
         <div className={dashStyle.dashboardStats}>
           <div className="stat-card">

@@ -5,24 +5,18 @@ import manageStyles from './styling/teacher/Manage.module.css';
 import {courseData} from './CourseData.jsx';
 function ManageCourses() {
   const navigate = useNavigate();
-
-  const courses = [
-    { id: 1, name: "Math 101", students: 30, schedule: "Mon & Wed, 10:00 AM" },
-    { id: 2, name: "Physics 202", students: 25, schedule: "Tue & Thu, 2:00 PM" },
-  ];
-
   return (
     <>
     <Navbar/>
-      <div className={manageStyles.courses-container}>
+      <div className={manageStyles.coursesContainer}>
         <h2 className={manageStyles.title}>Manage Courses</h2>
-        <div className={manageStyles.courses-grid}>
+        <div className={manageStyles.coursesGrid}>
           {courseData.map((course) => (
-            <div key={course.id} className={manageStyles.course-card}>
+            <div key={course.id} className={manageStyles.courseCard}>
               <h3>{course.name}</h3>
               <p><strong>Students:</strong> {course.students}</p>
               <p><strong>Schedule:</strong> {course.schedule}</p>
-              <div className={manageStyles.course-actions}>
+              <div className={manageStyles.courseActions}>
               <button onClick={() => navigate(`/markattendance/${course.id}`)}>
                 Mark Attendance
               </button>

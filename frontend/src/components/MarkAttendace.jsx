@@ -62,11 +62,11 @@ function AttendanceTable() {
   return (
     <>
       <Navbar />
-      <div className={markStyles.attendance-container}>
+      <div className={markStyles.attendanceContainer}>
         <h2>Attendance Marking</h2>
 
         {/* Date Picker */}
-        <div className={markStyles.date-picker}>
+        <div className={markStyles.datePicker}>
           <label>Select Date: </label>
           <input
             type="date"
@@ -77,10 +77,10 @@ function AttendanceTable() {
         </div>
 
         {/* Display selected date */}
-        {selectedDate && <p className={markStyles.selected-date}>Date: {formatDate(selectedDate)}</p>}
+        {selectedDate && <p className={markStyles.selectedDate}>Date: {formatDate(selectedDate)}</p>}
 
         {/* Attendance Table */}
-        <table className={markStyles.attendance-table}>
+        <table className={markStyles.attendanceTable}>
           <thead>
             <tr>
               <th>#</th>
@@ -106,7 +106,7 @@ function AttendanceTable() {
         </table>
 
         {/* Submit Button */}
-        <button className={markStyles.submit-button} onClick={handleSubmit}>
+        <button className={markStyles.submitButton} onClick={handleSubmit}>
           Submit Attendance
         </button>
       </div>
