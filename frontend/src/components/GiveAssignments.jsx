@@ -3,9 +3,9 @@ import { useParams } from "react-router-dom"; // ✅ Import useParams
 import { FaEdit, FaTrash, FaPlus } from "react-icons/fa";
 import Navbar from "./TeacherNavbar";
 
-import assignStyles from '../components/styling/teacher/GiveAssignments.module.css';
+import assignStyles from "../components/styling/teacher/GiveAssignments.module.css";
+
 function Assignments() {
-  
   const { courseId } = useParams(); // ✅ Get courseId from the URL
   const [assignments, setAssignments] = useState([
     { id: 1, title: "Math Homework", dueDate: "2025-04-05", status: "Pending" },
@@ -41,7 +41,7 @@ function Assignments() {
   return (
     <>
       <Navbar />
-      <div className={assignStyles.assignments-container}>
+      <div className={assignStyles.assignmentsContainer}>
         <h2>Assignments for Course ID: {courseId}</h2> {/* ✅ Show Course ID */}
 
         {/* Search Bar */}
@@ -50,11 +50,11 @@ function Assignments() {
           placeholder="Search assignments..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          className={assignStyles.search-input}
+          className={assignStyles.searchInput}
         />
 
         {/* Add Assignment */}
-        <div className={assignStyles.add-assignment}>
+        <div className={assignStyles.addAssignment}>
           <input
             type="text"
             placeholder="Assignment Title"
@@ -72,7 +72,7 @@ function Assignments() {
         </div>
 
         {/* Assignments Table */}
-        <table className={assignStyles.assignments-table}>
+        <table className={assignStyles.assignmentsTable}>
           <thead>
             <tr>
               <th>Title</th>
@@ -111,9 +111,9 @@ function Assignments() {
                   {editing?.id === assignment.id ? (
                     <button onClick={() => handleEditAssignment(assignment.id)}>Save</button>
                   ) : (
-                    <FaEdit onClick={() => setEditing(assignment)} className={assignStyles.edit-icon} />
+                    <FaEdit onClick={() => setEditing(assignment)} className={assignStyles.editIcon} />
                   )}
-                  <FaTrash onClick={() => handleDeleteAssignment(assignment.id)} className={assignStyles.delete-icon} />
+                  <FaTrash onClick={() => handleDeleteAssignment(assignment.id)} className={assignStyles.deleteIcon} />
                 </td>
               </tr>
             ))}

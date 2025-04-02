@@ -1,45 +1,126 @@
-
-/* ManageCourses css */
-
+/* Manage Courses Container */
 .coursesContainer {
-    padding: 20px;
-    margin: 50px auto 20px; /* 150px from the top */
-  
+  max-width: 1200px; /* Keeps it centered and contained */
+  margin: 50px auto 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Title Styling */
+.title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #3498db;
+  padding: 20px;
+}
+
+/* Responsive Grid Layout */
+.coursesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  padding: 10px;
+  max-width: 100%;
+}
+
+/* Individual Course Card */
+.courseCard {
+  background: var(--theme-gray-primary);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.courseCard:hover {
+  transform: scale(1.03);
+}
+
+/* Course Title */
+.courseCard h3 {
+  margin-bottom: 8px;
+  font-size: 18px;
+  color: var(--theme-gray-accent);
+}
+
+/* Course Actions */
+.courseActions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+/* Buttons */
+.courseActions button {
+  background: var(--theme-gray-accent);
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.courseActions button:hover {
+  background: #2980b9;
+}
+
+/* 📱 Mobile & Tablet View */
+@media (max-width: 1024px) {
+  .coursesContainer {
+      width: 90%;
   }
-  .title{
-    text-align: center;
-    padding: 20px;
-  }
+
   .coursesGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
-  
-  .courseCard {
-    background: var(--theme-gray-primary);
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .coursesContainer {
+      width: 95%;
   }
-  
-  .courseCard h3 {
-    margin-bottom: 8px;
-    color: var(--theme-gray-accent);
+
+  .coursesGrid {
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   }
-  
+
   .courseActions {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
+      flex-direction: column;
+      align-items: center;
   }
-  
+
   .courseActions button {
-    background: var(--theme-gray-accent);
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    cursor: pointer;
-    border-radius: 5px;
+      width: 100%;
   }
-  
+}
+
+@media (max-width: 480px) {
+  .title {
+      font-size: 20px;
+  }
+
+  .coursesGrid {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+  }
+
+  .courseCard {
+      padding: 12px;
+  }
+
+  .courseActions button {
+      font-size: 12px;
+      padding: 8px;
+  }
+}
