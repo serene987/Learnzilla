@@ -66,9 +66,20 @@
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+    .mainContent {
+        margin-left: 60px;
+    }
+    .mainContent.active {
+        margin-left: 250px;
+    }
+}
+
 @media (max-width: 768px) {
     .assignmentsContainer {
         width: 90%;
+        padding: 15px;
+        margin-left: 5; /* Prevents overlap with sidebar */
     }
 
     .assignmentsTitle {
@@ -79,9 +90,20 @@
     .assignmentsTable td {
         padding: 10px 12px;
     }
+
+    .mainContent {
+        margin-left: 60px;
+    }
 }
 
 @media (max-width: 480px) {
+    .assignmentsContainer {
+        width: 95%;
+        margin: 15px auto;
+        padding: 10px;
+        margin-left: 5;
+    }
+
     .assignmentsTitle {
         font-size: 18px;
     }
@@ -89,6 +111,10 @@
     .assignmentsTable th,
     .assignmentsTable td {
         padding: 8px 10px;
+        font-size: 14px;
+    }
+
+    .mainContent {
+        margin-left: 5;
     }
 }
-
