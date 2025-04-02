@@ -1,14 +1,11 @@
-import TeacherSideNavbar from '../../components/TeacherNavbar.jsx'
-
-import { FaBook, FaClipboard, FaCheckCircle, FaPlusCircle } from "react-icons/fa";
-
+import Navbar from '../../components/TeacherNavbar.jsx';
+import ManageCourses from '../../components/ManageCourses.jsx';
 function TeacherDashboard() {
-  // const [sidebarOpen, setSidebarOpen] = useState(false);
-
 
   return (
   <>
-      <TeacherSideNavbar />  
+      <Navbar />
+      <ManageCourses/>
     </>
   );
 }

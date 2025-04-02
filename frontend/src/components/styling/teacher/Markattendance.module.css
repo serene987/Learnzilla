@@ -20,8 +20,12 @@
     padding: 12px;
     text-align: left;
     border-bottom: 1px solid var(--theme-gray-secondary);
+<<<<<<< HEAD
   }
   
+=======
+  }T
+>>>>>>> 29a1c15296cf809af01299adca97535fa9278cbe
   .attendanceTable th {
     background: var(--theme-gray-primary);
     color: white;
@@ -79,8 +83,12 @@
     padding: 12px;
     text-align: left;
     border-bottom: 1px solid var(--theme-gray-secondary);
+<<<<<<< HEAD
   }
   
+=======
+  }T
+>>>>>>> 29a1c15296cf809af01299adca97535fa9278cbe
   .attendanceTable th {
     background: var(--theme-gray-text-secondary);
     color: white;
@@ -114,6 +122,7 @@
       width: 90%;
       margin-top: 15%;
     }
+<<<<<<< HEAD
   
     .attendanceTable th, .attendanceTable td {
       padding: 10px;
@@ -121,6 +130,13 @@
     }
   
     .attendanceTable input[type="checkbox"] {
+=======
+  T   .attendanceTable th, .attendanceTable td {
+      padding: 10px;
+      font-size: 14px;
+    }
+  T   .attendanceTable input[type="checkbox"] {
+>>>>>>> 29a1c15296cf809af01299adca97535fa9278cbe
       width: 18px;
       height: 18px;
     }
@@ -131,6 +147,7 @@
       width: 95%;
       margin-top: 18%;
     }
+<<<<<<< HEAD
   
     .attendanceTable th, .attendanceTable td {
       font-size: 12px;
@@ -138,6 +155,13 @@
     }
   
     .attendanceTable input[type="checkbox"] {
+=======
+  T   .attendanceTable th, .attendanceTable td {
+      font-size: 12px;
+      padding: 8px;
+    }
+  T   .attendanceTable input[type="checkbox"] {
+>>>>>>> 29a1c15296cf809af01299adca97535fa9278cbe
       width: 16px;
       height: 16px;
     }
@@ -146,4 +170,45 @@
       width: 100%;
     }
   }
-  
+ /* Responsive Design */
+@media (max-width: 768px) {
+  .attendanceContainer {
+    margin-left: 60px;
+    width: calc(100% - 60px);
+    padding: 15px;
+  }
+
+  .attendanceTable th,
+  .attendanceTable td {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .attendanceTable input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .attendanceContainer {
+    width: 100%;
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  .attendanceTable th,
+  .attendanceTable td {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .attendanceTable input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+  }
+
+  .submitButton {
+    width: 100%;
+  }
+}

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 import { TeacherSidebarData } from './TeacherSidebarData.jsx';
 import { IconContext } from 'react-icons';
-// import TeacherSidebar from '../components/styling/TeacherSidenavbar.css'
+import styles from '../components/styling/Sidenavbar.module.css';
 
 function SideNavbar({ toggleSidebar }) {
   const [sidebar, setSidebar] = useState(false);
@@ -19,21 +19,21 @@ function SideNavbar({ toggleSidebar }) {
     <>
       <IconContext.Provider value={{ color: '#fff' }}>
         {/* Menu Icon */}
-        <div className="menu-bars" onClick={showSidebar}>
+        <div className={styles.menuBars} onClick={showSidebar}>
           <FaIcons.FaBars />
         </div>
 
         {/* Sidebar Navigation */}
-        <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
-          <ul className="nav-menu-items">
+        <nav className={sidebar ? `${styles.navMenu} ${styles.active}` : styles.navMenu}>
+          <ul className={styles.navMenuItems}>
             {/* Close Button */}
-            <li className="navbar-toggle" onClick={showSidebar}>
-              <AiIcons.AiOutlineClose className="menu-bars" />
+            <li className={styles.navbarToggle} onClick={showSidebar}>
+              <AiIcons.AiOutlineClose className={styles.menuBars} />
             </li>
 
             {/* Sidebar Links */}
             {TeacherSidebarData.map((item, index) => (
-              <li key={index} className={item.cName}>
+              <li key={index} className={styles[item.cName] || ''}>
                 <Link to={item.path}>
                   {item.icon}
                   <span>{item.title}</span>

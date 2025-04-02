@@ -1,5 +1,9 @@
 import { useState } from "react";
+<<<<<<< HEAD
 import TeacherNavbar  from './TeacherNavbar.jsx';
+=======
+import Navbar from "./TeacherNavbar.jsx";
+>>>>>>> 29a1c15296cf809af01299adca97535fa9278cbe
 import Axios from "axios"; // Import Axios for API calls
 
 import markStyles from './styling/teacher/Markattendance.module.css';
@@ -61,7 +65,11 @@ function AttendanceTable() {
 
   return (
     <>
+<<<<<<< HEAD
       <TeacherNavbar />
+=======
+      <Navbar />
+>>>>>>> 29a1c15296cf809af01299adca97535fa9278cbe
       <div className={markStyles.attendanceContainer}>
         <h2>Attendance Marking</h2>
 

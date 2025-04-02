@@ -1,0 +1,99 @@
+.viewClassContainer {
+    max-width: 900px;
+    margin: 100px auto 20px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .studentsSection {
+    margin-top: 20px;
+  }
+  
+  .studentsTable {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .studentsTable th,
+  .studentsTable td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .studentsTable th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+  
+  .gradingSection {
+    margin-top: 30px;
+  }
+  
+  .gradesTable {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .announcementsSection {
+    margin-top: 30px;
+  }
+  
+  .announcementInput {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+  
+  .announcementButton {
+    background-color: var(--color-primary, #1c583f);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .announcementButton:hover {
+    background-color: var(--color-accent, #2c9841);
+  }
+  
+  .announcementsList {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .announcementItem {
+    background: #f4f4f4;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+  }
+  
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .viewClassContainer {
+        margin-left: 60px;
+        padding: 15px;
+    }
+
+    .studentsList {
+        grid-template-columns: 1fr;
+    }
+
+    .announcementsSection input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        font-size: 20px;
+    }
+}
