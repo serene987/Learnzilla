@@ -10,8 +10,24 @@ export const NavbarData = [
     icon: <AiIcons.AiFillHome />,
   },
   {
+    title: 'Announcements',
+    path: '/annoucements',
+    icon: <IoIcons.IoIosPaper />,
+  },
+  {
     title: 'My Grades',
     path: '/grades',
     icon: <IoIcons.IoIosPaper />,
   },
+  {
+    title: 'My Attendance',
+    path: '/myattendance',
+    icon: <IoIcons.IoIosPaper />,
+  },
+  {
+    title: 'My Assignments',
+    path: '/assignments',
+    icon: <IoIcons.IoIosPaper />,
+  },
+
 ];

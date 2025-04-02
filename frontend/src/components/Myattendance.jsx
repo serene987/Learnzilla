@@ -1,6 +1,8 @@
 import { useState } from "react";
 import AttendanceStyle from '../components/styling/student/Attendance.module.css';
 
+import StudentNavbar from './StudentNavbar.jsx'
+
 function StudentAttendance() {
   const [attendance, setAttendance] = useState([
     { className: "Math", attendancePercentage: 90 },
@@ -16,6 +18,8 @@ function StudentAttendance() {
   };
 
   return (
+    <>
+    <StudentNavbar/>
      <div className={AttendanceStyle.attendanceContainer}>
       <h2>Attendance</h2>
       <table className={AttendanceStyle.attendanceTable}>
@@ -37,6 +41,7 @@ function StudentAttendance() {
         </tbody>
       </table>
     </div>
+          </>
   );
 }
 

@@ -2,19 +2,22 @@
 /* Grades */
 .gradesContainer {
     max-width: 800px;
-    margin: 20px auto;
+    margin: 5px auto 20px;
     padding: 20px;
     background: #f4f6f8;
     color: #34495e;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    /* position: absolute; */
+     z-index: 2; 
+    align-self: center;
 }
 
 /* Grades Table */
 .gradesTable {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 15px;
+    margin-top: 10px;
     background: white;
     border-radius: 8px;
     overflow: hidden;
