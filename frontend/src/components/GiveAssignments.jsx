@@ -77,15 +77,9 @@ function Assignments() {
 
   return (
     <>
-<<<<<<< HEAD
-      <TeacherNavbar />
-      <div className={assignStyles.assignments-container}>
-        <h2>Assignments for Course ID: {courseId}</h2> {/* ✅ Show Course ID */}
-=======
       <Navbar />
       <div className={assignStyles.assignmentsContainer}>
         <h2>Assignments for Course ID: {courseId}</h2>
->>>>>>> 29a1c15296cf809af01299adca97535fa9278cbe
 
         {/* Search Bar */}
         <input
