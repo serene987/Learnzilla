@@ -1,0 +1,20 @@
+{
+  "name": "rishabh-jewellers-billing",
+  "version": "1.0.0",
+  "description": "Automated Billing System for Rishabh Jewellers",
+  "scripts": {
+    "install-all": "cd backend && npm install && cd ../frontend && npm install",
+    "backend": "cd backend && npm start",
+    "frontend": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "setup": "echo 'Please follow SETUP_GUIDE.md for complete setup instructions'"
+  },
+  "keywords": [
+    "billing",
+    "invoice",
+    "jewellery",
+    "pos"
+  ],
+  "author": "Rishabh Jewellers",
+  "license": "PROPRIETARY"
+}
